@@ -44,7 +44,7 @@ export default {
 <style scoped>
 body {
   margin: 0;
-  padding: 0;
+  padding: 10;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f4;
 }
@@ -58,7 +58,7 @@ body {
   height: 50px; /* Réduction de la hauteur */
   align-items: center;
   border-radius:  0 0 50px 50px; /* Demi-rond arrondi vers le bas */
-  background-color: #79f009;
+  background-color: #2b8c00;
   color: white;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -69,7 +69,7 @@ body {
 #nav-bar {
   display: flex;
   justify-content: center;
-  background-color: #79f009;
+  background-color: #2b8c00;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   max-height: 0;
@@ -93,8 +93,8 @@ body {
 }
 
 .nav:hover, .nav.active {
-  background-color: #12e647;
-  color: rgb(20, 4, 241);
+  background-color: #ffbf08;
+  color: #2b8c00;
   font-weight: bold;
 }
 

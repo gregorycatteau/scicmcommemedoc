@@ -2,20 +2,16 @@
  
   
   <div>
-    <PartOne />
+   
+    <Worldstorytest />
   </div>
 </template>
 
-<script>
+<script setup>
 
-import PartOne from '~/components/premierconstat/part_one.vue';
-export default {
-  name: 'TestPage',
-  components: {
-    
-    PartOne
-  }
-}
+
+import Worldstorytest from '~/components/worldstorytest.vue';
+
 </script>
 
 <style>

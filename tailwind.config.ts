@@ -5,13 +5,17 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       colors: {
-        // Ajoutez ici les couleurs personnalisées que vous souhaitez utiliser dans votre projet
+        'scicgreen' : '#2b8c00',
+        'scicorange' : '#f26612',
+        'scicblue' : '#b0d9ff',
+        'scicyellow' : '#ffbf08',
+        'scicpurple' : '#bf87cc',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
-        'site-background': "url('/wallpaper2.png')",
+        'site-background': "url('/wallpaper3.png')",
         
       },
     },

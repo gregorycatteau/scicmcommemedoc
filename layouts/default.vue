@@ -1,6 +1,6 @@
 <template class="global">
-  <header>
-    <HeaderComponent />
+  <header class="heading">
+    <uppernavbar />
   </header>
 
   <main class="main">
@@ -11,16 +11,10 @@
   </footer>
 </template>
 
-<script>
-import HeaderComponent from '~/components/headercomponent.vue'
-import FooterComponent from '~/components/footercomponent.vue'
-export default {
-  components: {
-    HeaderComponent,
-    FooterComponent
-
-  }
-}
+<script setup lang="ts">
+import uppernavbar from '~/components/uppernavbar.vue';
+import FooterComponent from '~/components/footercomponent.vue';
 </script>
 <style scoped>
+
 </style>

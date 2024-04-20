@@ -15,4 +15,3 @@ import beforeallmission from '~/components/beforeallmission.vue';
 <style>
   
 </style>
-

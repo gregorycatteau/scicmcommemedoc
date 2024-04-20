@@ -1,46 +1,45 @@
 <template>
-  <section class="relative welcome-section" >
-    <div class="parallax-bg"></div>
-    <div class="glass-overlay">
-      <h1 class="title">SCIC M Comme Médoc</h1>
-      <p class="paragraph">Une coopérative pour un futur durable et solidaire.</p>
+  <section class="upperheader">
+    <div class="backgrounding"></div> 
+    <div class="content-overlay">
+      <h1 class="title">M Comme Médoc</h1>
+      
+    
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'WelcomeSection',
+  name: 'UpperHeader',
 }
 </script>
 
 <style scoped>
-.welcome-section {
-  @apply relative flex flex-col justify-center items-center h-28;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: auto;
+
+
+.upperheader {
+  @apply relative flex items-center justify-center h-32 md:h-48 m-4 rounded-3xl shadow-lg bg-gradient-to-r from-scicgreen to-scicblue;
+  overflow: hidden;
 }
 
-.parallax-bg {
-  @apply absolute top-0 left-0 w-full h-full bg-site-background bg-cover bg-center rounded-3xl ;
-  transform: translateZ(-1px) scale(2);
+.backgrounding {
+  @apply absolute top-0 left-0 w-full h-full bg-cover bg-center bg-site-background contrast-50 grayscale hover:grayscale-0;
   z-index: -1;
+
 }
 
-.glass-overlay {
-  @apply relative text-center p-10 md:p-20 rounded-full m-5;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  
+.content-overlay {
+  @apply relative text-center p-4 bg-white/50 backdrop-blur-2xl rounded-xl bg-opacity-30;
 }
 
 .title {
-  @apply text-4xl md:text-5xl font-bold text-slate-500 mb-4;
+  @apply text-lg md:text-xl lg:text-7xl  text-scicgreen;
+  font-family: Permanent Marker;
 }
 
-.paragraph {
-  @apply text-stone-600 text-lg md:text-xl;
+.description {
+  @apply hidden md:block text-scicgreen text-xl md:text-2xl;
+  font-family: Lora;
 }
 </style>
-
