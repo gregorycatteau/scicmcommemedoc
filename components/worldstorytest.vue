@@ -2,14 +2,9 @@
   <div class="timeline-container">
     <div class="steps-and-progress">
       <!-- Barre de progression verticale centrale -->
-      <div class="progress-bar"></div>
+     
       <!-- Placement des numéros d'étape le long de la barre de progression -->
-      <div v-for="(point, index) in points" :key="index" 
-           class="step-number" :style="{ 'top': `${index * 100 / (points.length - 1)}%` }">
-        <div class="number">
-           {{ index + 1 }}
-        </div>
-      </div>
+      
     </div>
     
     <div class="timeline-content-container">
@@ -19,6 +14,12 @@
         <div class="content">
           <p class="description">{{ point.description }}</p>
           <img :src="point.image" alt="Illustration pour {{ point.title }}" class="illustration-image">
+        </div>
+      </div>
+      <div v-for="(point, index) in points" :key="index" 
+           class="step-number" :style="{ 'top': `${index * 100 / (points.length - 1)}%` }">
+        <div class="number">
+           {{ index + 1 }}
         </div>
       </div>
     </div>
@@ -88,12 +89,12 @@ const currentStep = computed(() => points.value.length - 1);
 
 /* Conteneur des étapes et de la barre de progression */
 .steps-and-progress {
-  @apply flex flex-col items-center w-10/12 relative top-0;
+  @apply flex flex-col justify-items-start  relative top-0;
 }
 
 /* Barre de progression verticale */
 .progress-bar {
-  @apply bg-gray-400 w-1 absolute left-1/2 z-0 top-10 bottom-6;
+  @apply bg-gray-400 w-1 absolute left-1/2 z-50 top-10 bottom-6;
 }
 
 /* Numéro de l'étape */

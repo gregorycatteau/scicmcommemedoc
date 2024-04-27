@@ -5,7 +5,9 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxt/content",
     "@hypernym/nuxt-anime",
-    "@nuxt/fonts" // Incluez tous vos modules ici, pas besoin de dupliquer la clé 'modules'
+    // Incluez tous vos modules ici, pas besoin de dupliquer la clé 'modules'
+    "@nuxt/fonts",
+    "@pinia/nuxt"
   ],
   anime: {
     provide: true,

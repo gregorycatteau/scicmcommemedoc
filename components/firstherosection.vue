@@ -18,36 +18,32 @@ function gotomission() {
 </script>
 
 <style scoped>
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 .hero-wrapper {
-  @apply bg-no-repeat bg-cover bg-center flex items-center justify-center h-screen rounded-2xl;
+  @apply w-full bg-no-repeat bg-cover bg-center flex items-center justify-center min-h-screen rounded-2xl;
   background-image: url('/resilience.png');
   animation: fadeIn 1s ease-out;
 }
-
 .text-wrapper {
   @apply text-center;
   animation: fadeIn 2s ease-out; /* Delay de 1s pour commencer après l'animation de l'image de fond */
 }
-
 .slogan {
-  @apply text-scicyellow text-7xl font-bold p-10 bg-opacity-50 bg-scicgreen rounded-md;
-  font-family: Playfair Display;
-  animation: fadeIn 3s ease-out; /* Delay de 2s pour commencer après l'animation du texte wrapper */
+  @apply text-5xl font-bold p-6 bg-opacity-50 bg-scicgreen text-scicorange rounded-md; /* Taille de texte réduite pour mobile */
+  font-family: "Playfair Display", serif;
 }
-
 .buttoncontainer {
-  @apply mt-8;
-  animation: fadeIn 4s ease-out; /* Delay de 3s pour commencer après l'animation du slogan */
+  @apply mt-4; /* Espacement réduit pour mobile */
 }
-
 .action-button {
-  @apply bg-scicorange text-white font-bold py-2 px-6 rounded hover:bg-scicyellow transition-colors;
-  font-family: Montserrat;
+  @apply bg-scicorange text-white font-bold py-3 px-5 rounded hover:bg-scicyellow transition-colors;
+  font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 640px) {
+  .hero-wrapper {
+    @apply rounded-none min-h-0 py-12;
+  }
+  .slogan {
+    @apply text-3xl p-4; /* Texte encore plus petit pour les très petits écrans */
+  }
 }
 </style>
-

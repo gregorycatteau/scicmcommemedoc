@@ -2,13 +2,14 @@
 title: "Naviguer dans la Complexité : Unissons-nous pour Simplifier le Quotidien"
 summary: "Cet article explore comment, en unissant nos efforts, nous pouvons transformer les défis complexes en solutions simples et efficaces, à travers les expériences de Clara et Antoine."
 date: "2023-04-19"
-author: "Gregory Catteau"
+author: "Jenny Catteau"
 tags: ["complexité", "simplification", "collaboration"]
 category: "Développement personnel"
 image: "/complexite.png"
 slug: "naviguer-dans-la-complexite-unissons-nous-pour-simplifier"
 readingTime: "4 minutes"
 published: true
+page: "complexity"
 ---
 
 **Naviguer dans la Complexité : Unissons-nous pour Simplifier le Quotidien**

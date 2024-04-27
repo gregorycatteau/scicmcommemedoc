@@ -7,7 +7,7 @@
 
     <!-- Tabs for Activity Areas -->
     <div class="flex justify-center space-x-4 my-4">
-      <button v-for="pole in poles" :key="pole" @click="selectedPole = pole" :class="{ 'bg-gray-800 text-white': selectedPole === pole }" class="bg-white shadow px-6 py-2 rounded hover:bg-gray-200 transition-colors">
+      <button v-for="pole in poles" :key="pole" @click="selectedPole = pole" :class="{ 'bg-scicpurple text-scicgreen': selectedPole === pole }" class="bg-scicgreen text-scicblue shadow px-6 py-2 rounded hover:bg-scicorange hover:text-scicblue transition-colors">
         {{ pole }}
       </button>
     </div>

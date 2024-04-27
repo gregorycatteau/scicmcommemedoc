@@ -15,14 +15,14 @@
 
     <div class="steps-container">
       <div class="step-item">
-        <h3 class="step-title">Étape 1 : Prise de Conscience et Éducation</h3>
+        <h3 class="step-title">Étape 1 : Prendre conscience</h3>
         <p class="step-description">
           Le respect du vivant commence par une prise de conscience profonde de notre interconnexion avec la nature et tous ses habitants. Reconnaître que chaque action a un impact sur l'écosystème est fondamental. Nous nous engageons à sensibiliser nos communautés, en partageant des connaissances et en éduquant sur l'importance de préserver la biodiversité et les ressources naturelles. Cet éveil collectif est le premier pas vers un territoire conscient et respectueux du vivant.
         </p>
       </div>
 
       <div class="step-item">
-        <h3 class="step-title">Étape 2 : Adoption de Pratiques Durables</h3>
+        <h3 class="step-title">Étape 2 : Adopter de Pratiques Durables</h3>
         <p class="step-description">
           Fort de cette prise de conscience, notre territoire s'engage à adopter des pratiques durables dans tous les aspects de la vie quotidienne et professionnelle. De l'agriculture respectueuse de l'environnement aux initiatives de réduction des déchets, chaque habitant, entreprise et institution est invité à réfléchir et à modifier ses habitudes pour le bien de notre planète. En cultivant des pratiques écoresponsables, nous posons des actes concrets en faveur du respect du vivant.
         </p>
@@ -252,8 +252,13 @@ function goBack() {
 
 <style scoped>
 .service-section {
-  @apply flex flex-col items-center text-center p-6 text-scicgreen bg-no-repeat bg-cover bg-center max-w-screen-lg mx-auto rounded-xl shadow-lg;
+  @apply flex flex-col w-full items-center text-center p-6 bg-no-repeat bg-cover bg-center max-w-screen-lg mx-auto rounded-xl shadow-lg;
   background-image: url('/vivantorange.png');
+}
+@media (max-width: 640px) {
+  .service-section {
+    @apply p-4 rounded-lg; /* Padding et arrondis ajustés pour les petits écrans */
+  }
 }
 .main-feature-item {
   @apply max-w-4xl bg-white bg-opacity-65 p-6 rounded-xl shadow-lg mb-10;
@@ -303,23 +308,23 @@ function goBack() {
   @apply space-y-6;
 }
 .step-item {
-  @apply bg-scicblue rounded-lg shadow p-6;
+  @apply bg-scicgreen rounded-lg shadow p-6;
 }
 .step-title {
   @apply text-xl font-semibold mb-2 text-center text-scicpurple bg-white p-2 rounded-lg shadow-lg;
   font-family: Kalnia;
 }
 .step-description {
-  @apply text-base text-justify;
+  @apply text-lg text-justify text-scicblue indent-8 text-wrap;
   font-family: Lora;
 }
 .modal-footer {
   @apply flex flex-col items-center;
 }
 .call-to-action {
-  @apply mb-4 text-lg;
+  @apply mb-4 text-lg text-scicgreen font-semibold text-center;
 }
 .action-button {
-  @apply bg-scicgreen text-white font-bold py-2 px-6 rounded hover:bg-scicblue transition-colors;
+  @apply bg-scicgreen text-white font-bold py-2 px-6 rounded hover:bg-scicorange transition-colors;
 }
 </style>

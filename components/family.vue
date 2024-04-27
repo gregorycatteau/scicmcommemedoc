@@ -35,9 +35,9 @@
       </div>
       <template #footer>
         <div class="footerwrapper">
-          <button class="button">Exemples</button>
-          <button class="button">Nos besoins</button>
-          <button class="button">Recrutement</button>
+          <button class="button" @click="openExampleCreche">Exemples</button>
+          <button class="button" @click="openBesoinsCreche">Nos besoins</button>
+          <button class="button" @click="openRecrutementCreche">Recrutement</button>
         </div>
       </template>
     </UCard>
@@ -72,9 +72,9 @@
   </div>
   <template #footer>
     <div class="footerwrapper">
-      <button class="button">Exemples</button>
-      <button class="button">Nos besoins</button>
-      <button class="button">Recrutement</button>
+      <button class="button" @click="openExampleEcole">Exemples</button>
+      <button class="button" @click="openBesoinsEcole">Nos besoins</button>
+      <button class="button" @click="openRecrutementEcole">Recrutement</button>
     </div>
   </template>
 </UCard>
@@ -111,7 +111,7 @@
   </div>
   <template #footer>
     <div class="footerwrapper">
-      <button class="button">Exemples</button>
+      <button class="button" @click="openExampleParentalite">Exemples</button>
       <button class="button">Nos besoins</button>
       <button class="button">Recrutement</button>
     </div>
@@ -119,16 +119,53 @@
 </UCard>
 
   </div>
+  <USlideover v-model="slideoverStore.isOpen" class="uslideoverwrapper" >
+      <component :is="slideoverStore.contentComponent" />
+    </USlideover>
 </template>
 
 <script setup>
+import { useSlideoverStore } from '@/stores/slideover';
+import ExempleCreche from '@/components/projects/exemplecreche.vue';
+import BesoinsCreche from '@/components/projects/besoinscreche.vue';
+import RecrutementCreche from '@/components/projects/recrutementcreche.vue';
+import ExempleEcole from '@/components/projects/exempleecole.vue';
+import BesoinsEcole from '@/components/projects/besoinsecole.vue';
+import RecrutementEcole from '@/components/projects/recrutementecole.vue';
+import ExempleParentalite from '@/components/projects/exempleparentalite.vue';
 
+// Directement utiliser le store importé sans redéclaration
+const slideoverStore = useSlideoverStore();
+
+function openExampleCreche() {
+  slideoverStore.openSlideover(ExempleCreche);
+}
+function openBesoinsCreche() {
+  slideoverStore.openSlideover(BesoinsCreche);
+}
+function openRecrutementCreche() {
+  slideoverStore.openSlideover(RecrutementCreche);
+}
+function openExampleEcole() {
+  slideoverStore.openSlideover(ExempleEcole);
+}
+function openBesoinsEcole() {
+  slideoverStore.openSlideover(BesoinsEcole);
+}
+function openRecrutementEcole() {
+  slideoverStore.openSlideover(RecrutementEcole);
+}
+function openExampleParentalite() {
+  slideoverStore.openSlideover(ExempleParentalite);
+}
 </script>
+
 
 <style scoped>
 .wrapper {
   @apply bg-family-hero bg-cover bg-center h-64 flex items-center justify-center bg-black bg-opacity-50;
 } 
+
 .bg-family-hero {
   background-image: url('/wallpaper.png');
 }

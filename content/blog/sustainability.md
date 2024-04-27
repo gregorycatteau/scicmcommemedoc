@@ -9,6 +9,7 @@ image: "/resilience2.png"
 slug: "cultiver-la-resilience-strategies-adaptatives"
 readingTime: "5 minutes"
 published: true
+page: "sustainability"
 ---
 
 # Cultiver la Résilience : Pourquoi les Stratégies Adaptatives sont notre Avenir

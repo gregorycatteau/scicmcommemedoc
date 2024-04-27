@@ -1,22 +1,26 @@
-<template >
+<template>
   <div class="wrapper">
     <Firstherosection />
     <Introductionsection />
     <Process />
-    index depuis zéro
   </div>
 </template>
+
 <script>
-import  Firstherosection from '~/components/firstherosection.vue';
-import  Introductionsection from '~/components/introductionsection.vue';
+import Firstherosection from '~/components/firstherosection.vue';
+import Introductionsection from '~/components/introductionsection.vue';
 import Process from '~/components/process.vue';
-
-
 </script>
+
 <style scoped>
+.wrapper {
+  @apply flex flex-col items-center justify-center min-h-screen mx-auto gap-y-8;
+  animation: fadeIn 1s ease-out;
+}
+@media (max-width: 640px) {
   .wrapper {
-    @apply flex flex-col items-center justify-center max-w-screen-2xl mx-auto rounded-xl gap-8;
-    
-    animation: fadeIn 1s ease-out;
+    @apply gap-y-4 px-4;
   }
+}
 </style>
+

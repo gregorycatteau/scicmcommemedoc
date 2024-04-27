@@ -25,9 +25,13 @@ export default <Partial<Config>>{
       opacity: ['disabled'],
     },
   },
+  corePlugins: {
+    aspectRatio: false,
+  },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
     // ...
   ],
 }

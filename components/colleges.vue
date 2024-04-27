@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6">
+  <div class="table-wrapper">
     <UTable :columns="columns" :rows="colleges">
       <template #row="{ row, index }">
         <tr :class="rowClass(row, index)">
@@ -12,9 +12,10 @@
     </UTable>
   </div>
 </template>
+
 <script setup lang="ts">
 import { ref } from 'vue';
-
+const rowClass= ref('');
 const colleges = ref([
   { category: 'Bénéficiaires', college:'Bénéficiaires directs',type: 'Clients internes sans contrepartie d\'implication active', description: '1 part pour individu, 2 parts pour un foyer' },
   { category: 'Bénéficiaires', college:'Consom\'acteurs', type: 'Bénéficiaires avec implication active', description: '2 parts pour participation' },
@@ -37,16 +38,29 @@ const columns = ref([
 ]);
 </script>
 <style scoped>
+.table-wrapper {
+  @apply overflow-x-auto; /* Permet le défilement horizontal sur petits écrans */
+}
 
 tr {
   @apply border-b border-gray-200 bg-scicgreen;
 }
 
 tr:hover {
-  background-color: #f3f4f6; /* Light gray background on hover */
+  @apply bg-gray-100; /* Utiliser Tailwind pour le survol */
 }
 
 td {
-  border-bottom: 1px solid #ddd; /* Adds a bottom border to all cells */
+  @apply border-b border-gray-300;
+}
+
+@media (max-width: 640px) {
+  td {
+    @apply p-2 text-sm; /* Réduire le padding et la taille du texte pour les mobiles */
+  }
+  .heading, .footing {
+    @apply text-xs; /* Réduire la taille des en-têtes pour les petits écrans */
+  }
 }
 </style>
+

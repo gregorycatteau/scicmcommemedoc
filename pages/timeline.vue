@@ -8,17 +8,15 @@
      
  
 
-   <Worldstorytest />
+   <Worldstorytest2 />
     
     <!-- Pied de page / Navigation -->
-    <div class="footer text-center mt-10">
-      <UButton class="bg-scicorange text-white">Revenir en arrière</UButton>
-    </div>
+    
   </div>
 </template>
 
 <script>
-import Worldstorytest from '~/components/worldstorytest.vue';
+import Worldstorytest from '~/components/worldstorytest2.vue';
 
 </script>
 

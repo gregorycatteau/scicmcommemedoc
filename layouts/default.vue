@@ -1,6 +1,6 @@
 <template class="global">
   <header class="heading">
-    <uppernavbar />
+    <globalnavigation />
   </header>
 
   <main class="main">
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import uppernavbar from '~/components/uppernavbar.vue';
+import Globalnavigation from '~/components/globalnavigation.vue';
 import FooterComponent from '~/components/footercomponent.vue';
 </script>
 <style scoped>

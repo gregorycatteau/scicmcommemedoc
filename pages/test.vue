@@ -1,19 +1,13 @@
-<template>
- 
-  
-  <div>
-   
-    <Worldstorytest />
+<template >
+  <div class="wrapper">
+   <Globalnavigation />
   </div>
 </template>
-
-<script setup>
-
-
-import Worldstorytest from '~/components/worldstorytest.vue';
-
+<script setup lang="ts">
+import Globalnavigation from '~/components/globalnavigation.vue';
 </script>
-
-<style>
-  
+<style scoped>
+  .wrapper {
+    @apply mt-20
+  }
 </style>

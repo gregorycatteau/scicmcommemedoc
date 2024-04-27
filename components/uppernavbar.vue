@@ -5,12 +5,12 @@
 <nav class="mainwrapper">
   <div class="secondwrapper">
   
-      <NuxtLink to="/" class="title">M Comme Médoc</NuxtLink>
+      <NuxtLink to="/" class="title"><span class="lettering">M</span> Comme Médoc</NuxtLink>
       
       
   
   <div class="separator">
-      <button type="button" class="button">S'impliquer</button>
+      <button class="button" @click="gotoImplication">S'impliquer</button>
       <button data-collapse-toggle="navbar-sticky" type="button" class="toggler" aria-controls="navbar-sticky" aria-expanded="false">
         <span class="sr-only">Ouvrir le menu principal</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -29,14 +29,27 @@
       <li class="itemlist">
         <NuxtLink to="/timeline" class="link">Historique</NuxtLink>
       </li>
-
+      <li class="itemlist">
+        <NuxtLink to="/projects" class="link">Projets</NuxtLink>
+      </li>
+      <li class="itemlist">
+        <NuxtLink to="/listing" class="link">Blog</NuxtLink>
+      </li>
     </ul>
   </div>
   </div>
 </nav>
 </template>
 <script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+function gotoImplication() {
+  router.push('/implication');
+}
 </script>
+
 <style scoped>
 .mainwrapper {
   @apply bg-scicgreen fixed w-full z-20 top-0 start-0 border-b border-scicblue  ;
@@ -47,6 +60,9 @@
 .title {
   @apply text-white  text-4xl;
   font-family: Permanent Marker;
+}
+.lettering {
+  @apply text-scicorange;
 }
 .separator {
   @apply flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse;

@@ -192,7 +192,7 @@ onMounted(() => {
 
 <style scoped>
 .wrapper {
-  @apply mt-20 p-4 gap-10;
+  @apply  mt-20 p-4 gap-10;
 }
 .internalwrapper {
   @apply gap-10;
@@ -272,5 +272,28 @@ onMounted(() => {
 .links {
   @apply text-scicorange ;
   font-family: "Lora", serif;
+}
+@media (max-width: 640px) {
+  .wrapper, .internalwrapper {
+    @apply flex flex-col gap-4 overflow-x-hidden;
+  }
+  .internalorganizer {
+    @apply flex-col gap-4;
+  }
+  .wordwrapper {
+    @apply text-xl; /* Taille de texte réduite pour les mots */
+  }
+  .heroimage {
+    @apply w-full; /* Pleine largeur pour les images sur mobile */
+  }
+  .ucarding {
+    @apply w-full; /* Carte pleine largeur sur petits écrans */
+  }
+  .title1, .subtitle {
+    @apply text-2xl; /* Taille de texte réduite pour les titres */
+  }
+  .developpement {
+    @apply text-sm p-2; /* Texte plus petit et padding ajusté */
+  }
 }
 </style>

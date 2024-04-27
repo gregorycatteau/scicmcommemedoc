@@ -9,6 +9,7 @@ image: "/volatilite.png"
 slug: "martine-et-jean-naviguer-dans-les-eaux-turbulentes"
 readingTime: "5 minutes"
 published: true
+page: "volatility"
 ---
 
 **Martine et Jean : Naviguer dans les Eaux Turbulentes de la Volatilité**
