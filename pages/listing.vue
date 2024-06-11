@@ -1,18 +1,32 @@
 <template>
-  <div class="blog-page-container">
-    <Articlesfilter />
-    <Articleslist />
+  <div class="blog-page-container">  
+    <BlogBlogherosection class="hero" />
+    <div class="content-wrapper">
+    
+      <BlogFilteraccordion class="filters" />
+      <BlogArticleslist class="articles" />
+    </div>
   </div>
 </template>
 
 <script setup>
-// Importer le composant ArticlesList
-import Articleslist from '~/components/blog/articleslist.vue';
-import Articlesfilter from '~/components/blog/articlesfilter.vue';
+
 </script>
 
 <style scoped>
 .blog-page-container {
-  @apply mt-20 p-4 bg-gray-100; 
+  @apply  p-4 bg-gray-100;
+}
+
+.content-wrapper {
+  @apply flex;
+}
+
+.filters {
+  @apply w-1/4;
+}
+
+.articles {
+  @apply w-3/4;
 }
 </style>

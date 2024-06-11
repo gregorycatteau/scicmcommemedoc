@@ -2,20 +2,21 @@
   <section class="service-section">
 
     <div class="main-feature-item">
-      <h3 class="mainpretitle">Nous savons tous que...</h3>
-      <h3 class="maintitle">La VIE,<br/><span class="emphaser">Le VIVANT,</span> <br/>sont notre premières richesses... Non ?</h3>
-      <p class="description">Le respect du vivant commence par une prise de conscience profonde de notre interconnexion avec la nature et tous ses habitants. Nous nous engageons à sensibiliser nos communautés au respect de la biodiversité et des ressources naturelles.</p>
+      <h3 class="mainpretitle">Nous nous engageons, considérant que...</h3>
+      <h3 class="maintitle">La VIE,<br/><span class="emphaser">Le VIVANT,</span> <br/>sont notre premières richesses...</h3>
+      <p class="description1">Le respect du vivant commence par une prise de conscience profonde de notre interconnexion avec la nature et tous ses habitants. Nous nous engageons à sensibiliser les habitants de notre territoire au respect de la biodiversité et des ressources naturelles.</p>
       <UButton class="discover-button" @click="isOpenRespect = true">Découvrir</UButton>
     </div>
     <UModal v-model="isOpenRespect" class="modal-respect">
   <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
     <template #header>
-      <h2 class="modal-title">Honorer le Respect du Vivant : Notre Engagement Étape par Étape</h2>
+      <h2 class="main-modal-title">Honorer le Respect du Vivant : <br><span class="titleemphazer">Notre Engagement Étape par Étape</span></h2>
     </template>
 
     <div class="steps-container">
       <div class="step-item">
         <h3 class="step-title">Étape 1 : Prendre conscience</h3>
+        <h3 class="step-title-description"></h3>
         <p class="step-description">
           Le respect du vivant commence par une prise de conscience profonde de notre interconnexion avec la nature et tous ses habitants. Reconnaître que chaque action a un impact sur l'écosystème est fondamental. Nous nous engageons à sensibiliser nos communautés, en partageant des connaissances et en éduquant sur l'importance de préserver la biodiversité et les ressources naturelles. Cet éveil collectif est le premier pas vers un territoire conscient et respectueux du vivant.
         </p>
@@ -46,7 +47,11 @@
     <template #footer>
       <div class="modal-footer">
         <p class="call-to-action">L'appel est lancé : rejoignez-nous dans cet engagement profond pour le respect du vivant. Ensemble, engageons-nous à protéger notre environnement, à préserver la biodiversité et à assurer un avenir durable pour les générations futures.</p>
-        <UButton class="action-button">Participer à l'Engagement</UButton>
+        <div class="calltoactionorgoback">
+        
+        <NuxtLink to="/implication" class="action-button">Participer à l'Engagement</NuxtLink>
+        <button class="returnbutton" @click="isOpenRespect = false">Revenir</button>
+        </div>
       </div>
     </template>
   </UCard>
@@ -54,20 +59,26 @@
 
     <div class="features">
       <div class="feature-item">
+        <div class="titlegrouper">
         <span class="icon">🍃</span>
-        <h3 class="title">Vivants <br/>et <br/>Résilients</h3>
-        <p class="description">Nous avons désormais besoin de réfléchir notre territoire en terme de résilience. De trouver des solutions souples et robustes qui plient dans le sens du vent sans jamais...<br/> Se rompre.</p>
+        <h3 class="title">Vivants et Résilients</h3>
+      </div>
+        <p class="description">Nous avons désormais besoin de réfléchir notre territoire en terme de résilience. De trouver des solutions souples et robustes qui plient dans le sens du vent sans jamais... Se rompre.</p>
         <UButton class="discover-button" @click="isOpenLiving = true">Devenir Résilients</UButton>
       </div>
       <div class="feature-item">
+        <div class="titlegrouper">
         <span class="icon">❤️</span>
-        <h3 class="title">Solidaires<br/> et <br/>Collectifs</h3>
+        <h3 class="title">Solidaires et Collectifs</h3>
+      </div>
         <p class="description">Les solutions individualistes n'ont plus d'avenir dans un monde qui nécessite l'inclusion en lieu et place de la dispersion. Seuls on va vite,...<br/>Mais ensemble on va beaucoup plus loin.</p>
         <UButton class="discover-button" @click="isOpenSolidarity= true">Agir ensemble</UButton>
       </div>
       <div class="feature-item">
+        <div class="titlegrouper">
         <span class="icon">🌱</span>
-        <h3 class="title">Partenaires <br/> et <br/>Acteurs</h3>
+        <h3 class="title">Partenaires et Acteurs</h3>
+      </div>
         <p class="description">Les solutions figées ne fonctionnent plus. Par l'expérimentation et l'essaimage, nous transformons les idées en actions concrètes, semant les graines d'un présent heureux et sain.</p>
         <UButton class="discover-button" @click="isOpenPartners = true">Se mettre en action</UButton>
       </div>
@@ -120,7 +131,10 @@
     <template #footer>
       <div class="modal-footer">
         <p class="call-to-action">Nous invitons chacun à rejoindre ce mouvement de résilience collective.</p>
-        <UButton class="action-button" @click="goBack">Revenir</UButton>
+        <div class="calltoactionorgoback">
+        <NuxtLink to="/implication" class="action-button">S'engager pour la résilience</NuxtLink>
+        <button class="returnbutton" @click="isOpenLiving = false">Revenir</button>
+        </div>
       </div>
     </template>
   </UCard>
@@ -172,7 +186,11 @@
     <template #footer>
       <div class="modal-footer">
         <p class="call-to-action">L'invitation est lancée à tous : devenez acteurs de la transformation de notre territoire.</p>
-        <UButton class="action-button" @click="goBack">Rejoindre l'Élan de Solidarité</UButton>
+       
+        <div class="calltoactionorgoback">
+        <NuxtLink to="/implication" class="action-button">Rejoindre l'élan de solidarité</NuxtLink>
+        <button class="returnbutton" @click="isOpenSolidarity = false">Revenir</button>
+        </div>
       </div>
     </template>
   </UCard>
@@ -226,7 +244,11 @@
     <template #footer>
       <div class="modal-footer">
         <p class="call-to-action">Nous invitons chaque membre de notre territoire à se joindre à cette démarche collaborative.</p>
-        <UButton class="action-button" @click="goBack">Rejoindre l'Élan de Partenariat</UButton>
+       
+        <div class="calltoactionorgoback">
+        <NuxtLink to="/implication" class="action-button">Rejoindre l'élan de Partenariat</NuxtLink>
+        <button class="returnbutton" @click="isOpenPartners = false">Revenir</button>
+        </div>
       </div>
     </template>
   </UCard>
@@ -252,79 +274,137 @@ function goBack() {
 
 <style scoped>
 .service-section {
-  @apply flex flex-col w-full items-center text-center p-6 bg-no-repeat bg-cover bg-center max-w-screen-lg mx-auto rounded-xl shadow-lg;
+  @apply flex flex-col w-screen items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat;
   background-image: url('/vivantorange.png');
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
 @media (max-width: 640px) {
   .service-section {
-    @apply p-4 rounded-lg; /* Padding et arrondis ajustés pour les petits écrans */
+    @apply p-4 rounded-lg;
   }
 }
+
 .main-feature-item {
-  @apply max-w-4xl bg-white bg-opacity-65 p-6 rounded-xl shadow-lg mb-10;
+  @apply p-6 rounded-xl shadow-xl mb-10 text-center;
+  background-color: rgba(4, 59, 22, 0.507)7)% 0% / 0.1);
+  backdrop-filter: blur(10px) hue-rotate(360deg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: c 10s linear infinite;
 }
+
+.mainpretitle, .maintitle {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
 .mainpretitle {
-  @apply text-2xl font-semibold mb-2;
-  font-family: Montserrat;
+  @apply text-3xl font-semibold mb-4;
 }
+
 .maintitle {
-  @apply text-4xl font-bold mb-4;
-  font-family: Display;
+  @apply text-5xl font-bold mb-6;
 }
+
 .emphaser {
-  @apply text-scicpurple text-7xl m-10;
+  @apply text-scicpurple text-7xl text-center;
 }
-.title {
-  @apply text-3xl font-bold mb-4;
-  font-family: Kalnia;
+
+.description, .description1 {
+  @apply text-justify text-lg indent-8 p-4 text-white;
+  font-family: 'Lora', serif;
 }
-.description {
-  @apply mb-6;
-  font-family: Lora;
-}
+
 .features {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-4 mb-6;
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mb-6;
 }
+
 .feature-item {
-  @apply flex flex-col items-center p-4 bg-white bg-opacity-65 rounded-xl shadow-lg;
+  @apply flex flex-col items-center p-6 rounded-xl shadow-xl;
+  background-color: #f191121a;
+  backdrop-filter: blur(10px) hue-rotate(360deg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: c 10s linear infinite;
 }
+
+.titlegrouper {
+  @apply flex items-center justify-center gap-4 p-6 rounded-lg mb-4;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.title {
+  @apply text-2xl font-semibold mb-2 text-white;
+}
+
 .icon {
-  @apply mb-2 text-3xl; /* Ajustez la taille de l'icône selon vos besoins */
+  @apply flex-shrink-0 mb-2 text-3xl h-10 w-10 text-white bg-scicgreen rounded-full bg-opacity-50 p-2;
 }
+
 .call-to-action {
-  @apply mt-6;
+  @apply mt-6 text-lg text-white;
 }
+
 .discover-button, .join-button {
-  @apply mt-4 mx-2 bg-scicgreen text-white font-bold py-2 px-4 rounded hover:bg-scicorange hover:text-white transition-colors;
+  @apply mt-4 mx-2 bg-scicgreen text-white font-bold py-2 px-4 rounded-lg hover:bg-scicorange hover:text-white transition-colors;
 }
-.modal-living {
+
+.modal-living, .modal-solidarity, .modal-partners, .modal-respect {
   @apply max-w-4xl;
 }
+
 .modal-title {
-  @apply text-4xl font-bold mb-4 text-center text-scicgreen p-10 bg-scicblue rounded-lg shadow-lg;
-  font-family: Display;
+  @apply text-4xl font-bold mb-4 text-center p-10 ring-2 ring-white rounded-lg shadow-lg text-scicgreen;
+  font-family: 'Montserrat', sans-serif;
 }
+
 .steps-container {
   @apply space-y-6;
 }
+
 .step-item {
-  @apply bg-scicgreen rounded-lg shadow p-6;
+  @apply ring-2 ring-white rounded-lg shadow-lg p-6;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) hue-rotate(360deg);
+  animation: c 10s linear infinite;
 }
+
 .step-title {
-  @apply text-xl font-semibold mb-2 text-center text-scicpurple bg-white p-2 rounded-lg shadow-lg;
-  font-family: Kalnia;
+  @apply text-xl font-semibold mb-2 text-center p-2 ring-2 ring-white rounded-lg bg-opacity-50;
+  font-family: 'Kalnia', serif;
 }
+
 .step-description {
-  @apply text-lg text-justify text-scicblue indent-8 text-wrap;
-  font-family: Lora;
+  @apply text-lg text-justify indent-8;
+  font-family: 'Lora', serif;
 }
+
 .modal-footer {
   @apply flex flex-col items-center;
 }
+
 .call-to-action {
-  @apply mb-4 text-lg text-scicgreen font-semibold text-center;
+  @apply mb-4 text-lg text-white font-semibold text-center;
 }
-.action-button {
-  @apply bg-scicgreen text-white font-bold py-2 px-6 rounded hover:bg-scicorange transition-colors;
+
+.calltoactionorgoback {
+  @apply flex flex-col items-center gap-4;
+}
+
+.action-button, .returnbutton {
+  @apply bg-scicgreen text-white font-bold py-2 px-6 rounded-lg hover:bg-scicorange transition-colors;
+}
+
+/* Animations */
+@keyframes c {
+  from {
+    backdrop-filter: blur(2vmin) hue-rotate(0deg);
+    -webkit-backdrop-filter: blur(2vmin) hue-rotate(0deg);
+  }
+  to {
+    backdrop-filter: blur(2vmin) hue-rotate(360deg);
+    -webkit-backdrop-filter: blur(2vmin) hue-rotate(360deg);
+  }
 }
 </style>

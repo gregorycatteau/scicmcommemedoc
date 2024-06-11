@@ -1,6 +1,6 @@
 <template >
   <div class="wrapper">
-    lol 
+    <Getinvolved />
   </div>
 </template>
 <script setup lang="fr">

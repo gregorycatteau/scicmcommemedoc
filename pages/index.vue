@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Firstherosection from '~/components/firstherosection.vue';
 import Introductionsection from '~/components/introductionsection.vue';
 import Process from '~/components/process.vue';

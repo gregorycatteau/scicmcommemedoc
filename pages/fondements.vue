@@ -3,13 +3,9 @@
     <fondementcomponent />
   </div>
 </template>
-<script>
+<script setup >
 import fondementcomponentVue from '~/components/fondementcomponent.vue';
-export default {
-  components: {
-    fondementcomponentVue
-  },
-}
+
 </script>
 <style scoped>
 

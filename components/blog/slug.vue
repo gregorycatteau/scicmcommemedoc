@@ -4,7 +4,7 @@
     <ContentDoc path="`/blog/${page}`" v-slot="{ doc, notFound }">
       <header>
         <div class="text-center p-5">
-          <h1 class="text-4xl font-bold lg:w-2/3 mx-auto text-scicgreen">{{ doc.title }}</h1>
+          <h1 class="text-4xl font-bold lg:w-2/3 mx-auto text-scicgreen text-center">{{ doc.title }}</h1>
           <p class="text-gray-500 text-sm mt-2">{{ doc.date }}</p>
         </div>
         

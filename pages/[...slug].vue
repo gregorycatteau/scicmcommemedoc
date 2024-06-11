@@ -1,7 +1,24 @@
 <template>
   <main class="pt-20">
     <ContentDoc
-      class="prose-2xl prose-h1:text-scicgreen prose-h1:text-center prose-h2:text-scicgreen prose-h2:text-center prose-p:text-scicgreen prose-p:text-justify prose-p:text-xl prose-p:indent-8 prose-p:text-gray-800 prose-p:p-10 prose-table:table-fixed prose-table:w-10/12 prose-table:mx-auto prose-table:shadow-lg prose-table:first-line:bg-scicgreen"
+      class="
+      prose-2xl 
+      prose-h1:text-scicgreen 
+      prose-h1:text-center 
+      prose-h2:text-scicblue 
+      prose-h2:text-center 
+     
+      prose-p:text-scicgreen 
+      prose-p:text-justify 
+      prose-p:text-xl 
+      prose-p:indent-8 
+      prose-p:text-red-800 
+      prose-p:p-10 
+      prose-table:table-fixed 
+      prose-table:w-10/12 
+      prose-table:mx-auto 
+      prose-table:shadow-lg 
+      prose-table:first-line:bg-scicgreen"
     />
     <div class="return">
       <Button @click="goBack" class="button">Revenir à l'accueil</Button>

@@ -6,15 +6,10 @@
     
   </div>
 </template>
-<script>
+<script setup>
 import contactcomponent from '~/components/contactcomponent.vue';
 import faqcomponent from '~/components/faqcomponent.vue';
-export default {
-  components: {
-    contactcomponent,
-    faqcomponent
-  }
-}
+
 </script>
 <style scoped>
   .title {

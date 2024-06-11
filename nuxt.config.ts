@@ -1,14 +1,31 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    "@nuxt/ui",
-    "@nuxt/content",
-    "@hypernym/nuxt-anime",
-    // Incluez tous vos modules ici, pas besoin de dupliquer la clé 'modules'
-    "@nuxt/fonts",
-    "@pinia/nuxt"
-  ],
+  modules: ["@nuxt/ui", "@nuxt/content", "@hypernym/nuxt-anime", // Incluez tous vos modules ici, pas besoin de dupliquer la clé 'modules'
+  "@nuxt/fonts", "@pinia/nuxt", '@vueuse/nuxt'],
+  // nuxt.config.ts
+  
+  app: {
+    head: {
+      title: 'M Comme Médoc - Engagez-vous dans l\'économie sociale en Médoc',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'M Comme Médoc, une SCIC dynamique en Médoc, favorise une économie solidaire et durable. Participez à nos projets innovants de développement territorial et social, et engagez-vous à nos côtés pour un territoire plus fort et plus vert. Découvrez comment vous impliquer aujourd\'hui.' },
+        { hid: 'keywords', name: 'keywords', content: 'M Comme Médoc, SCIC, économie sociale, développement territorial, Médoc, coopérative, engagement communautaire, développement durable' },
+        { hid: 'robots', name: 'robots', content: 'index, follow' },
+        { hid: 'og:title', property: 'og:title', content: 'M Comme Médoc - Engagez-vous dans l\'économie sociale en Médoc' },
+        { hid: 'og:description', property: 'og:description', content: 'Rejoignez M Comme Médoc pour promouvoir une économie solidaire en Médoc. Engagez-vous dans nos projets de coopération pour un impact social durable.' },
+        { hid: 'og:url', property: 'og:url', content: 'https://www.mcommemedoc.fr' },
+        { hid: 'og:type', property: 'og:type', content: 'website' }
+      ],
+      link: [
+        { rel: 'canonical', href: 'https://www.mcommemedoc.fr' }
+      ]
+    },
+  },
+
+
   anime: {
     provide: true,
   },

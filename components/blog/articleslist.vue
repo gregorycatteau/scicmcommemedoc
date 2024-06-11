@@ -1,105 +1,123 @@
 <template>
   <div class="articles-list-container">
-    <!-- Utilisez ContentQuery avec des filtres dynamiques basés sur le store Pinia -->
-    <ContentQuery :path="'/blog'" :where="queryFilters" v-slot="{ data: articles, notFound }">
-      <div v-if="articles.length === 0" class="no-articles">
-        Aucun article disponible pour le moment.
-      </div>
-      <div v-else v-for="article in articles" :key="article.slug" class="article-preview">
-        <div class="secondwrapper">
-          <h2 class="article-title">{{ article.title }}</h2>
-          <img :src="article.image" alt="Cover image for article" class="article-image">
-          <p class="articlesummary">{{ article.summary }}</p>
+    <div class="masonry">
+      <ContentQuery :path="'/blog'" :where="queryFilters" v-slot="{ data: articles, notFound }">
+        <div v-if="articles.length === 0 && !notFound" class="no-articles">
+          Aucun article disponible pour le moment.
         </div>
-        <div class="metadata">
-          <span class="date">{{ article.date }}</span>
-          <span class="author">{{ article.author }}</span>
-          <span class="reading-time">{{ article.readingTime }}</span>
+        <div v-if="notFound" class="notfound">
+          <div class="no-articles">
+            Aucun article trouvé.
+          </div>
         </div>
-        <nuxt-link :to="`/blog/${article.page}`" class="read-more">Lire plus</nuxt-link>
-      </div>
-      <div class="notfound">
-        <div class="no-articles">
-          Aucun article trouvé.
+        <div v-else v-for="article in articles" :key="article.slug" class="article-card masonry-item">
+          <div class="card-content">
+            <img :src="article.image" alt="Cover image for article" class="article-image">
+            <div class="category-label">{{ article.category }}</div>
+            <h2 class="article-title">{{ article.title }}</h2>
+            <p class="articlesummary">{{ article.summary }}</p>
+            <div class="metadata">
+              <span class="date">{{ new Date(article.date).toLocaleDateString() }}</span>
+              <span class="author">{{ article.author }}</span>
+            </div>
+            <nuxt-link :to="`/blog/${article.page}`" class="read-more">Lire plus</nuxt-link>
+          </div>
         </div>
-      </div>
-    </ContentQuery>
+      </ContentQuery>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useFiltersStore } from '@/stores/filters';
-  // Assurez-vous que le chemin est correct
+import { ref, computed } from 'vue';
+import { useFiltersStore } from '~/stores/filters';
 
+// Utilisation du store Pinia pour les filtres
 const filtersStore = useFiltersStore();
 
-// Calculer dynamiquement les critères de la requête basée sur les filtres définis
+// Création des filtres dynamiques basés sur le store Pinia
 const queryFilters = computed(() => {
-  const { category, author, tags } = filtersStore.filters;
-  let where = { published: true };
-
-  if (category) {
-    where.category = category;
-  }
-  if (author) {
-    where.author = author;
-  }
-  if (tags && tags.length > 0) {
-    // Assurez-vous que le backend peut gérer la requête avec $contains pour les tableaux
-    where.tags = { $contains: tags };
-  }
-
+  const filters = filtersStore.filters;
+  const where = {};
+  if (filters.category.length) where.category = { $in: filters.category };
+  if (filters.author.length) where.author = { $in: filters.author };
+  if (filters.tags.length) where.tags = { $in: filters.tags };
   return where;
 });
 </script>
 
 <style scoped>
 .articles-list-container {
-  @apply flex flex-col items-center justify-center;
+  @apply p-4;
 }
 
-.no-articles {
-  @apply text-center text-lg text-gray-600;
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 16px;
 }
 
-.article-preview {
-  @apply bg-white p-8 my-10 flex flex-col gap-4 items-center text-center rounded-lg shadow-lg;
+.masonry-item {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
 }
 
-.article-title {
-  @apply text-3xl font-bold text-scicgreen hover:text-scicorange p-10;
+.masonry-item:hover {
+  transform: translateY(-5px);
 }
 
 .article-image {
-  @apply w-full h-48 object-cover rounded-lg;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-top-right-radius: 48px;
+  border-bottom-left-radius: 112px;
+  border-bottom-right-radius: 8px;
+}
+
+.card-content {
+  padding: 16px;
+  position: relative;
+}
+
+.category-label {
+  background-color: #2b8c00;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 4px 8px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.article-title {
+  @apply text-xl font-bold mb-2 mt-4 text-center text-balance;
+}
+
+.articlesummary {
+  @apply text-base text-gray-700 mb-4 text-justify indent-2 text-balance;
 }
 
 .metadata {
-  @apply flex justify-between w-full text-lg text-gray-500;
-}
-.articlesummary
-{
-  @apply text-lg text-scicpurple mt-10;
+  @apply flex flex-row gap-4 text-sm text-gray-500 mb-2 items-center justify-center;
 }
 
 .read-more {
-  @apply mt-4 text-scicgreen text-2xl hover:underline;
-}
-.date {
-  @apply bg-scicgreen text-gray-100 p-4 rounded-2xl shadow-2xl;
-}
-.author {
-  @apply bg-scicgreen text-gray-100 p-4 rounded-2xl shadow-2xl;
-}
-.reading-time {
-  @apply bg-scicgreen text-gray-100 p-4 rounded-2xl shadow-2xl;
-}
-.notfound {
-  @apply text-center text-lg text-gray-600;
-}
-.secondwrapper {
-  @apply flex flex-col items-center justify-center;
+  @apply text-scicgreen text-center hover:underline;
 }
 
+.no-articles, .notfound {
+  @apply text-center text-gray-500 mt-4;
+}
 </style>

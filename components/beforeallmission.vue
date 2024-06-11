@@ -6,7 +6,7 @@
     <template #header>
       <h1 class="maintitle">Vous ne devez plus être seuls pour faire face à :</h1>
     </template>
-    <section class="sectionpair">
+    <section class="sectionpair bg-scicgreen p-4 bg-opacity-35 rounded-2xl shadow-2xl">
       <div class="text-section">
         <h2 class="section-title">Un monde devenu volatile</h2>
         <h3 class="section-subtitle">Quand préparer un budget devient un défi</h3>
@@ -18,7 +18,7 @@
       <img src="/volatilite.png" alt="Illustration of volatility and uncertainty" class="image-section">
     </section>
 
-    <section class="sectionunpair flex flex-col md:flex-row-reverse">
+    <section class="sectionunpair flex flex-col md:flex-row-reverse bg-scicorange p-4 bg-opacity-35 rounded-2xl shadow-2xl ">
       <div class="text-section">
         <h2 class="section-title">Un monde devenu complexe</h2>
         <h3 class="section-subtitle">Et si on y réfléchissait ensemble ?</h3>
@@ -31,7 +31,7 @@
       
     </section>
 
-    <section class="sectionpair flex flex-col md:flex-row">
+    <section class="sectionpair flex flex-col md:flex-row bg-scicgreen p-4 bg-opacity-35 rounded-2xl shadow-2xl">
       <div class="text-section">
         <h2 class="section-title">Un monde devenu ambigu</h2>
         <h3 class="section-subtitle">Ecologie ou Egologie ? </h3>
@@ -43,7 +43,7 @@
       <img src="/ambiguite.png" alt="Illustration of ecological ambiguity" class="image-section">
     </section>
 
-    <section class="sectionunpair flex flex-col md:flex-row-reverse">
+    <section class="sectionunpair flex flex-col md:flex-row-reverse bg-scicorange p-4 bg-opacity-35 rounded-2xl shadow-2xl">
       <div class="text-section">
         <h2 class="section-title">Un besoin urgent de Résilience</h2>
         <h3 class="section-subtitle">Développer des Stratégies Adaptatives</h3>
@@ -70,7 +70,7 @@
     </section>
   
   <template #footer>
-      <Button @click="goBack" class="button">Revenir en arrière</Button>
+      <button @click="goBack" class="button">Revenir en arrière</button>
     </template>
     </UCard>
 </template>
@@ -88,7 +88,7 @@ function goBack() {
 
 <style scoped>
 .before-all-mission {
-  @apply text-scicgreen bg-white flex flex-col items-center py-20 px-4 gap-8 w-11/12 m-auto rounded-xl shadow-lg;
+  @apply text-scicgreen bg-white bg-opacity-50 flex flex-col items-center py-20 px-4 gap-8 w-screen m-auto rounded-xl shadow-lg;
 }
 .maintitle {
   @apply text-4xl font-bold text-scicgreen mb-4 font-bold;
@@ -96,16 +96,16 @@ function goBack() {
 }
 
 .section {
-  @apply flex flex-col md:flex-row items-center gap-8 max-w-4xl;
+  @apply flex flex-col md:flex-row items-center gap-8 max-w-7xl;
 }
 .sectionpair {
-  @apply flex flex-col md:flex-row items-center gap-8 max-w-4xl;
+  @apply flex flex-col md:flex-row items-center gap-8 max-w-7xl;
 }
 .sectionunpair {
-  @apply flex flex-col md:flex-row-reverse items-center gap-8 max-w-4xl;
+  @apply flex flex-col md:flex-row-reverse items-center gap-8 max-w-7xl;
 }
 .text-section {
-  @apply flex-1 p-4;
+  @apply flex-1 p-4 text-slate-800;
 }
 
 .image-section {
@@ -135,13 +135,13 @@ function goBack() {
 }
 
 .section-description {
-  @apply mb-4 text-justify indent-8;
+  @apply mb-4 text-justify indent-8 text-slate-900;
   font-family: 'Montserrat', sans-serif;
   @apply text-lg text-opacity-90;
 }
 
 .section-description {
-  @apply text-scicgreen;
+  @apply text-slate-800;
   font-family: 'Lora', serif;
 }
 .buttoncentring {

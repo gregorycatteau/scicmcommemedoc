@@ -31,13 +31,24 @@
 
 
 <script setup lang="ts">
-import { ref, onMounted }from 'vue';
-const parallaxEffect = ref(null);
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+// Spécifier le type comme HTMLDivElement
+const parallaxEffect = ref<HTMLDivElement | null>(null);
 
 onMounted(() => {
-  window.addEventListener('scroll', () => {
-    const offset = window.pageYOffset;
-    parallaxEffect.value.style.backgroundPositionY = offset * 0.5 + 'px';
+  const handleScroll = () => {
+    if (parallaxEffect.value) {
+      const offset = window.scrollY;
+      parallaxEffect.value.style.backgroundPositionY = offset * 0.5 + 'px';
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Nettoyage de l'événement lors du démontage du composant
+  onBeforeUnmount(() => {
+    window.removeEventListener('scroll', handleScroll);
   });
 });
 const points = ref([

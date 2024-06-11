@@ -15,8 +15,8 @@
   </div>
 </template>
 
-<script>
-import Worldstorytest from '~/components/worldstorytest2.vue';
+<script setup>
+import worldstorytest2 from '~/components/worldstorytest2.vue';
 
 </script>
 

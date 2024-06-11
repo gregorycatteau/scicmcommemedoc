@@ -1,7 +1,7 @@
 ---
 title: "Entre Écologie et Égologie : Unissons Nos Forces pour une Cohérence Écologique"
 summary: "Cet article examine les défis des actions écologiques influencées par des intérêts personnels versus collectifs et propose des solutions basées sur la collaboration et la cohésion."
-date: "2023-04-19"
+date: "19/04/2023"
 author: "Gregory Catteau"
 tags: ["écologie", "collaboration", "cohérence écologique"]
 category: "Environnement"

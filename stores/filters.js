@@ -1,4 +1,3 @@
-// stores/filters.js
 import { defineStore } from 'pinia';
 
 export const useFiltersStore = defineStore('filters', {

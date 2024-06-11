@@ -1,16 +1,16 @@
 <template>
-  <main class="max-w-5xl mx-auto pt-10">
+  <main class="max-w-5xl mx-auto pt-20">
     <ContentQuery :path="'/blog/' + $route.params.slug" find="one" v-slot="{ data, notFound }">
       <template v-if="notFound">
         <p class="text-center text-lg text-red-500">Article non trouvé.</p>
       </template>
       <template v-else>
-        <article class="prose prose-2xl prose-green mx-auto text-justify shadow-lg p-10">
-          <h1 class="text-4xl text-center text-scicgreen font-bold my-5">{{ data.title }}</h1>
+        <article class="articleformatter">
+          <h1 class="title">{{ data.title }}</h1>
           <div class="imagewrapper mb-5">
             <img :src="data.image" alt="Image principale de l'article" v-if="data.image" class="max-w-full h-auto mx-auto"/>
           </div>
-          <ContentDoc :document="data" />
+          <ContentDoc :document="data" class="prosing"/>
         </article>
       </template>
     </ContentQuery>
@@ -36,4 +36,49 @@ main {
   display: block;
   margin: 0 auto;
 }
+.articleformatter {
+  @apply pt-20 prose-2xl 
+
+  prose-h2:text-scicgreen 
+  prose-h2:text-center
+  prose-h3:text-scicorange
+  prose-h3:text-center
+  prose-h4:text-scicgreen
+  prose-h4:indent-8
+  prose-blockquote:text-scicblue
+    prose-blockquote:text-center
+    prose-blockquote:text-2xl
+  prose-blockquote:bg-scicgreen
+  prose-blockquote:px-8
+  prose-blockquote:py-2
+  prose-blockquote:rounded-2xl
+  prose-blockquote:shadow-lg
+  
+  prose-blockquote:text-center
+  prose-blockquote:italic
+  
+
+  prose-p:text-lg
+  prose-p:text-justify
+  prose-p:indent-8;
+  
+  
+}
+.title {
+  @apply text-4xl text-center text-scicgreen font-bold my-5;
+}
+.prosing {
+  @apply prose-blockquote:text-scicblue
+    prose-blockquote:text-center
+    prose-blockquote:text-2xl
+  prose-blockquote:bg-scicgreen
+  prose-blockquote:px-8
+  prose-blockquote:py-2
+  prose-blockquote:rounded-2xl
+  prose-blockquote:shadow-lg
+  
+  prose-blockquote:text-center
+  prose-blockquote:italic;
+}
+
 </style>
