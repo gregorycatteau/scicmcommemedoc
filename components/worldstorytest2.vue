@@ -133,20 +133,20 @@ const points = ref([
 </script>
 <style scoped>
 .carousel {
-  @apply w-full mx-auto max-w-7xl; /* Max width increased for larger screens */
+  @apply w-full m-auto max-w-7xl h-screen; /* Max width increased for larger screens */
 }
 
 .card-wrapper {
-  @apply relative flex flex-col md:flex-row items-stretch bg-white shadow-lg rounded-lg overflow-hidden; /* More shadow for depth */
+  @apply relative flex flex-col md:flex-row items-stretch bg-transparent shadow-lg rounded-lg overflow-hidden h-96; /* More shadow for depth */
 }
 
 .wrapperucard {
-  @apply flex flex-col md:flex-row items-stretch p-6 gap-6; /* Increased padding and gap, responsive layout */
+  @apply flex flex-col md:flex-row items-stretch p-6 gap-6 w-10/12 m-auto h-auto; /* Increased padding and gap, responsive layout */
 }
 
 /* Parallax Background */
 .content-card {
-  @apply relative flex-grow overflow-hidden;
+  @apply relative flex-grow overflow-hidden opacity-75;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -168,7 +168,7 @@ const points = ref([
 }
 
 .description {
-  @apply text-lg mb-4 text-gray-800 leading-relaxed text-justify indent-8; /* Smaller text for description with a lighter color for hierarchy and relaxed leading for better readability */
+  @apply text-sm mb-4 text-gray-800 leading-relaxed text-justify indent-8; /* Smaller text for description with a lighter color for hierarchy and relaxed leading for better readability */
   font-family:'Lora', serif; /* Custom font */
 }
 

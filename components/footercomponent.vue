@@ -61,18 +61,13 @@
   </footer>
 </template>
 
-
-
-
 <script setup>
-
-
-
+// Empty setup for now
 </script>
 
 <style scoped>
 .mainwrapper {
-  @apply bg-scicgreen w-full bottom-0 left-0 right-0 z-20 py-4 scroll-m-20;
+  @apply bg-scicgreen w-full bottom-0 left-0 right-0 z-20 py-4 sticky;
 }
 
 .secondarywrapper {

@@ -1,10 +1,14 @@
 <template>
-  <div class="wrapper">
-    page habitat
-  </div>
+  <section class="wrapper">
+    <buildingintrosection />
+    <buildingobjectives />
+    <buildinginitiatives />
+  </section>
 </template>
 <script setup lang="ts">
-
+import buildingintrosection from '@/components/projects/building/buildingintrosection.vue';
+import buildingobjectives from '@/components/projects/building/buildingobjectives.vue';
+import buildinginitiatives from '@/components/projects/building/buildinginitiatives.vue';
 </script>
 <style scoped>
   .wrapper {

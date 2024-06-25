@@ -1,7 +1,11 @@
 <template>
-  <div class="mainwrapper">
-    <h1 class="title">Découvrez les Fondements Innovants de la SCIC M Comme Médoc</h1>
 
+  <div class="mainwrapper">
+   <ClientOnly>
+    <DiscoveryNeuralnoise/>
+   </ClientOnly>
+    <h1 class="title">Découvrez les Fondements Innovants de la SCIC M Comme Médoc</h1>
+    
     <p class="meta-description">
       Rejoignez-nous pour explorer les fondements uniques de la SCIC M Comme Médoc - une coopérative dédiée à l'innovation sociale, à la durabilité et à l'impact communautaire.
     </p>
@@ -16,7 +20,7 @@
       <p class="description">
         La SCIC M Comme Médoc est née d'une vision simple mais puissante : créer une économie plus juste et plus durable. Nos fondements reposent sur le principe de responsabilité sociale, économique et environnementale. Nous croyons fermement que les entreprises peuvent prospérer tout en ayant un impact positif sur la société et la planète.
       </p>
-
+      
       <h2 class="subtitle">La Coopération au Cœur de Notre Structure</h2>
       <p class="description">
         Au cœur de la SCIC M Comme Médoc se trouve l'engagement envers une structure coopérative et démocratique. Chez nous, chaque associé, qu'il soit une personne physique ou morale, a une voix égale dans la prise de décision, reflétant notre engagement envers <span><NuxtLink to="/gouvernance" class="link">la démocratie participative et la gestion inclusive.

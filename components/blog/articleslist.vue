@@ -29,16 +29,14 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { computed } from 'vue';
 import { useFiltersStore } from '~/stores/filters';
 
-// Utilisation du store Pinia pour les filtres
 const filtersStore = useFiltersStore();
 
-// Création des filtres dynamiques basés sur le store Pinia
 const queryFilters = computed(() => {
   const filters = filtersStore.filters;
-  const where = {};
+  const where = { published: true };
   if (filters.category.length) where.category = { $in: filters.category };
   if (filters.author.length) where.author = { $in: filters.author };
   if (filters.tags.length) where.tags = { $in: filters.tags };
@@ -61,7 +59,6 @@ const queryFilters = computed(() => {
 .masonry-item {
   display: flex;
   flex-direction: column;
-  background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;

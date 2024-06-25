@@ -201,11 +201,11 @@
       <template #header>
         <div class="modaltitlewrapper">
           <p class="sumupmodaltitle">Résumons notre échange</p>
-          <p class="modalsummary">D'après votre saisie, il semble que vous vous intéressiez à la SCIC M Comme Médoc en tant que :</p>
+          <p class="modalsummary">D'après votre saisie, l'aventure M Comme Médoc semble vous intéresser</p>
           <h2 class="membershipoption">{{ selectedMembership && selectedMembership.title }}</h2>
-          <p class="modalsummary">Vous avez également mentionné que vous souhaitiez :</p>
+          <p class="modalsummary">Vous avez donc pour ambition de prendre votre place au sein de M Comme Médoc.</p>
           <h2 class="membershipoption">{{ selectedMembership && selectedMembership.description }}</h2>
-          <p class="modalsummary">Dans ce cas, votre collège d'appartenance serait celui des :</p>
+          <p class="modalsummary">Dans votre cas, votre collège d'appartenance serait celui des :</p>
           <div class="membershipoption">{{ selectedMembership && selectedMembership.collegeName }}</div>
         </div>
       </template>
@@ -232,6 +232,10 @@
       <template #footer>
         <div class="h-8"></div>
       </template>
+      <div class="buttonwrapper">
+      <NuxtLink to="/test" class="validationbutton">Poursuivre la demande d'adhésion</NuxtLink>
+      <button class="cancelbutton">Revenir</button>
+    </div>
     </UCard>
   </UModal>
 </template>
@@ -440,6 +444,9 @@ color: #F26612;
 .modaltitlewrapper {
   @apply p-4 bg-slate-50 shadow-lg shadow-[scicgreen] rounded-2xl;
 }
+.beneficelist {
+  @apply text-justify text-scicorange my-4 p-4 indent-2 list-disc list-outside;
+}
 .sumupmodaltitle {
   @apply text-center text-scicgreen bg-slate-100 p-4 rounded-2xl text-balance text-2xl font-semibold shadow-lg;
 }
@@ -448,6 +455,18 @@ color: #F26612;
 }
 .membershipoption {
   @apply text-center text-scicgreen bg-slate-100 p-4 rounded-2xl text-balance text-2xl font-semibold shadow-lg;
+}
+.membershipcondition {
+  @apply text-justify text-scicorange my-4 p-4 indent-2;
+}
+.buttonwrapper {
+  @apply flex justify-between w-full  gap-4;
+}
+.validationbutton {
+  @apply bg-scicgreen text-white font-semibold py-2 px-4 rounded hover:bg-scicorange focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50;
+}
+.cancelbutton {
+  @apply bg-scicorange text-white font-semibold py-2 px-4 rounded hover:bg-scicpurple focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50;
 }
 </style>
 

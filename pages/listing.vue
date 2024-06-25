@@ -9,13 +9,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 </script>
 
 <style scoped>
 .blog-page-container {
-  @apply  p-4 bg-gray-100;
+  @apply  p-4 bg-transparent;
 }
 
 .content-wrapper {

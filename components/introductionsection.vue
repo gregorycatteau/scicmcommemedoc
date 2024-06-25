@@ -277,7 +277,7 @@ function goBack() {
   @apply flex flex-col w-screen items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat;
   background-image: url('/vivantorange.png');
   background-blend-mode: multiply;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(53, 161, 20, 0.5);
 }
 
 @media (max-width: 640px) {
@@ -288,27 +288,29 @@ function goBack() {
 
 .main-feature-item {
   @apply p-6 rounded-xl shadow-xl mb-10 text-center;
-  background-color: rgba(4, 59, 22, 0.507)7)% 0% / 0.1);
+  background-color: rgba(13, 233, 86, 0.507)7)% 0% / 0.1);
   backdrop-filter: blur(10px) hue-rotate(360deg);
   border: 1px solid rgba(255, 255, 255, 0.2);
   animation: c 10s linear infinite;
 }
 
 .mainpretitle, .maintitle {
-  font-family: 'Montserrat', sans-serif;
+  @apply text-3xl skew-x-3 opacity-80;
   color: white;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .mainpretitle {
-  @apply text-3xl font-semibold mb-4;
+  @apply text-3xl  mb-4 skew-x-3;
 }
 
 .maintitle {
-  @apply text-5xl font-bold mb-6;
+  @apply text-5xl  mb-6 skew-x-3;
 }
 
 .emphaser {
-  @apply text-scicpurple text-7xl text-center;
+  @apply text-scicyellow text-7xl text-center skew-x-3;
+  font-family: 'Permanent Marker', cursive;
 }
 
 .description, .description1 {
@@ -339,7 +341,7 @@ function goBack() {
 }
 
 .icon {
-  @apply flex-shrink-0 mb-2 text-3xl h-10 w-10 text-white bg-scicgreen rounded-full bg-opacity-50 p-2;
+  @apply flex mb-2 text-3xl h-10 w-10 text-white bg-scicgreen rounded-full bg-opacity-50 items-center justify-center p-10;
 }
 
 .call-to-action {

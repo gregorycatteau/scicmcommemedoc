@@ -1,10 +1,14 @@
 <template>
-  <div class="wrapper">
-    page santé
-  </div>
+  <section class="wrapper">
+    <healthintrosection />
+    <healthobjectives />
+    <healthinitiatives />
+  </section>
 </template>
 <script setup lang="ts">
-
+import healthintrosection from '@/components/projects/health/healthintrosection.vue';
+import healthobjectives from '@/components/projects/health/healthobjectives.vue';
+import healthinitiatives from '@/components/projects/health/healthinitiatives.vue';
 </script>
 <style scoped>
   .wrapper {

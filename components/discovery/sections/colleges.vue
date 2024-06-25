@@ -2,7 +2,7 @@
   <div class="table-wrapper">
     <UTable :columns="columns" :rows="colleges">
       <template #row="{ row, index }">
-        <tr class="rowClass(row, index)">
+        <tr :class="getRowClass(row, index)">
           <td class="p-4">{{ row.category }}</td>
           <td class="p-4">{{ row.college }}</td>
           <td class="p-4">{{ row.type }}</td>
@@ -15,7 +15,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const rowClass= ref('');
+
 const colleges = ref([
   { category: 'Bénéficiaires', college:'Bénéficiaires directs',type: 'Clients internes sans contrepartie d\'implication active', description: '1 part pour individu, 2 parts pour un foyer' },
   { category: 'Bénéficiaires', college:'Consom\'acteurs', type: 'Bénéficiaires avec implication active', description: '2 parts pour participation' },
@@ -30,20 +30,24 @@ const colleges = ref([
 ]);
 
 const columns = ref([
-  { key: 'category', label: 'Catégorie de Sociétaires', class: 'text-center pl-4  text-bold p-4' },
-  { key: 'college', label: 'Collège', class: 'text-center pl-4  text-bold p-4'},
-  { key: 'type', label: 'Description', class: 'text-center pl-4  text-bold p-4' },
+  { key: 'category', label: 'Catégorie de Sociétaires', class: 'text-center pl-4 text-bold p-4' },
+  { key: 'college', label: 'Collège', class: 'text-center pl-4 text-bold p-4'},
+  { key: 'type', label: 'Description', class: 'text-center pl-4 text-bold p-4' },
   { key: 'description', label: 'Parts Sociales Minimales', class: 'pl-4 text-bold p-4' },
-  
 ]);
+
+function getRowClass(row: any, index: number) {
+  return '';
+}
 </script>
+
 <style scoped>
 .table-wrapper {
   @apply overflow-x-auto p-10; /* Permet le défilement horizontal sur petits écrans */
 }
 
 tr {
-  @apply border-b border-gray-200 ;
+  @apply border-b border-gray-200;
 }
 
 tr:hover {

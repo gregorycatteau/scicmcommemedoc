@@ -16,6 +16,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/nuxt": "^10.9.0",
     "nuxt": "^3.11.2",
+    "nuxt-mail": "^5.0.1",
     "vue": "^3.3.13",
     "vue-router": "^4.2.5"
   },

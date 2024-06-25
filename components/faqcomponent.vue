@@ -32,6 +32,7 @@ const items = [{
 </script>
 
 <template>
+  <h2 class="text-3xl text-center font-bold text-scicgreen dark:text-white mt-8 mb-4">Foire aux questions</h2>
   <UAccordion :items="items" class="w-8/12 m-auto bg-slate-50 p-3">
     <template #item="{ item }">
       <p class="italic text-gray-900 dark:text-white text-center">
@@ -41,7 +42,7 @@ const items = [{
 
     <template #getting-started>
       <div class="text-gray-900 dark:text-white text-center">
-        <Logo class="w-auto h-8 mx-auto" />
+        
 
         <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
           "M comme Médoc" est une SCIC dédiée à la promotion et à la valorisation des produits et services du Médoc, avec un accent particulier sur le développement durable et l'implication communautaire.

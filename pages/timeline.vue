@@ -1,5 +1,6 @@
-<template>
+<template> <DiscoveryNeuralnoise />
   <div class="timeline-container">
+   
     <!-- En-tête -->
     <div class="header ">
       <h1 class="title">Ce que nous avons compris par l'action et l'implication</h1>
@@ -25,7 +26,7 @@ import worldstorytest2 from '~/components/worldstorytest2.vue';
   @apply flex flex-col items-center gap-10;
 }
 .header {
-  @apply shadow-lg rounded-xl bg-scicgreen p-10 text-center rounded-xl mt-20;
+  @apply shadow-lg rounded-xl bg-scicgreen p-10 text-center rounded-xl mt-20 bg-opacity-75;
 }
 .title {
   @apply text-4xl font-semibold text-scicyellow mb-4;

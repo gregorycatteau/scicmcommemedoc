@@ -1,42 +1,29 @@
 <template>
-  <div class="wrapper" ref="el">
-    <div class="sticky-buttons" :class="{ 'hidden-buttons': isHidden }">
-      <div class="flex justify-center space-x-4 my-4 bg-white bg-opacity-20">
-        <button v-for="pole in poles" :key="pole" @click="scrollToPole(pole)" :class="{ 'bg-scicpurple text-scicgreen': selectedPole === pole }" class="bg-scicgreen text-scicblue shadow px-6 py-2 rounded hover:bg-scicorange hover:text-scicblue transition-colors">
-          {{ pole }}
-        </button>
-      </div>
-    </div>
-
-    <main class="main">
-      <section v-for="(pole, index) in poles" :key="index" :id="poleId(pole)" :ref="el => (sections[pole] = el)" class="section">
-        <figure class="image-container" :class="getHeroClass(pole)">
-          <img :src="getHeroImage(pole)" :alt="pole" />
-        </figure>
-        <article class="content">
-          <h2 class="section-title">{{ getHeroTitle(pole) }}</h2>
-          <component :is="getComponentName(pole)" />
-        </article>
-      </section>
-    </main>
-    
-    <button @click="scrollToTop" class="scroll-to-top fixed bottom-4 right-4 bg-scicgreen text-scicblue shadow p-4 rounded-full hover:bg-scicorange hover:text-scicblue transition-colors">
-      ↑
-    </button>
-  </div>
+  <main>
+    <section v-for="(pole, index) in poles" :key="index" :id="poleId(pole)" :ref="el => (sections[pole] = el)" class="section">
+      <figure class="image-container" :class="getHeroClass(pole)">
+        <img :src="getHeroImage(pole)" :alt="pole" class="image-container-image"/>
+      </figure>
+      <article class="content">
+        <h2 class="section-title">{{ getHeroTitle(pole) }}</h2>
+        <component :is="getComponentName(pole)" />
+      </article>
+    </section>
+  </main>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+
+import { ref, onMounted } from 'vue';
 import { usePoleStore } from '~/stores/querypoles';
-import anime from 'animejs/lib/anime.es.js';
 import Family from '@/components/family.vue';
 import Knowledge from '@/components/knowledge.vue';
 import Economy from '@/components/economy.vue';
 import Health from '@/components/health.vue';
 import Building from '@/components/building.vue';
-
-
+definePageMeta({
+  layout: 'projectslayout',
+})
 const store = usePoleStore();
 const poles = [
   'famille',
@@ -45,14 +32,11 @@ const poles = [
   'santé bien être',
   'habitat solidaire'
 ];
-const selectedPole = ref(store.selectedPole || poles[0]);
 const sections = ref({});
-const isHidden = ref(false);
-let lastScrollTop = 0;
-let scrollTimeout = null;
+const selectedPole = ref(store.selectedPole || poles[0]);
 
 function poleId(pole) {
-  return escape(pole.replace(/\s+/g, '-').replace(/[()]/g, '').toLowerCase());
+  return pole.replace(/\s+/g, '-').replace(/[()]/g, '').toLowerCase();
 }
 
 function getHeroImage(pole) {
@@ -99,155 +83,24 @@ function getHeroClass(pole) {
   return classes[pole];
 }
 
-function scrollToPole(pole) {
-  const target = sections.value[pole];
-  if (target) {
-    anime({
-      targets: 'html, body',
-      scrollTop: target.offsetTop,
-      duration: 800,
-      easing: 'easeInOutQuad'
-    });
-    selectedPole.value = pole;
-    store.setSelectedPole(pole);
-  }
-}
-
-function scrollToTop() {
-  anime({
-    targets: 'html, body',
-    scrollTop: 0,
-    duration: 800,
-    easing: 'easeInOutQuad'
-  });
-}
-
 onMounted(() => {
-  const handleScroll = () => {
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-      if (!isHidden.value) {
-        isHidden.value = true;
-        anime({
-          targets: '.sticky-buttons',
-          translateY: -100,
-          duration: 300,
-          easing: 'easeInQuad'
-        });
-      }
-    } else {
-      if (isHidden.value) {
-        if (scrollTimeout) clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(() => {
-          isHidden.value = false;
-          anime({
-            targets: '.sticky-buttons',
-            translateY: 0,
-            duration: 300,
-            easing: 'easeOutQuad'
-          });
-        }, 2000);
-      }
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-  };
-
-  window.addEventListener('scroll', handleScroll);
-
-  onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll);
-  });
-
   store.$subscribe(() => {
     if (store.selectedPole) {
       selectedPole.value = store.selectedPole;
-      scrollToPole(store.selectedPole);
     }
   });
 });
 </script>
 
-
-
-
-
-
-
-
+<script>
+export default {
+  layout: 'projectslayout'
+}
+</script>
 
 <style scoped>
-:root {
-  --scale: 0.1;
-  --space: 8vmin;
-  --font-primary: 'Lato', sans-serif;
-  --font-heading: 'Playfair Display', serif;
-  --main-color: #2b8c00;
-}
-
-.wrapper {
-  margin-top: 140px;
-}
-
-.sticky-buttons {
-  position: sticky;
-  top: 60px;
-  z-index: 1000;
-  background: var(--main-color);
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.hidden-buttons {
-  transform: translateY(-100%);
-}
-
-.page-title {
-  text-align: center;
-}
-
-.header,
-.footer {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-}
-
 .section {
-  transform-origin: center top;
-  transform: scaleY(calc(1 - var(--scale)));
-}
-
-.section > * {
-  transform-origin: center top;
-  transform: scaleY(calc(1 / (1 - var(--scale))));
-}
-
-.section-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: bold;
-  line-height: 1.125;
-  background-color: var(--main-color);
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 2rem;
-}
-
-.content {
-  position: relative;
-  margin: -50vh auto 0;
-  padding: var(--space);
-  max-width: 90ch;
-  width: calc(100% - var(--space));
-  background: hsla(5, 15%, 5%, 0.9);
-  transform-origin: center top;
-  transform: scaleY(calc(1 - var(--scale)));
-}
-
-.content > * + * {
-  margin-top: 2rem;
+  margin-top: 140px;
 }
 
 .image-container {
@@ -262,41 +115,43 @@ onMounted(() => {
 }
 
 .image-container img {
-  display: block;
+ 
+  display: flex;
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  vertical-align : bottom; 
 }
 
-.image-container::before,
-.image-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.25s ease-in-out;
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: bold;
+  line-height: 1.125;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 2rem;
 }
 
-.image-container::before {
-  filter: saturate(0);
-  background: radial-gradient(closest-side, #222, #fff) 0px 0px / 0.75vmin 0.75vmin;
-  background-blend-mode: multiply;
-  filter: saturate(0) brightness(1.25) blur(0.5px) contrast(30);
+.content {
+  position: relative;
+  margin: -50vh auto 0;
+  padding: var(--space);
+  border-radius: 2rem;
+  max-width: 135ch;
+  width: calc(100% - var(--space));
+  background: hsla(128, 87%, 30%, 0.8);
+  transform-origin: center top;
+  transform: scaleY(calc(1 - var(--scale)));
 }
 
-.image-container::after {
-  background: linear-gradient(45deg, #2b8c00, #f26612, #ffbf08, #bf87cc, #b0d9ff);
-  mix-blend-mode: screen;
-}
-
-.image-container:hover::before,
-.image-container:hover::after {
-  opacity: 0;
+.content > * + * {
+  margin-top: 2rem;
 }
 
 .hero-amandine::before {
@@ -324,80 +179,10 @@ onMounted(() => {
   background: var(--bg);
 }
 
-.hero-alexandre::before {
-  background: repeating-radial-gradient(circle at 75% 40%, #333 1px, #fff 1px, #fff 5px, #333 5px, #333 6px), var(--bg);
-  filter: saturate(0) brightness(1.25) blur(0.75px) contrast(30);
-}
-
-.hero-alexandre::after {
-  background: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
-}
-
-.hero-caroline::before {
-  background: repeating-linear-gradient(to bottom, #000 1px, #fff 1px, #fff 5px, #000 5px, #000 6px), var(--bg);
-  filter: saturate(0) brightness(1.25) blur(0.75px) contrast(40);
-}
-
-.hero-caroline::after {
-  background: linear-gradient(45deg, #40e0d0 -25%, #ff8c00, #ff0080 125%);
-}
-
-.hero-david::before {
-  background: repeating-linear-gradient(to bottom, #333 1px, #fff 1px, #fff 6px, #333 6px, #333 7px), repeating-linear-gradient(to right, #333 1px, #fff 1px, #fff 6px, #333 6px, #333 7px), var(--bg);
-  filter: saturate(0) brightness(1.25) blur(0.75px) contrast(30);
-}
-
-.hero-david::after {
-  background: linear-gradient(-45deg, #2bc0e4, #eaecc6);
-}
-
-.title1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  color: #2b8c00;
-  font-family: "Permanent Marker", cursive;
-}
-
-.subtitle {
-  font-size: 2.25rem;
-  font-weight: 600;
-  text-align: center;
-  color: #2b8c00;
-  font-family: "Playfair Display", serif;
-}
-
-.wordwrapper {
-  font-size: 1.5rem;
-  color: #f26612;
-  font-weight: bold;
-  font-style: italic;
-  font-family: "Lora", serif;
-}
-
-.icons {
-  font-size: 3.75rem;
-  color: #2b8c00;
-}
-
-/* Styles pour le bouton de retour en haut de page */
-.scroll-to-top {
-  position: fixed;
-  bottom: 16px;
-  right: 16px;
-  background-color: var(--main-color);
-  color: #2b8c00;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50%;
-  font-size: 24px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.scroll-to-top:hover {
-  background-color: #f26612;
-  color: #2b8c00;
+/* Add necessary styles for hero classes */
+.hero-amandine, .hero-alexandre, .hero-caroline, .hero-david, .hero-eric {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
+

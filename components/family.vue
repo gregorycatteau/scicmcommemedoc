@@ -173,7 +173,7 @@ function openExampleParentalite() {
   @apply text-white text-center text-4xl font-bold;
 }
 .ucardwrapper {
-  @apply bg-white shadow-xl rounded-lg p-6;
+  @apply bg-white shadow-xl rounded-lg p-6 m-8 opacity-90;
 }
 
 .ucardtitle {

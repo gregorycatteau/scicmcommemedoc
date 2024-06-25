@@ -1,5 +1,7 @@
 <template>
   <div class="accordion-container">
+    <Blogtitlecount />
+    <Blogblogsearchbar />
     <div class="accordion-section" v-for="filterType in Object.keys(filterOptions)" :key="filterType">
       <button @click="toggleSection(filterType)" class="accordion-title">
         {{ getFilterLabel(filterType) }}
@@ -37,6 +39,8 @@
 <script setup>
 import { ref, watch, getCurrentInstance } from 'vue';
 import { useFiltersStore } from '~/stores/filters';
+import Blogtitlecount from '@/components/blog/titlecount.vue';
+import Blogblogsearchbar from '@/components/blog/blogsearchbar.vue';
 
 // Utilisation du store Pinia pour gérer l'état global des filtres
 const filtersStore = useFiltersStore();
@@ -128,7 +132,7 @@ watch(filters, (newFilters) => {
 }
 
 .accordion-section {
-  @apply mb-4;
+  @apply mb-4 accent-scicgreen;
 }
 
 .accordion-title {
@@ -152,6 +156,7 @@ label {
   @apply font-medium text-gray-700;
 }
 </style>
+
 
 
 

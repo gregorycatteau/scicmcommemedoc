@@ -1,8 +1,28 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content", "@hypernym/nuxt-anime", // Incluez tous vos modules ici, pas besoin de dupliquer la clé 'modules'
-  "@nuxt/fonts", "@pinia/nuxt", '@vueuse/nuxt'],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/content",
+    // Incluez tous vos modules ici, pas besoin de dupliquer la clé 'modules'
+    "@hypernym/nuxt-anime",
+    "@nuxt/fonts",
+    "@pinia/nuxt",
+    '@vueuse/nuxt',
+    ['nuxt-mail', {
+      message: {
+        to: process.env.EMAIL_TO,
+      },
+      smtp: {
+        host: process.env.SMTP_HOST,
+        port: Number(process.env.SMTP_PORT),
+        auth: {
+          user: process.env.SMTP_USER,
+          pass: process.env.SMTP_PASS,
+        },
+      },
+    }],
+  ],
   // nuxt.config.ts
   
   app: {
