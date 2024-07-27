@@ -12,8 +12,8 @@ export default defineNuxtConfig({
     ['nuxt-mail', {
       message: {
         to: process.env.EMAIL_TO,
-        cc:process.env.EMAIL_CC,
-        bcc: process.env.EMAIL_BCC,
+        cc:process.env.EMAIL_CC || '',
+        bcc: process.env.EMAIL_BCC || '',
       },
       smtp: {
         host: process.env.SMTP_HOST,
