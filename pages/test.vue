@@ -25,21 +25,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, shallowRef } from 'vue';
+import { computed, defineAsyncComponent, onMounted, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { useUserStore } from '@/stores/user';
 import memberships from '@/data/membership';
 
-// Type pour les composants de formulaire
-type FormComponents = {
-  [key: string]: () => Promise<typeof import('*.vue')>;
-};
-
 // Store, router et calculs réactifs
 const router = useRouter();
 const store = useUserStore();
+
 const userType = computed(() => store.userType);
-const userChoice = computed(() => store[`${store.userType}Choice`]);
+const userChoice = computed(() => store[`${userType.value}Choice` as keyof typeof store]);
 
 const membershipDetails = computed(() => {
   if (!userType.value || !userChoice.value) {
@@ -48,37 +44,20 @@ const membershipDetails = computed(() => {
   return memberships[userType.value]?.find(option => option.id === userChoice.value) || null;
 });
 
-// Gestion des composants de formulaire dynamiques avec gestion des erreurs
-const formComponents: FormComponents = {
-  individual: () => import('@/components/involvmentforms/individualform.vue').then(m => m.default).catch(err => {
-    console.error('Erreur lors du chargement du formulaire Individual:', err);
-    return null;
-  }),
-  association: () => import('@/components/involvmentforms/associationform.vue').then(m => m.default).catch(err => {
-    console.error('Erreur lors du chargement du formulaire Association:', err);
-    return null;
-  }),
-  enterprise: () => import('@/components/involvmentforms/societyform.vue').then(m => m.default).catch(err => {
-    console.error('Erreur lors du chargement du formulaire Enterprise:', err);
-    return null;
-  }),
+// Utilisation de defineAsyncComponent pour importer les composants dynamiquement
+const formComponents: { [key: string]: ReturnType<typeof defineAsyncComponent> } = {
+  individual: defineAsyncComponent(() => import('@/components/involvmentforms/individualform.vue')),
+  family: defineAsyncComponent(() => import('@/components/involvmentforms/individualform.vue')),
+  entrepreneur: defineAsyncComponent(() => import('@/components/involvmentforms/entrepreneurform.vue')),
+  association: defineAsyncComponent(() => import('@/components/involvmentforms/associationform.vue')),
+  enterprise: defineAsyncComponent(() => import('@/components/involvmentforms/societyform.vue')),
 };
 
-const currentFormComponent = shallowRef<typeof import('*.vue') | null>(null);
-
-const loadComponent = async () => {
-  if (formComponents[userType.value]) {
-    currentFormComponent.value = await formComponents[userType.value]();
-  } else {
-    currentFormComponent.value = null;
-  }
-};
+const currentFormComponent = computed(() => formComponents[userType.value] || null);
 
 onMounted(() => {
   if (!userType.value || !userChoice.value) {
     router.push('/');
-  } else {
-    loadComponent();
   }
 });
 </script>
@@ -113,3 +92,4 @@ onMounted(() => {
   font-family: 'Lora', 'sans-serif';
 }
 </style>
+

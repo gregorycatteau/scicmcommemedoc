@@ -233,8 +233,8 @@
         <div class="h-8"></div>
       </template>
       <div class="buttonwrapper">
-      <NuxtLink to="/test" class="validationbutton">Poursuivre la demande d'adhésion</NuxtLink>
-      <button class="cancelbutton">Revenir</button>
+      <NuxtLink to="/userinvolved" class="validationbutton">Poursuivre la demande d'adhésion</NuxtLink>
+      <NuxtLink tp="/implication" class="cancelbutton">Revenir</NuxtLink>
     </div>
     </UCard>
   </UModal>

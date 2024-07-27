@@ -23,7 +23,7 @@
       </UForm>
     </div>
     <MailSender v-if="mounted" :formData="state" :onSuccess="onEmailSent" />
-    <gratefulmessage v-if="showModal" @close="showModal = false" />
+    <gratefulMessage v-if="showModal" @close="showModal = false" />
   </div>
 </template>
 

@@ -67,7 +67,7 @@
 
 <style scoped>
 .mainwrapper {
-  @apply bg-scicgreen w-full bottom-0 left-0 right-0 z-20 py-4 sticky;
+  @apply bg-scicgreen w-full bottom-0 left-0 right-0 z-20 py-4 ;
 }
 
 .secondarywrapper {

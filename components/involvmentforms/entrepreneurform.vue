@@ -4,18 +4,17 @@
     <div class="containered">
       <img src="/contact.png" alt="Logo" class="image" />
       <UForm :schema="schema" :state="state" class="schema">
-        
-        <UFormGroup label="Nom de l'entreprise" name="enterprisename" eager-validation>
-          <UInput v-model="state.enterprisename" placeholder="Par exemple : Initiative Médoc" />
+        <UFormGroup label="Nom d'utilisateur" name="username" eager-validation>
+          <UInput v-model="state.username" placeholder="Par exemple : Jean Dupont" />
         </UFormGroup>
-        <UFormGroup label="Représentant légal" name="username" eager-validation>
-          <UInput v-model="state.username" placeholder="Par exemple : Jean Bourseau" />
+        <UFormGroup label="Nom de l'entreprise" name="enterprisename" eager-validation>
+          <UInput v-model="state.enterprisename" placeholder="Par exemple : Dupont&Dupont" />
         </UFormGroup>
         <UFormGroup label="Domaine d'activité" name="activityname" eager-validation>
-          <UInput v-model="state.activityname" placeholder="Par exemple : Fabricant d'initiatives" />
+          <UInput v-model="state.activityname" placeholder="Par exemple : Fabrication de jeux en bois" />
         </UFormGroup>
         <UFormGroup label="Adresse" name="adressname" eager-validation>
-          <UInput v-model="state.adressname" placeholder="Par exemple : 12 rue des Minguets" />
+          <UInput v-model="state.adressname" placeholder="Par exemple : 12 rue des Minguets ou Lieu dit Le chemin rouge" />
         </UFormGroup>
         <UFormGroup label="Code postal" name="postalcode" eager-validation>
           <UInput v-model="state.postalcode" placeholder="Par exemple : 33590" />
@@ -24,7 +23,7 @@
           <UInput v-model="state.cityname" placeholder="Par exemple : Talais" />
         </UFormGroup>
         <UFormGroup label="Email" name="email" eager-validation>
-          <UInput v-model="state.email" placeholder="Par exemple : jean.bourseau@example.com" />
+          <UInput v-model="state.email" placeholder="Par exemple : jean.dupont@example.com" />
         </UFormGroup>
         <UFormGroup label="Numéro de téléphone" name="phone" eager-validation>
           <UInput v-model="state.phone" placeholder="Par exemple : 0123456789" />
@@ -110,6 +109,5 @@ onMounted(() => {
   @apply bg-white opacity-85 p-4 rounded-lg shadow-lg w-9/12 mx-auto;
 }
 </style>
-
 
 

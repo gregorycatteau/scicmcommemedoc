@@ -1,4 +1,4 @@
-<template>
+<<template>
   <div>
     <button @click="sendEmail" class="btn-send" :disabled="isSending">
       <span v-if="!isSending">Envoyer le message</span>
