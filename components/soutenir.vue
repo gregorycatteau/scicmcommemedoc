@@ -14,6 +14,6 @@ export default {
 <style scoped>
 .soutenir-section {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
 }
 </style>
