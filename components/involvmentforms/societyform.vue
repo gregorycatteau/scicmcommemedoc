@@ -8,7 +8,7 @@
         <UFormGroup label="Nom de l'entreprise" name="enterprisename" eager-validation>
           <UInput v-model="state.enterprisename" placeholder="Par exemple : Initiative Médoc" />
         </UFormGroup>
-        <UFormGroup label="Représentant légal" name="username" eager-validation>
+        <UFormGroup label="Représentée par" name="username" eager-validation>
           <UInput v-model="state.username" placeholder="Par exemple : Jean Bourseau" />
         </UFormGroup>
         <UFormGroup label="Domaine d'activité" name="activityname" eager-validation>
