@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
        // Active le crawling des liens pour limiter le nombre de pages pré-rendues
-      routes: ['/']      // Liste les routes spécifiques à pré-rendre
+      routes: []      // Liste les routes spécifiques à pré-rendre
     }
   },
   app: {
