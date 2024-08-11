@@ -4,11 +4,6 @@
 
 [build.environment]
   NODE_VERSION = "18.14.0"
-  
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
-[build.environment]
   EMAIL_CC = "bourseaujenny@live.fr"
   EMAIL_BCC = "charlie.piedferre@gmail.com"
   SMTP_FROM = "nepasrepondre@mcommemedoc.fr"
@@ -17,12 +12,11 @@
   SMTP_PORT = "465"
   SMTP_SECURE = "true"
   SMTP_USER = "direction@mcommemedoc.fr"
-
-# Configuration du prerendering pour Nuxt.js
-[build.environment]
   NITRO_PRERENDER_ROUTES = "/, /discovery, /fondements, /implication, /mission, /projects, /timeline, /contact"
 
-# Désactiver ou limiter le prerendering (Nuxt.js)
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
 [context.production.environment]
   NODE_ENV = "production"
 
