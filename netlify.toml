@@ -12,7 +12,7 @@
   SMTP_PORT = "465"
   SMTP_SECURE = "true"
   SMTP_USER = "direction@mcommemedoc.fr"
-  NITRO_PRERENDER_ROUTES = "/, /discovery, /fondements, /implication, /mission, /projects, /timeline, /contact"
+ 
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
