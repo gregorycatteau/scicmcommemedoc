@@ -1,9 +1,31 @@
 [build]
-  command = "npm run build"
+  command = "NODE_OPTIONS='--max-old-space-size=4096' npm run build"
   publish = "dist"
-
-[build.environment]
-  NODE_OPTIONS = "--max-old-space-size=8192"
+  environment = { 
+    NODE_VERSION = "18.14.0"
+  }
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
+
+[build.environment]
+  # Variables d'environnement supplémentaires
+  EMAIL_CC = "bourseaujenny@live.fr"
+  EMAIL_BCC = "charlie.piedferre@gmail.com"
+  SMTP_FROM = "nepasrepondre@mcommemedoc.fr"
+  SMTP_HOST = "smtp.hostinger.com"
+  SMTP_PASS = "!Mcommemedoc/(12)"
+  SMTP_PORT = "465"
+  SMTP_SECURE = "true"
+  SMTP_USER = "direction@mcommemedoc.fr"
+
+# Optionnel : configuration du prerendering pour Nuxt.js
+[build]
+  command = "NODE_OPTIONS='--max-old-space-size=8192' npm run build"
+
+[build.environment]
+  NITRO_PRERENDER_ROUTES = "/, /discovery, /fondements, /implication, /mission, /projects, /timeline, /contact"
+
+# Optionnel : pour désactiver ou limiter le prerendering (Nuxt.js)
+[context.production.environment]
+  NODE_ENV = "production"

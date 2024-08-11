@@ -26,7 +26,12 @@ export default defineNuxtConfig({
     }],
   ],
   // nuxt.config.ts
-  
+  nitro: {
+    prerender: {
+      crawlLinks: true,  // Active le crawling des liens pour limiter le nombre de pages pré-rendues
+      routes: ['/', '/discovery', '/fondements', '/implication', '/mission', '/projects', '/timeline', '/contact']      // Liste les routes spécifiques à pré-rendre
+    }
+  },
   app: {
     head: {
       title: 'M Comme Médoc - Engagez-vous dans l\'économie sociale en Médoc',
