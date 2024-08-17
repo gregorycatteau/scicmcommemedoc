@@ -68,12 +68,7 @@ export default defineNuxtConfig({
     // Extraire le CSS pour de meilleures performances
    // Optimiser le CSS pour réduire la taille des fichiers
   },
-  nitro: {
-    prerender: {
-       // Active le crawling des liens pour limiter le nombre de pages pré-rendues
-      routes: []      // Liste les routes spécifiques à pré-rendre
-    }
-  },
+ 
   app: {
     head: {
       title: 'M Comme Médoc - Engagez-vous dans l\'économie sociale en Médoc',
