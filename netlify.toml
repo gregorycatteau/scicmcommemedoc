@@ -1,9 +1,11 @@
 [build]
-  command = "NODE_OPTIONS='--max-old-space-size=8192' npm run build"
+  command = "npm run build"
   publish = "dist"
+  base = "."
 
 [build.environment]
   NODE_VERSION = "18.14.0"
+  NODE_ENV = "production"
   EMAIL_CC = "bourseaujenny@live.fr"
   EMAIL_BCC = "charlie.piedferre@gmail.com"
   SMTP_FROM = "nepasrepondre@mcommemedoc.fr"
@@ -12,11 +14,22 @@
   SMTP_PORT = "465"
   SMTP_SECURE = "true"
   SMTP_USER = "direction@mcommemedoc.fr"
- 
+  NPM_FLAGS = "--legacy-peer-deps"  # Ajoute cette ligne si nécessaire pour résoudre des conflits de dépendances
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[context.deploy-preview]
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[context.branch-deploy]
+  command = "npm install && npm run build"
+  publish = "dist"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
 
-[context.production.environment]
-  NODE_ENV = "production"
+[cache]
+  paths = ["node_modules", "package-lock.json"]
 
