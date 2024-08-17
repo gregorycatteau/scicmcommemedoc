@@ -14,7 +14,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.0.6",
     "@tailwindcss/typography": "^0.5.10",
-    "@vueuse/nuxt": "^11.0.0",
+   
     "nuxt-mail": "^5.0.1",
     "vue": "^3.3.13",
     "vue-router": "^4.2.5"
@@ -26,7 +26,8 @@
     "@nuxt/fonts": "0.7.2",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.11.1",
-    "@pinia/nuxt": "latest",
+    "@pinia/nuxt": "latest", 
+    "@vueuse/nuxt": "^11.0.0",
     "@vueuse/core": "^11.0.0",
     "nuxt": "^3.12.4",
     "pinia": "^2.1.7",
