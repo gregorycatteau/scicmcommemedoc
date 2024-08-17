@@ -4,7 +4,7 @@
   base = "."
 
 [build.environment]
-  NODE_VERSION = "18.14.0"
+  NODE_VERSION = "20.11.0"
   NODE_ENV = "production"
   EMAIL_CC = "bourseaujenny@live.fr"
   EMAIL_BCC = "charlie.piedferre@gmail.com"
