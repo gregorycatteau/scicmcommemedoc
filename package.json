@@ -30,5 +30,9 @@
     "@pinia/nuxt": "latest",
     "pinia": "^2.1.7",
     "zod": "^3.22.4"
-  }
+  },
+  "engines": {
+  "node": ">=18.0.0"
 }
+}
+
