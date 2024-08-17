@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         },
       },
     }],
-    "nuxt-mail"
+    
   ],
   
   image: {
