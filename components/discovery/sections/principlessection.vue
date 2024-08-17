@@ -77,11 +77,11 @@ onMounted(() => {
 }
 
 .text-wrapper {
-  @apply text-center relative z-20; /* Assurez-vous que le texte est au-dessus des animations de fond */
+  @apply text-center relative z-20;
 }
 
 .contentplacer {
-  @apply absolute top-1/2 left-1/2 my-10 transform -translate-x-1/2 -translate-y-1/2 p-5 max-w-6xl w-10/12  bg-opacity-80 rounded-lg text-center z-20;
+  @apply absolute top-1/2 left-1/2 my-10 transform -translate-x-1/2 -translate-y-1/2 p-5 max-w-6xl w-10/12 bg-opacity-80 rounded-lg text-center z-20;
 }
 
 .section-title {
@@ -89,7 +89,7 @@ onMounted(() => {
 }
 
 .developpement {
-  @apply text-base leading-relaxed text-scicgreen text-justify indent-2  mb-6;
+  @apply text-base leading-relaxed text-scicgreen text-justify indent-2 mb-6;
   font-family: 'Lora', serif;
 }
 

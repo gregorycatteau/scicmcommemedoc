@@ -1,9 +1,7 @@
 <template>
 
   <div class="mainwrapper">
-   <ClientOnly>
-    <DiscoveryNeuralnoise/>
-   </ClientOnly>
+  
     <h1 class="title">Découvrez les Fondements Innovants de la SCIC M Comme Médoc</h1>
     
     <p class="meta-description">

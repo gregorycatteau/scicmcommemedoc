@@ -2,14 +2,14 @@
   <div class="wrapper">
     <Firstherosection />
     <Introductionsection />
-    <Process />
+   
   </div>
 </template>
 
 <script setup>
 import Firstherosection from '~/components/firstherosection.vue';
 import Introductionsection from '~/components/introductionsection.vue';
-import Process from '~/components/process.vue';
+
 </script>
 
 <style scoped>

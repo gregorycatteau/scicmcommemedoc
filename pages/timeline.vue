@@ -1,4 +1,4 @@
-<template> <DiscoveryNeuralnoise />
+<template> 
   <div class="timeline-container">
    
     <!-- En-tête -->
@@ -17,13 +17,16 @@
 </template>
 
 <script setup>
-import worldstorytest2 from '~/components/worldstorytest2.vue';
+import Worldstorytest2 from '~/components/worldstorytest2.vue';
 
 </script>
 
 <style scoped>
 .timeline-container {
-  @apply flex flex-col items-center gap-10;
+  @apply flex flex-col items-center gap-10 min-h-screen;
+}
+.main {
+  @apply flex flex-grow min-h-screen;
 }
 .header {
   @apply shadow-lg rounded-xl bg-scicgreen p-10 text-center rounded-xl mt-20 bg-opacity-75;

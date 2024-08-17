@@ -2,15 +2,14 @@
   <UCarousel class="carousel" v-slot="{ item }" :items="points" :ui="{ item: 'basis-full' }" arrows>
     <div class="card-wrapper">
       <div class="wrapperucard">
-        
-        <UCard ref="parallaxEffect" class="content-card" :style="{ backgroundImage: 'url(' + item.image + ')' }">
+        <UCard class="content-card" :style="{ backgroundImage: 'url(' + item.image + ')' }">
           <template #header>
             <p class="date">{{ item.date }}</p>
           </template>
-          <div class="content-carding">
+          <div ref="parallaxContent" class="content-carding">
             <h1 class="title">{{ item.title }}</h1>
             <p class="description">{{ item.description }}</p>
-            <div class="content-carding">
+            <div class="content-inner">
               <h2 class="subtitle">{{ item.firstsubtitle }}</h2>
               <p class="description">{{ item.firstdescription }}</p>
               <h2 class="subtitle">{{ item.secondsubtitle }}</h2>
@@ -25,32 +24,11 @@
   </UCarousel>
 </template>
 
-
-
-
-
-
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref } from 'vue';
 
-// Spécifier le type comme HTMLDivElement
-const parallaxEffect = ref<HTMLDivElement | null>(null);
 
-onMounted(() => {
-  const handleScroll = () => {
-    if (parallaxEffect.value) {
-      const offset = window.scrollY;
-      parallaxEffect.value.style.backgroundPositionY = offset * 0.5 + 'px';
-    }
-  };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-
-  // Nettoyage de l'événement lors du démontage du composant
-  onBeforeUnmount(() => {
-    window.removeEventListener('scroll', handleScroll);
-  });
-});
 const points = ref([
   {
     date: "2018-2019",
@@ -112,7 +90,7 @@ const points = ref([
     title: "Lancement Officiel de la SCIC M Comme Médoc",
     image: '/sixthperiod.png',
     firstsubtitle: "Planification du Lancement de la SCIC M Comme Médoc",
-    firstdescription: "Sous réserve de contretemps de dernière minute, la date du 15 juin 2024 est marquée pour le lancement officiel de la SCIC M Comme Médoc. Cette date représente un moment clé pour le projet, symbolisant le début d'une nouvelle ère de gestion coopérative et de développement territorial. Le lancement est l'occasion de mettre en lumière une structure innovante, conçue pour maximiser les bénéfices pour le collectif et pour l'écosystème local.",
+    firstdescription: "Sous réserve de contretemps de dernière minute, la date du 31 août 2024 est marquée pour le lancement officiel de la SCIC M Comme Médoc. Cette date représente un moment clé pour le projet, symbolisant le début d'une nouvelle ère de gestion coopérative et de développement territorial. Le lancement est l'occasion de mettre en lumière une structure innovante, conçue pour maximiser les bénéfices pour le collectif et pour l'écosystème local.",
     secondsubtitle: "Principes Fondateurs de la Nouvelle Structure",
     seconddescription: "Dès son inauguration, la SCIC M Comme Médoc incarnera une approche novatrice, construite sur les principes de sobriété et d'écologie. Partant de zéro, cette structure vise à transformer les idéaux en pratiques concrètes, en restant fidèle à une philosophie qui valorise le minimalisme et l'impact écologique positif. C'est une démarche qui reflète un engagement profond envers le développement durable et responsable.",
     thirdsubtitle: "Anticipation des Premiers Projets Concrets",
@@ -133,53 +111,52 @@ const points = ref([
 </script>
 <style scoped>
 .carousel {
-  @apply w-full m-auto max-w-7xl h-screen; /* Max width increased for larger screens */
+  @apply w-full m-auto max-w-7xl h-screen;
 }
 
 .card-wrapper {
-  @apply relative flex flex-col md:flex-row items-stretch bg-transparent shadow-lg rounded-lg overflow-hidden h-96; /* More shadow for depth */
+  @apply relative flex flex-col md:flex-row items-stretch bg-transparent shadow-lg rounded-lg overflow-hidden h-auto; /* Changement pour h-auto */
 }
 
 .wrapperucard {
-  @apply flex flex-col md:flex-row items-stretch p-6 gap-6 w-10/12 m-auto h-auto; /* Increased padding and gap, responsive layout */
+  @apply flex flex-col md:flex-row items-stretch p-6 gap-6 w-10/12 m-auto;
 }
 
-/* Parallax Background */
 .content-card {
-  @apply relative flex-grow overflow-hidden opacity-75;
+  @apply relative flex-grow overflow-hidden opacity-75 ;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  min-height: 1200px; /* Augmentation de la hauteur minimale */
+  height: 1000px; /* Fixer la hauteur */
+  z-index: 5;
 }
 
-/* Glass effect on the text container */
 .content-carding {
-  @apply flex flex-col justify-between p-4 bg-white/30 backdrop-blur-md rounded-lg border border-white/50 shadow-lg; /* Applying glass effect */
+  @apply flex flex-col justify-between p-4 bg-white/30 backdrop-blur-md rounded-lg border border-white/50 shadow-lg h-full overflow-y-auto relative z-10;
+}
+
+.content-inner {
+  @apply flex flex-col space-y-4;
 }
 
 .date {
-  @apply text-lg md:text-xl font-semibold bg-scicgreen text-white text-center rounded-2xl p-4; /* Responsive font size, bold style */
-  font-family: 'Montserrat', sans-serif; /* Custom font */
+  @apply text-lg md:text-xl font-semibold bg-scicgreen text-white text-center rounded-2xl p-4;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .title {
-  @apply text-xl md:text-4xl font-bold my-2 text-slate-800 text-center; /* Responsive font size, darker text for better readability */
-  font-family: 'Playfair Display', serif; /* Custom font */
+  @apply text-xl md:text-4xl font-bold my-2 text-slate-800 text-center;
+  font-family: 'Playfair Display', serif;
 }
 
 .description {
-  @apply text-sm mb-4 text-gray-800 leading-relaxed text-justify indent-8; /* Smaller text for description with a lighter color for hierarchy and relaxed leading for better readability */
-  font-family:'Lora', serif; /* Custom font */
+  @apply text-sm mb-4 text-black leading-relaxed text-justify indent-8;
+  font-family:'Lora', serif;
 }
 
 .subtitle {
-  @apply font-semibold text-lg text-scicgreen; /* Subtitles with bold and larger text for emphasis */
-  font-family:'Kalnia', serif; /* Custom font */
+  @apply font-semibold text-lg text-scicgreen;
+  font-family:'Kalnia', serif;
 }
-
-
-
 </style>
-
-
-

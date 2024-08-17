@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
     "@nuxt/content",
-    // Incluez tous vos modules ici, pas besoin de dupliquer la clé 'modules'
+    '@nuxt/image',
     "@hypernym/nuxt-anime",
     "@nuxt/fonts",
     "@pinia/nuxt",
@@ -25,7 +25,48 @@ export default defineNuxtConfig({
       },
     }],
   ],
-  // nuxt.config.ts
+  
+  image: {
+    // Définir des formats d'image plus légers
+    formats: ['webp'], // Utilise WebP par défaut pour les images plus légères
+    quality: 70, // Réduire la qualité pour compresser les images sans perte significative de qualité visuelle
+
+    // Configuration globale des tailles d'images pour différentes tailles d'écran
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536
+    },
+
+    // Limites maximales pour les images
+    sizes: {
+      default: 1200, // Taille maximale par défaut pour toutes les images
+    },
+
+    // Lazy loading pour améliorer les performances
+    provider: 'public',
+    presets: {
+      default: {
+        modifiers: {
+          format: 'webp', // Force le format WebP pour toutes les images
+          quality: 70, // Applique la qualité par défaut
+          fit: 'cover', // Recadre les images pour qu'elles s'ajustent au conteneur
+        },
+      },
+    },
+
+    // Ajuster la gestion des images locales
+    staticFilename: '[publicPath]/images/[name]-[hash][ext]', // Optimise le nommage des fichiers pour les images statiques
+  },
+
+  // Configuration supplémentaire pour le build
+  build: {
+    // Extraire le CSS pour de meilleures performances
+   // Optimiser le CSS pour réduire la taille des fichiers
+  },
   nitro: {
     prerender: {
        // Active le crawling des liens pour limiter le nombre de pages pré-rendues

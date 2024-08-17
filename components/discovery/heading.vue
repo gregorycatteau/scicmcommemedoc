@@ -1,8 +1,5 @@
 <template>
   <div class="internalorganizer">
-    <ClientOnly>
-    <DiscoveryNeuralnoise />
-  </ClientOnly>
     <div class="textual">
       <h1 ref="titleRef" class="title1">M Comme Médoc</h1>
       <h2 class="subtitle">
@@ -17,7 +14,6 @@
 <script setup lang="ts">
 import { ref, shallowRef, onMounted } from 'vue';
 import { useAnimate } from '@vueuse/core';
-
 
 const titleRef = shallowRef<HTMLElement | null>(null);
 const words = ['socialement', 'solidairement', 'écologiquement', 'respectueusement'];
@@ -51,50 +47,30 @@ onMounted(() => {
 <style scoped>
 /* Styles pour le Header */
 .internalorganizer {
-  @apply scroll-my-10 flex flex-col align-middle content-center items-center mt-20;
-  min-height: 2rem;
-  gap: 16px;
-  padding: 16px;
-  text-align: center;
-  background-color: var(--main-color);
-  color: #fff;
-  position: relative;
+  @apply scroll-my-10 flex flex-col align-middle content-center items-center mt-20 gap-4 p-4 text-center;
+  @apply relative min-h-[2rem] bg-transparent;
 }
 
 .textual {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
+  @apply flex flex-col gap-4 items-center justify-center;
 }
 
 .title1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  text-align: center;
-  color: #2b8c00;
+  @apply text-[3.5rem] font-bold text-center text-[#2b8c00];
   font-family: "Permanent Marker", cursive;
 }
 
 .subtitle {
-  font-size: 2.25rem;
-  font-weight: 600;
-  text-align: center;
-  color: #2b8c00;
+  @apply text-[2.25rem] font-semibold text-center text-[#2b8c00];
   font-family: "Playfair Display", serif;
 }
 
 .wordwrapper {
-  font-size: 4.5rem;
-  color: #f26612;
-  font-weight: bold;
-  font-style: italic;
+  @apply text-[4.5rem] text-[#f26612] font-bold italic;
   font-family: "Lora", serif;
 }
 
 .icons {
-  font-size: 3.75rem;
-  color: #2b8c00;
+  @apply text-[3.75rem] text-[#2b8c00];
 }
 </style>

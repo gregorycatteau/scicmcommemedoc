@@ -10,7 +10,7 @@ import mcmstory from "~/components/mcmstory.vue";
 
 <style scoped>
 .mainwrapper {
-  @apply  bg-gray-100;
+  @apply  bg-transparent;
 }
 @media (max-width: 640px) {
   .mainwrapper {

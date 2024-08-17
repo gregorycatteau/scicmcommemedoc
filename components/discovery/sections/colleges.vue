@@ -17,23 +17,18 @@
 import { ref } from 'vue';
 
 const colleges = ref([
-  { category: 'Bénéficiaires', college:'Bénéficiaires directs',type: 'Clients internes sans contrepartie d\'implication active', description: '1 part pour individu, 2 parts pour un foyer' },
-  { category: 'Bénéficiaires', college:'Consom\'acteurs', type: 'Bénéficiaires avec implication active', description: '2 parts pour participation' },
-  { category: 'Acteurs', college:'Partenaires de services',type: 'Partenaires développant l\'offre de service', description: '5 parts pour individus et associations, 10 parts pour entreprises' },
-  { category: 'Acteurs', college:'Fournisseurs locaux',type: 'Partenaires fournissant des produits locaux', description: '5 parts pour individus et associations, 10 parts pour entreprises' },
-  { category: 'Acteurs', college:'Parten\'acteurs',type: 'Partenaires avec implication active', description: '2 parts sociales pour les individus ou associations, 5 parts/entreprise' },
-  { category: 'Acteurs', college:'Salariés', type: 'Futurs salariés de la SCIC', description: 'Pas d\'obligation' },
-  { category: 'Autres', college: 'Partenaires Financiers', type:'Personnes souhaitant contribuer à la scic par le biais de parts sociales',description: '20 parts pour individus, 50 parts pour autres' },
-  { category: 'Autres', college:'Partenaires Écologiques', type: 'Acteurs travaillant sur l\'aspect écologique avec la SCIC', description: '5 parts pour associations, 20 parts pour entreprises' },
-  { category: 'Autres', college:'Partenaires Institutionnels', type: 'Institutions partenaires, comme les mairies', description: '10 parts' },
-  { category: 'Autres', college:'Partenaires Sociaux', type: 'Associations d\'usagers et autres collectifs sociaux', description: '1 part pour individus, 10 parts pour collectifs' }
+  { category: 'Salariés ou Producteurs', college:'Salariés ou Producteurs de biens ou services', type: 'Actifs au sein de la coopérative', description: '30% des droits de vote' },
+  { category: 'Bénéficiaires Directs et Fournisseurs Locaux', college:'Bénéficiaires directs et Fournisseurs locaux', type: 'Bénéficiaires directs et partenaires locaux', description: '10% des droits de vote' },
+  { category: 'Consomm\'acteurs', college:'Consomm\'acteurs impliqués', type: 'Bénéficiaires impliqués activement', description: '30% des droits de vote' },
+  { category: 'Partenaires Financiers et Collectivités', college:'Partenaires financiers et Collectivités territoriales', type: 'Financeurs privés et entités publiques', description: '20% des droits de vote' },
+  { category: 'Autres Catégories', college:'Autres catégories d\'associés', type: 'Diverses autres catégories', description: '10% des droits de vote' }
 ]);
 
 const columns = ref([
   { key: 'category', label: 'Catégorie de Sociétaires', class: 'text-center pl-4 text-bold p-4' },
   { key: 'college', label: 'Collège', class: 'text-center pl-4 text-bold p-4'},
   { key: 'type', label: 'Description', class: 'text-center pl-4 text-bold p-4' },
-  { key: 'description', label: 'Parts Sociales Minimales', class: 'pl-4 text-bold p-4' },
+  { key: 'description', label: 'Droits de Vote', class: 'pl-4 text-bold p-4' },
 ]);
 
 function getRowClass(row: any, index: number) {
@@ -43,7 +38,7 @@ function getRowClass(row: any, index: number) {
 
 <style scoped>
 .table-wrapper {
-  @apply overflow-x-auto p-10; /* Permet le défilement horizontal sur petits écrans */
+  @apply overflow-x-auto p-10;
 }
 
 tr {
@@ -51,20 +46,21 @@ tr {
 }
 
 tr:hover {
-  @apply bg-gray-100; /* Utiliser Tailwind pour le survol */
+  @apply bg-gray-100;
 }
 
 td {
-  @apply border-b border-gray-300;
+  @apply border-b border-gray-300 p-4;
 }
 
 @media (max-width: 640px) {
   td {
-    @apply p-2 text-sm; /* Réduire le padding et la taille du texte pour les mobiles */
+    @apply p-2 text-sm;
   }
   .heading, .footing {
-    @apply text-xs; /* Réduire la taille des en-têtes pour les petits écrans */
+    @apply text-xs;
   }
 }
 </style>
+
 

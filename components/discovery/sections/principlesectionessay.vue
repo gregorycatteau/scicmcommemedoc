@@ -37,21 +37,13 @@
 <script setup lang="ts">
 </script>
 
-
-<script setup lang="ts">
-</script>
-
-
-<script setup lang="ts">
-</script>
-
 <style scoped>
 * {
-  box-sizing: border-box;
+  @apply box-border;
 }
 
 :root {
-  color-scheme: light dark;
+  @apply [color-scheme:light_dark];
   --h: 330;
   --s: 88%;
   --l: 66%;
@@ -62,11 +54,7 @@
   --shadow-color: hsla(var(--h) var(--s) var(--l) / 0.6);
   --shadow-y: 1rem;
   --space: clamp(1.125rem, 0.8rem + 1.3cqi, 1.875rem);
-  --gradient: linear-gradient(
-    165deg,
-    transparent 50%,
-    hsla(var(--h) var(--s) var(--l) / 0.15) 125%
-  );
+  --gradient: linear-gradient(165deg, transparent 50%, hsla(var(--h) var(--s) var(--l) / 0.15) 125%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -75,91 +63,52 @@
   }
 }
 
-html {
-  height: 100%;
+html, body {
+  @apply h-full;
 }
 
 body {
-  display: grid;
-  place-items: center;
-  font-family: 'Lora', serif;
-  font-size: clamp(1rem, 0.6rem + 1.125cqi, 1.125rem);
-  line-height: 1.5;
-  padding: 2rem;
-  min-height: 100%;
-  background: #f0f0f0; /* Slightly lighter background for better contrast */
+  @apply grid place-items-center font-serif text-base leading-relaxed p-8 bg-gray-200;
 }
 
 h2 {
-  font-size: 2.5em; /* Slightly larger for better emphasis */
-  font-weight: 700;
-  line-height: 1.1;
-  text-wrap: balance;
-  color: #2b2b2b; /* Darker color for better contrast */
+  @apply text-4xl font-bold leading-snug text-gray-800;
 }
 
 .flow > * + * {
-  margin-block-start: var(--space);
+  @apply mt-[var(--space)];
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  border: var(--border);
-  border-radius: 1rem;
-  inline-size: min(55rem, 100%);
-  height: auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.8); /* Slightly opaque background for better readability */
+  @apply grid grid-cols-1 border rounded-xl max-w-5xl h-auto p-8 bg-white/80;
 }
 
 .intro {
-  padding: var(--space);
-  background-image: var(--gradient);
-  border-bottom: var(--border);
+  @apply p-[var(--space)] bg-[var(--gradient)] border-b-[var(--border)];
 }
 
 .details {
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  padding-left: 2rem; /* Added padding for better separation */
+  @apply flex flex-col overflow-y-auto pl-8;
 }
 
 .imageplacer {
-  border-bottom: var(--border);
-  padding: var(--space);
+  @apply border-b-[var(--border)] p-[var(--space)];
 }
 
 .scroll-container {
-  @apply bg-scicgreen bg-opacity-65 rounded-2xl border-spacing-1 border-solid border-x-2 border-scicorange;
-  flex-grow: 1;
-  border: 2px;
-  border: #2b2b2b;
-  
-  overflow-y: auto;
-  overscroll-behavior-x: contain;
-  scrollbar-color: var(--brand-color-bg) transparent;
-  padding: var(--space);
-  border-bottom: var(--border);
-  max-height: 600px;
-  animation: scroll-shadow-inset linear;
-  animation-timeline: scroll(self);
+  @apply bg-scicgreen bg-opacity-65 rounded-2xl border-spacing-1 border-solid border-x-2 border-scicorange flex-grow border-2 border-gray-800 overflow-y-auto overscroll-contain   p-[var(--space)] border-b-[var(--border)] max-h-[600px] ;
 }
 
 .listing2 {
-  @apply list-disc list-outside p-8; /* Darker color for better contrast */
+  @apply list-disc list-outside p-8;
 }
 
 .listitem2 {
-  @apply mb-1 text-xl text-justify indent-2 text-scicblue font-extrabold ;/* Slightly larger for better readability */
+  @apply mb-1 text-xl text-justify indent-2 text-white font-extrabold;
 }
 
 footer {
-  padding: var(--space);
-  text-align: center;
-  background-image: var(--gradient);
-  border-top: var(--border);
+  @apply p-[var(--space)] text-center bg-[var(--gradient)] border-t-[var(--border)];
 }
 
 @keyframes scroll-shadow-inset {
@@ -173,55 +122,45 @@ footer {
 
 @media (min-width: 40rem) {
   .container {
-    grid-template-columns: 1fr 1fr;
+    @apply grid-cols-2;
   }
 
   .intro {
-    border-bottom: unset;
-    border-right: var(--border);
+    @apply border-b-0 border-r-[var(--border)];
   }
 
   .details {
-    border-left: var(--border);
+    @apply border-l-[var(--border)];
   }
 }
 
 /* Effet de verre */
 .glass {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @apply backdrop-blur-lg bg-white/30 border bg-white/30 shadow-lg;
 }
 
 .imgplace {
-  @apply mt-5 prose mx-auto lg:max-w-none; /* Align the items at the start */
+  @apply mt-5 prose mx-auto lg:max-w-none;
 }
 
 .headerimage {
-  @apply w-64 float-left  rounded-lg shadow-lg object-cover object-center mb-0 mr-6 [clip-path:circle(70%_at_20%_30%)] [shape-outside:circle(70%_at_20%_30%)];
+  @apply w-64 float-left rounded-lg shadow-lg object-cover object-center mb-0 mr-6 [clip-path:circle(70%_at_20%_30%)] [shape-outside:circle(70%_at_20%_30%)];
 }
+
 .maintitle {
   @apply text-zinc-700 hover:text-white font-light skew-x-6;
-  font-family: 'Permanent marker', cursive;
+  font-family: 'Permanent Marker', cursive;
 }
+
 .subtitle {
-  @apply text-2xl text-zinc-800;
+  @apply text-3xl text-zinc-800;
 }
 
 .cta-button {
-  font: inherit;
-  line-height: normal;
-  padding: 0.5rem 1.5rem 0.6rem;
-  background: var(--brand-color-bg);
-  color: var(--brand-color-fg);
-  border: unset;
-  border-radius: 0.25rem;
-  cursor: pointer;
+  @apply  leading-normal py-2 px-6 bg-[var(--brand-color-bg)] text-[var(--brand-color-fg)] border-0 rounded cursor-pointer;
 }
 
 .cta-button:active {
-  translate: 0 1px;
+  @apply translate-y-px;
 }
-
 </style>

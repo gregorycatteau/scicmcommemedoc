@@ -67,8 +67,12 @@
 
 <style scoped>
 .mainwrapper {
-  @apply bg-scicgreen w-full bottom-0 left-0 right-0 z-20 py-4 ;
+  @apply bg-scicgreen w-full py-4;
+  position: absolute; /* Fixé au bas de la fenêtre */
+  z-index: 10;
+  height: auto;
 }
+
 
 .secondarywrapper {
   @apply mx-auto max-w-screen-xl space-y-4 px-4 sm:px-6 lg:space-y-16 lg:px-8;
