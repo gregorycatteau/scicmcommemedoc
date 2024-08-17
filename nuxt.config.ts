@@ -1,4 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -64,10 +64,6 @@ export default defineNuxtConfig({
   },
 
   // Configuration supplémentaire pour le build
-  build: {
-    // Extraire le CSS pour de meilleures performances
-   // Optimiser le CSS pour réduire la taille des fichiers
-  },
  
   app: {
     head: {
