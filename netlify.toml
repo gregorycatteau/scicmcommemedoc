@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "node --max-old-space-size=4096 ./node_modules/.bin/nuxt build"
   publish = "dist"
   base = "."
 
@@ -14,17 +14,17 @@
   SMTP_PORT = "465"
   SMTP_SECURE = "true"
   SMTP_USER = "direction@mcommemedoc.fr"
-  NPM_FLAGS = "--legacy-peer-deps"  # Ajoute cette ligne si nécessaire pour résoudre des conflits de dépendances
+  NPM_FLAGS = "--legacy-peer-deps"
 
 [context.production.environment]
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm install && npm run build"
+  command = "npm install && node --max-old-space-size=4096 ./node_modules/.bin/nuxt build"
   publish = "dist"
 
 [context.branch-deploy]
-  command = "npm install && npm run build"
+  command = "npm install && node --max-old-space-size=4096 ./node_modules/.bin/nuxt build"
   publish = "dist"
 
 [[plugins]]
