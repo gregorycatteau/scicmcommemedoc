@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build:client": "nuxt build --no-server",
     "build:server": "nuxt build --no-client",
     "build": "npm run build:client && npm run build:server",
@@ -10,6 +11,10 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
+  },
+  "resolutions": {
+    "nuxt-mail": "^5.0.1",
+    "@nuxt/fonts": "^0.7.2"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.6",
@@ -32,7 +37,8 @@
     "zod": "^3.22.4"
   },
   "engines": {
-  "node": ">=18.0.0"
+    "node": ">=18.0.0"
+  }
 }
-}
+
 
