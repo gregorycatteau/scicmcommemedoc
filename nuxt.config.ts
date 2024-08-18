@@ -58,13 +58,7 @@ export default defineNuxtConfig({
 
     prerender: {
       routes: [
-        '/',
-        '/discovery',
-        '/fondements',
-        '/timeline',
-        '/projects',
-        '/listing',
-        '/implication'
+        '/'
       ],
       crawlLinks: false,
     },
