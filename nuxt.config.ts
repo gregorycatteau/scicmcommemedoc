@@ -54,11 +54,11 @@ export default defineNuxtConfig({
   },
 
   // Désactivation complète du prérendu et SSR
-  ssr: false, // Désactiver le SSR pour un site statique
-  nitro: {
+   // Désactiver le SSR pour un site statique
+   nitro: {
     prerender: {
-      routes: [], // Aucune route à prérendre
-      crawlLinks: false, // Désactive l'exploration des liens pour le prérendu
+      routes: ['/','/discovery', '/fondements', '/timeline', '/projects', '/listing', '/implication'], // Liste explicite des routes
+      crawlLinks: false,
     },
   },
 
