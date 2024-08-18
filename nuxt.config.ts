@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-
   modules: [
     "@nuxt/ui",
     "@nuxt/content",
@@ -26,6 +25,7 @@ export default defineNuxtConfig({
     }],
   ],
 
+  // Configuration de lazy loading pour les images
   image: {
     formats: ['webp'],
     quality: 70,
@@ -35,7 +35,7 @@ export default defineNuxtConfig({
       md: 768,
       lg: 1024,
       xl: 1280,
-      xxl: 1536,
+      xxl: 1536
     },
     sizes: {
       default: 1200,
@@ -53,32 +53,25 @@ export default defineNuxtConfig({
     staticFilename: '[publicPath]/images/[name]-[hash][ext]',
   },
 
+  // Désactivation complète du prérendu et SSR
+  // Désactiver le SSR pour un site statique
   nitro: {
-    preset: 'netlify',
-
     prerender: {
-      routes: [
-        '/'
-      ],
+      routes: [],
       crawlLinks: false,
     },
-
-    compressPublicAssets: true,
-
-    minify: true,
-
-    analyze: false,
   },
 
+  // Configuration globale des composants
   components: {
     dirs: [
       {
         path: '~/components',
         extensions: ['vue'],
-        prefix: 'Lazy',
-        watch: true,
-      },
-    ],
+        prefix: 'Lazy', // Ajoute un préfixe "Lazy" pour les composants importés automatiquement
+        watch: true, // Option pour surveiller les changements dans le dossier de composants
+      }
+    ]
   },
 
   app: {
