@@ -53,26 +53,27 @@ export default defineNuxtConfig({
     staticFilename: '[publicPath]/images/[name]-[hash][ext]',
   },
 
-  // Désactivation du prérendu
+  // Désactivation complète du prérendu et SSR
+  ssr: false, // Désactiver le SSR pour un site statique
   nitro: {
     prerender: {
-      routes: [], // Désactive le prérendu
+      routes: [], // Aucune route à prérendre
+      crawlLinks: false, // Désactive l'exploration des liens pour le prérendu
     },
   },
 
-  // Configuration globale du lazy loading pour les composants
+  // Configuration globale des composants
   components: {
     dirs: [
       {
         path: '~/components',
         extensions: ['vue'],
-        prefix: 'Lazy',
-        loader: true // Active le lazy loading globalement
+        prefix: 'Lazy', // Ajoute un préfixe "Lazy" pour les composants importés automatiquement
+        watch: true, // Option pour surveiller les changements dans le dossier de composants
       }
     ]
   },
 
-  // Configuration supplémentaire pour le build
   app: {
     head: {
       title: 'M Comme Médoc - Engagez-vous dans l\'économie sociale en Médoc',
@@ -139,3 +140,4 @@ export default defineNuxtConfig({
     ],
   }
 });
+
