@@ -109,7 +109,7 @@ export default defineNuxtConfig({
     families: [
       {
         name: 'Montserrat',
-        provider: 'google',
+        provider: 'google', // ou 'none' pour charger une police locale
         weights: ['400', '700'],
         styles: ['normal', 'italic']
       },
@@ -138,7 +138,10 @@ export default defineNuxtConfig({
         styles: ['normal', 'italic']
       }
     ],
-  }
+    display: 'swap', // Option pour contrôler le comportement du chargement des polices
+    prefetch: true, // Prélève les polices pour un chargement plus rapide
+    preconnect: true, // Optimise la connexion aux fournisseurs de polices
+  },
 });
 
 
