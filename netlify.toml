@@ -1,5 +1,5 @@
 [build]
-  command = "node --max-old-space-size=4096 ./node_modules/.bin/nuxt build"
+  command = "npm run build"
   publish = "dist"
   base = "."
 
@@ -20,11 +20,11 @@
   NODE_ENV = "production"
 
 [context.deploy-preview]
-  command = "npm install && node --max-old-space-size=4096 ./node_modules/.bin/nuxt build"
+  command = "npm install && npm run build"
   publish = "dist"
 
 [context.branch-deploy]
-  command = "npm install && node --max-old-space-size=4096 ./node_modules/.bin/nuxt build"
+  command = "npm install && npm run build"
   publish = "dist"
 
 [[plugins]]
