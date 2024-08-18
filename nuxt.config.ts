@@ -1,4 +1,3 @@
-
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
@@ -12,7 +11,7 @@ export default defineNuxtConfig({
     ['nuxt-mail', {
       message: {
         to: process.env.EMAIL_TO,
-        cc:process.env.EMAIL_CC || '',
+        cc: process.env.EMAIL_CC || '',
         bcc: process.env.EMAIL_BCC || '',
       },
       smtp: {
@@ -24,15 +23,12 @@ export default defineNuxtConfig({
         },
       },
     }],
-    
   ],
-  
-  image: {
-    // Définir des formats d'image plus légers
-    formats: ['webp'], // Utilise WebP par défaut pour les images plus légères
-    quality: 70, // Réduire la qualité pour compresser les images sans perte significative de qualité visuelle
 
-    // Configuration globale des tailles d'images pour différentes tailles d'écran
+  // Configuration de lazy loading pour les images
+  image: {
+    formats: ['webp'],
+    quality: 70,
     screens: {
       xs: 320,
       sm: 640,
@@ -41,30 +37,42 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536
     },
-
-    // Limites maximales pour les images
     sizes: {
-      default: 1200, // Taille maximale par défaut pour toutes les images
+      default: 1200,
     },
-
-    // Lazy loading pour améliorer les performances
     provider: 'public',
     presets: {
       default: {
         modifiers: {
-          format: 'webp', // Force le format WebP pour toutes les images
-          quality: 70, // Applique la qualité par défaut
-          fit: 'cover', // Recadre les images pour qu'elles s'ajustent au conteneur
+          format: 'webp',
+          quality: 70,
+          fit: 'cover',
         },
       },
     },
+    staticFilename: '[publicPath]/images/[name]-[hash][ext]',
+  },
 
-    // Ajuster la gestion des images locales
-    staticFilename: '[publicPath]/images/[name]-[hash][ext]', // Optimise le nommage des fichiers pour les images statiques
+  // Désactivation du prérendu
+  nitro: {
+    prerender: {
+      routes: [], // Désactive le prérendu
+    },
+  },
+
+  // Configuration globale du lazy loading pour les composants
+  components: {
+    dirs: [
+      {
+        path: '~/components',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        loader: true // Active le lazy loading globalement
+      }
+    ]
   },
 
   // Configuration supplémentaire pour le build
- 
   app: {
     head: {
       title: 'M Comme Médoc - Engagez-vous dans l\'économie sociale en Médoc',
@@ -85,7 +93,6 @@ export default defineNuxtConfig({
     },
   },
 
-
   anime: {
     provide: true,
   },
@@ -99,33 +106,29 @@ export default defineNuxtConfig({
   },
   fonts: {
     families: [
-      // Montserrat avec les styles et poids que vous souhaitez
       {
         name: 'Montserrat',
         provider: 'google',
-        weights: ['400', '700'], // ajoutez d'autres poids si nécessaire
+        weights: ['400', '700'],
         styles: ['normal', 'italic']
       },
-      // Playfair Display avec les styles et poids que vous souhaitez
       {
         name: 'Playfair Display',
         provider: 'google',
-        weights: ['400', '700'], // ajoutez d'autres poids si nécessaire
+        weights: ['400', '700'],
         styles: ['normal', 'italic']
       },
-      // Lora avec les styles et poids que vous souhaitez
       {
         name: 'Lora',
         provider: 'google',
-        weights: ['400', '700'], // ajoutez d'autres poids si nécessaire
+        weights: ['400', '700'],
         styles: ['normal', 'italic']
       },
-      // Kaina (assurez-vous que le nom est correct ou remplacez-le par la police voulue)
       {
-        name: 'Kalnia', // Remplacez par le nom exact si c'est une police Google
-        provider: 'google', // ou 'none' si c'est une police personnalisée et fournissez les détails nécessaires
-        weights: ['400', '700'], // Ajustez selon les besoins
-        styles: ['normal', 'italic'] // Ajustez selon les besoins
+        name: 'Kalnia',
+        provider: 'google',
+        weights: ['400', '700'],
+        styles: ['normal', 'italic']
       },
       {
         name: 'Permanent Marker',
@@ -134,6 +137,5 @@ export default defineNuxtConfig({
         styles: ['normal', 'italic']
       }
     ],
-    // Personnalisez d'autres paramètres si nécessaire
   }
 });
