@@ -6,14 +6,7 @@
 [build.environment]
   NODE_VERSION = "20.11.0"
   NODE_ENV = "production"
-  EMAIL_CC = "bourseaujenny@live.fr"
-  EMAIL_BCC = "charlie.piedferre@gmail.com"
-  SMTP_FROM = "nepasrepondre@mcommemedoc.fr"
-  SMTP_HOST = "smtp.hostinger.com"
-  SMTP_PASS = "!Mcommemedoc/(12)"
-  SMTP_PORT = "465"
-  SMTP_SECURE = "true"
-  SMTP_USER = "direction@mcommemedoc.fr"
+  
   NPM_FLAGS = "--legacy-peer-deps"
 
 [context.production.environment]

@@ -25,40 +25,50 @@ export default defineNuxtConfig({
     }],
   ],
 
-  // Configuration de lazy loading pour les images
-  image: {
-    formats: ['webp'],
-    quality: 70,
-    screens: {
-      xs: 320,
-      sm: 640,
-      md: 768,
-      lg: 1024,
-      xl: 1280,
-      xxl: 1536
-    },
-    sizes: {
-      default: 1200,
-    },
-    provider: 'public',
-    presets: {
-      default: {
-        modifiers: {
-          format: 'webp',
-          quality: 70,
-          fit: 'cover',
-        },
+  // Configuration des polices
+  fonts: {
+    families: [
+      {
+        name: 'Montserrat',
+        provider: 'google',
+        weights: ['400', '700'],
+        styles: ['normal', 'italic']
       },
-    },
-    staticFilename: '[publicPath]/images/[name]-[hash][ext]',
+      {
+        name: 'Playfair Display',
+        provider: 'google',
+        weights: ['400', '700'],
+        styles: ['normal', 'italic']
+      },
+      {
+        name: 'Lora',
+        provider: 'google',
+        weights: ['400', '700'],
+        styles: ['normal', 'italic']
+      },
+      {
+        name: 'Kalnia',
+        provider: 'google',
+        weights: ['400', '700'],
+        styles: ['normal', 'italic']
+      },
+      {
+        name: 'Permanent Marker',
+        provider: 'google',
+        weights: ['400', '700'],
+        styles: ['normal', 'italic']
+      }
+    ],
+    display: 'swap',
+    prefetch: true,
+    preconnect: true,
   },
 
-  // Désactivation complète du prérendu et SSR
-  // Désactiver le SSR pour un site statique
+  // Désactivation du prérendu
   nitro: {
     prerender: {
-      routes: [],
-      crawlLinks: false,
+      routes: [], // Ne prérend aucune route
+      crawlLinks: false, // Désactive l'exploration des liens pour le prérendu
     },
   },
 
@@ -68,8 +78,8 @@ export default defineNuxtConfig({
       {
         path: '~/components',
         extensions: ['vue'],
-        prefix: 'Lazy', // Ajoute un préfixe "Lazy" pour les composants importés automatiquement
-        watch: true, // Option pour surveiller les changements dans le dossier de composants
+        prefix: 'Lazy',
+        watch: true,
       }
     ]
   },
@@ -104,43 +114,6 @@ export default defineNuxtConfig({
     api: {
       baseURL: '/api/_my_content'
     }
-  },
-  fonts: {
-    families: [
-      {
-        name: 'Montserrat',
-        provider: 'google', // ou 'none' pour charger une police locale
-        weights: ['400', '700'],
-        styles: ['normal', 'italic']
-      },
-      {
-        name: 'Playfair Display',
-        provider: 'google',
-        weights: ['400', '700'],
-        styles: ['normal', 'italic']
-      },
-      {
-        name: 'Lora',
-        provider: 'google',
-        weights: ['400', '700'],
-        styles: ['normal', 'italic']
-      },
-      {
-        name: 'Kalnia',
-        provider: 'google',
-        weights: ['400', '700'],
-        styles: ['normal', 'italic']
-      },
-      {
-        name: 'Permanent Marker',
-        provider: 'google',
-        weights: ['400', '700'],
-        styles: ['normal', 'italic']
-      }
-    ],
-    display: 'swap', // Option pour contrôler le comportement du chargement des polices
-    prefetch: true, // Prélève les polices pour un chargement plus rapide
-    preconnect: true, // Optimise la connexion aux fournisseurs de polices
   },
 });
 
