@@ -7,7 +7,7 @@
       <p class="description1">Le respect du vivant commence par une prise de conscience profonde de notre interconnexion avec la nature et tous ses habitants. Nous nous engageons à sensibiliser les habitants de notre territoire au respect de la biodiversité et des ressources naturelles.</p>
       <UButton class="discover-button" @click="isOpenRespect = true">Découvrir</UButton>
     </div>
-    <UModal v-model="isOpenRespect" class="modal-respect">
+    <UModal v-model="isOpenRespect" class="modal-respect" fullscreen>
   <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
     <template #header>
       <h2 class="main-modal-title">Honorer le Respect du Vivant : <br><span class="titleemphazer">Notre Engagement Étape par Étape</span></h2>
@@ -63,7 +63,7 @@
         <span class="icon">🍃</span>
         <h3 class="title">Vivants et Résilients</h3>
       </div>
-        <p class="description">Nous avons désormais besoin de réfléchir notre territoire en terme de résilience. De trouver des solutions souples et robustes qui plient dans le sens du vent sans jamais... Se rompre.</p>
+        <p class="description">Nous avons désormais besoin de réfléchir notre territoire en terme de résilience. <br /> De trouver des solutions souples et robustes qui, à l'image des roseaux, plient dans le sens du vent sans jamais... Se rompre.</p>
         <UButton class="discover-button" @click="isOpenLiving = true">Devenir Résilients</UButton>
       </div>
       <div class="feature-item">
@@ -84,9 +84,9 @@
       </div>
     </div>
 
-    <!-- Modals for each feature -->
+   
     <!-- Modal for Living & Resilient -->
-    <UModal v-model="isOpenLiving" class="modal-living">
+    <UModal v-model="isOpenLiving" class="modal-living" fullscreen>
       <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
     <template #header>
       <h2 class="modal-title">Vers une Résilience Collective : Un Chemin Étape par Étape</h2>
@@ -141,7 +141,7 @@
   </UModal>
 
     <!-- Modal for Solidarity & Collective -->
-    <UModal v-model="isOpenSolidarity" class="modal-solidarity">
+    <UModal v-model="isOpenSolidarity" class="modal-solidarity" fullscreen>
   <UCard :ui="{ divide: 'divide-y divide-gray-100 dark:divide-gray-800' }">
     <template #header>
       <h2 class="modal-title">La Solidarité : Un Voyage Collectif Étape par Étape sur Notre Territoire</h2>
@@ -274,7 +274,7 @@ function goBack() {
 
 <style scoped>
 .service-section {
-  @apply flex flex-col w-screen items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat;
+  @apply flex flex-col w-screen items-center justify-center min-h-screen bg-cover bg-center bg-no-repeat mb-24;
   background-image: url('/vivantorange.png');
   background-blend-mode: multiply;
   background-color: rgba(53, 161, 20, 0.5);
@@ -306,6 +306,10 @@ function goBack() {
 
 .maintitle {
   @apply text-5xl  mb-6 skew-x-3;
+}
+.main-modal-title {
+  @apply text-2xl font-bold mb-4 text-center p-10 ring-2 ring-white rounded-lg shadow-lg text-scicgreen;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .emphaser {
@@ -353,7 +357,7 @@ function goBack() {
 }
 
 .modal-living, .modal-solidarity, .modal-partners, .modal-respect {
-  @apply max-w-4xl;
+  @apply bg-gradient-to-r from-scicgreen to-scicblue;
 }
 
 .modal-title {

@@ -2,11 +2,11 @@
   <UCarousel class="carousel" v-slot="{ item }" :items="points" :ui="{ item: 'basis-full' }" arrows>
     <div class="card-wrapper">
       <div class="wrapperucard">
-        <UCard class="content-card" :style="{ backgroundImage: 'url(' + item.image + ')' }">
+        <UCard class="content-card">
           <template #header>
             <p class="date">{{ item.date }}</p>
           </template>
-          <div ref="parallaxContent" class="content-carding">
+          <div class="content-carding">
             <h1 class="title">{{ item.title }}</h1>
             <p class="description">{{ item.description }}</p>
             <div class="content-inner">
@@ -26,8 +26,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-
-
 
 const points = ref([
   {
@@ -109,54 +107,49 @@ const points = ref([
   }
 ]);
 </script>
+
 <style scoped>
 .carousel {
-  @apply w-full m-auto max-w-7xl h-screen;
+  @apply w-full m-auto max-w-7xl h-auto mb-10;
 }
 
 .card-wrapper {
-  @apply relative flex flex-col md:flex-row items-stretch bg-transparent shadow-lg rounded-lg overflow-hidden h-auto; /* Changement pour h-auto */
+  @apply flex justify-center items-center p-6;
 }
 
 .wrapperucard {
-  @apply flex flex-col md:flex-row items-stretch p-6 gap-6 w-10/12 m-auto;
+  @apply w-full max-w-7xl;
 }
 
 .content-card {
-  @apply relative flex-grow overflow-hidden opacity-75 ;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  min-height: 1200px; /* Augmentation de la hauteur minimale */
-  height: 1000px; /* Fixer la hauteur */
-  z-index: 5;
+  @apply bg-white bg-opacity-70  shadow-2xl rounded-2xl p-8;
 }
 
 .content-carding {
-  @apply flex flex-col justify-between p-4 bg-white/30 backdrop-blur-md rounded-lg border border-white/50 shadow-lg h-full overflow-y-auto relative z-10;
+  @apply flex flex-col justify-between bg-white bg-opacity-70 rounded-lg shadow-lg p-6;
 }
 
 .content-inner {
-  @apply flex flex-col space-y-4;
+  @apply flex flex-col space-y-6;
 }
 
 .date {
-  @apply text-lg md:text-xl font-semibold bg-scicgreen text-white text-center rounded-2xl p-4;
+  @apply text-lg md:text-xl font-semibold bg-scicgreen text-white text-center rounded-full p-2 mb-4;
   font-family: 'Montserrat', sans-serif;
 }
 
 .title {
-  @apply text-xl md:text-4xl font-bold my-2 text-slate-800 text-center;
+  @apply text-3xl md:text-4xl font-bold mb-6 text-scicorange text-center;
   font-family: 'Playfair Display', serif;
 }
 
 .description {
-  @apply text-sm mb-4 text-black leading-relaxed text-justify indent-8;
-  font-family:'Lora', serif;
+  @apply text-base mb-4 text-gray-700 leading-relaxed text-justify indent-8;
+  font-family: 'Lora', serif;
 }
 
 .subtitle {
-  @apply font-semibold text-lg text-scicgreen;
-  font-family:'Kalnia', serif;
+  @apply font-semibold text-2xl text-scicgreen mb-2;
+  font-family: 'Kalnia', serif;
 }
 </style>

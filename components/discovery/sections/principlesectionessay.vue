@@ -38,33 +38,12 @@
 </script>
 
 <style scoped>
-* {
-  @apply box-border;
-}
 
-:root {
-  @apply [color-scheme:light_dark];
-  --h: 330;
-  --s: 88%;
-  --l: 66%;
-  --brand-color-bg: hsl(var(--h) var(--s) var(--l));
-  --brand-color-fg: hsl(0 0% 99%);
-  --border: 1px solid var(--brand-color-bg);
-  --shadow-blur: 1.5rem;
-  --shadow-color: hsla(var(--h) var(--s) var(--l) / 0.6);
-  --shadow-y: 1rem;
-  --space: clamp(1.125rem, 0.8rem + 1.3cqi, 1.875rem);
-  --gradient: linear-gradient(165deg, transparent 50%, hsla(var(--h) var(--s) var(--l) / 0.15) 125%);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --l: 46%;
-  }
-}
 
-html, body {
-  @apply h-full;
+
+.mainwrapper {
+  @apply w-11/12 m-auto;
 }
 
 body {
@@ -80,7 +59,7 @@ h2 {
 }
 
 .container {
-  @apply grid grid-cols-1 border rounded-xl max-w-5xl h-auto p-8 bg-white/80;
+  @apply grid grid-cols-1 border rounded-xl w-full h-auto p-8 bg-white/80;
 }
 
 .intro {
@@ -95,16 +74,14 @@ h2 {
   @apply border-b-[var(--border)] p-[var(--space)];
 }
 
-.scroll-container {
-  @apply bg-scicgreen bg-opacity-65 rounded-2xl border-spacing-1 border-solid border-x-2 border-scicorange flex-grow border-2 border-gray-800 overflow-y-auto overscroll-contain   p-[var(--space)] border-b-[var(--border)] max-h-[600px] ;
-}
+
 
 .listing2 {
   @apply list-disc list-outside p-8;
 }
 
 .listitem2 {
-  @apply mb-1 text-xl text-justify indent-2 text-white font-extrabold;
+  @apply mb-1 text-xl text-justify indent-2 text-black font-extrabold;
 }
 
 footer {
@@ -156,11 +133,5 @@ footer {
   @apply text-3xl text-zinc-800;
 }
 
-.cta-button {
-  @apply  leading-normal py-2 px-6 bg-[var(--brand-color-bg)] text-[var(--brand-color-fg)] border-0 rounded cursor-pointer;
-}
 
-.cta-button:active {
-  @apply translate-y-px;
-}
 </style>

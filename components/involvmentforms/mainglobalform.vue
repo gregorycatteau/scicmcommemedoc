@@ -11,10 +11,10 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue';
-import { useUserStore } from '@/stores/user';
-import MailSender from '@/components/involvmentforms/involvedmailsender.vue';
-import GratefulMessage from '@/components/gratefulmessage.vue';
+import { ref, computed, onMounted } from "vue";
+import { useUserStore } from "@/stores/user";
+import MailSender from "@/components/involvmentforms/involvedmailsender.vue";
+import GratefulMessage from "~/components/contact/gratefulmessage.vue";
 
 const userStore = useUserStore();
 const currentState = userStore.currentState;
@@ -24,9 +24,9 @@ const mounted = ref(false);
 const showModal = ref(false);
 
 const formComponents = {
-  individual: () => import('@/components/involvmentforms/individualform.vue'),
-  company: () => import('@/components/involvmentforms/societyform.vue'),
-  association: () => import('@/components/involvmentforms/associationform.vue'),
+  individual: () => import("@/components/involvmentforms/individualform.vue"),
+  company: () => import("@/components/involvmentforms/societyform.vue"),
+  association: () => import("@/components/involvmentforms/associationform.vue"),
 };
 
 const currentFormComponent = computed(() => formComponents[currentState]);

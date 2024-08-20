@@ -4,8 +4,9 @@
 
   <UCard class="before-all-mission">
     <template #header>
-      <h1 class="maintitle">Vous ne devez plus être seuls pour faire face à :</h1>
+      <h1 class="maintitle">M Comme Médoc est pour que vous ne soyez plus seuls pour faire face à :</h1>
     </template>
+    <div class="separator">
     <section class="sectionpair bg-scicgreen p-4 bg-opacity-35 rounded-2xl shadow-2xl">
       <div class="text-section">
         <h2 class="section-title">Un monde devenu volatile</h2>
@@ -68,7 +69,7 @@
         <p class="mission-section-description">En tant que laboratoire vivant, nous nous engageons à expérimenter et appliquer de manière collaborative des stratégies fondées sur la résilience et la solidarité, visant à construire un environnement plus durable et harmonieux. » </p>
       </div>
     </section>
-  
+    </div>
   <template #footer>
       <button @click="goBack" class="button">Revenir en arrière</button>
     </template>
@@ -91,10 +92,12 @@ function goBack() {
   @apply text-scicgreen bg-white bg-opacity-50 flex flex-col items-center py-20 px-4 gap-8 w-screen m-auto rounded-xl shadow-lg;
 }
 .maintitle {
-  @apply text-4xl font-bold text-scicgreen mb-4 font-bold;
+  @apply text-2xl font-bold text-scicgreen mb-4 font-bold;
   font-family: 'Playfair Display', serif;
 }
-
+.separator {
+  @apply w-full flex flex-col items-center gap-8;
+}
 .section {
   @apply flex flex-col md:flex-row items-center gap-8 max-w-7xl;
 }
@@ -129,7 +132,7 @@ function goBack() {
   font-family: 'Playfair Display', serif;
 }
 
-.section-subtitle, .section-subtitle {
+.section-subtitle {
   @apply text-2xl mb-4 font-semibold text-center;
   font-family: 'Lora', serif;
 }
@@ -148,7 +151,7 @@ function goBack() {
   @apply flex justify-center items-center;
 }
 .button {
-  @apply bg-scicgreen text-scicblue rounded-lg p-4 hover:bg-scicorange hover:text-white;
+  @apply bg-scicgreen text-scicblue rounded-lg p-4 hover:bg-scicorange hover:text-white mb-10;
   font-family: 'Lora', serif;
 }
 .mission-section {

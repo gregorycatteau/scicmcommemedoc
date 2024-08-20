@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import DiscoverySectionsPrinciplesectionessay from '@/components/discovery/sections/principlesectionessay.vue';
 
 const imagesLoaded = ref(false);
 

@@ -1,29 +1,29 @@
-<template> 
+<template>
   <div class="timeline-container">
-   
     <!-- En-tête -->
-    <div class="header ">
-      <h1 class="title">Ce que nous avons compris par l'action et l'implication</h1>
-      <p class="description">Comprendre M Comme Médoc c'est comprendre les réflexions et les actions de ceux qui l'ont créé.</p>
-     </div>
-     
- 
+    <div class="header">
+      <h1 class="title">
+        Ce que nous avons compris par l'action et l'implication
+      </h1>
+      <p class="description">
+        Comprendre M Comme Médoc c'est comprendre les réflexions et les actions
+        de ceux qui l'ont créé.
+      </p>
+    </div>
 
-   <Worldstorytest2 />
-    
+    <Worldstorytest2 />
+
     <!-- Pied de page / Navigation -->
-    
   </div>
 </template>
 
 <script setup>
-import Worldstorytest2 from '~/components/worldstorytest2.vue';
-
+import Worldstorytest2 from "~/components/history/worldstorytest2.vue";
 </script>
 
 <style scoped>
 .timeline-container {
-  @apply flex flex-col items-center gap-10 min-h-screen;
+  @apply flex flex-col items-center justify-center gap-10;
 }
 .main {
   @apply flex flex-grow min-h-screen;
@@ -39,7 +39,5 @@ import Worldstorytest2 from '~/components/worldstorytest2.vue';
   @apply text-lg text-scicyellow;
   font-family: lora;
 }
-.footer {
-  @apply p-5;
-}
+
 </style>

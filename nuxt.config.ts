@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  ssr: false,
   modules: [
     "@nuxt/ui",
     "@nuxt/content",
@@ -80,7 +81,80 @@ export default defineNuxtConfig({
         extensions: ['vue'],
         prefix: 'Lazy',
         watch: true,
-      }
+      }, 
+      {
+        path: '~/components/blog',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/discovery',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/discovery/sections',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/involvmentforms',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/projects',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/projects/building',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      
+      {
+        path: '~/components/projects/economy',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/projects/familly',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/projects/health',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/projects/knowing',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/projects/navigation',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
+      {
+        path: '~/components/navigation',
+        extensions: ['vue'],
+        prefix: 'Lazy',
+        watch: true,
+      },
     ]
   },
 

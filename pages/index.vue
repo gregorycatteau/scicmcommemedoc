@@ -2,14 +2,12 @@
   <div class="wrapper">
     <Firstherosection />
     <Introductionsection />
-   
   </div>
 </template>
 
 <script setup>
-import Firstherosection from '~/components/firstherosection.vue';
-import Introductionsection from '~/components/introductionsection.vue';
-
+import Firstherosection from "~/components/accueil/firstherosection.vue";
+import Introductionsection from "~/components/accueil/introductionsection.vue";
 </script>
 
 <style scoped>
@@ -23,4 +21,3 @@ import Introductionsection from '~/components/introductionsection.vue';
   }
 }
 </style>
-

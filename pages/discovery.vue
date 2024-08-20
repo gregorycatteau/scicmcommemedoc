@@ -5,12 +5,12 @@
 </template>
 
 <script setup lang="ts">
-import mcmstory from "~/components/mcmstory.vue";
+import mcmstory from "~/components/discovery/mcmstory.vue";
 </script>
 
 <style scoped>
 .mainwrapper {
-  @apply  bg-transparent;
+  @apply bg-transparent;
 }
 @media (max-width: 640px) {
   .mainwrapper {
@@ -18,4 +18,3 @@ import mcmstory from "~/components/mcmstory.vue";
   }
 }
 </style>
-

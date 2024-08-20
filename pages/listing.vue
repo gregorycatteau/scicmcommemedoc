@@ -10,7 +10,9 @@
 </template>
 
 <script setup lang="ts">
-
+import BlogBlogherosection from "~/components/blog/blogherosection.vue";
+import BlogFilteraccordion from "~/components/blog/filteraccordion.vue";
+import BlogArticleslist from "~/components/blog/articleslist.vue";
 </script>
 
 <style scoped>

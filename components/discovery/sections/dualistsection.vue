@@ -82,7 +82,7 @@ onMounted(() => {
 }
 
 .content {
-  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 max-w-2xl bg-white bg-opacity-80 rounded-lg text-center z-20;
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 w-10/12 bg-white bg-opacity-80 rounded-lg text-center z-20;
 }
 
 .section-title {
@@ -90,7 +90,7 @@ onMounted(() => {
 }
 
 .developpement {
-  @apply text-base leading-relaxed text-scicgreen text-justify indent-2 text-balance mb-6;
+  @apply text-base leading-relaxed text-black text-justify indent-2 text-balance mb-6;
   font-family: 'Lora', serif;
 }
 </style>

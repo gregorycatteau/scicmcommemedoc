@@ -8,7 +8,7 @@
     <main class="main flex-grow">
       <slot />
     </main>
-    
+
     <footer class="footer">
       <FooterComponent />
     </footer>
@@ -16,9 +16,9 @@
 </template>
 
 <script setup lang="ts">
-import Globalnavigation from '~/components/globalnavigation.vue';
-import FooterComponent from '~/components/footercomponent.vue';
-import NeuralNoiseExtended from '~/components/neuralnoiseextended.vue';
+import Globalnavigation from "~/components/navigation/globalnavigation.vue";
+import FooterComponent from "~/components/navigation/footercomponent.vue";
+import NeuralNoiseExtended from "~/components/styles/neuralnoiseextended.vue";
 </script>
 
 <style scoped>
@@ -30,7 +30,5 @@ import NeuralNoiseExtended from '~/components/neuralnoiseextended.vue';
   @apply flex-grow;
 }
 
-.footer {
-  @apply bg-scicgreen py-4 mt-auto;
-}
+
 </style>
