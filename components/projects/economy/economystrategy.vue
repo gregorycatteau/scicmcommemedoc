@@ -163,11 +163,7 @@
     </div>
     <template #footer>
       <div class="footerwrapper">
-        <button class="button" @click="openExampleEcole">Exemples</button>
-        <button class="button" @click="openBesoinsEcole">Nos besoins</button>
-        <button class="button" @click="openRecrutementEcole">
-          Recrutement
-        </button>
+        
       </div>
     </template>
   </UCard>
