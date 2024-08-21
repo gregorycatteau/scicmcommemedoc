@@ -250,16 +250,13 @@ export default defineNuxtConfig({
     prerender: {
       routes: [
         "/", // Prérendu de la page d'accueil
-        "/contact",
-        "/discovery",
-        "/fondements",
-        "/implication",
-        "/timeline",
-        "/projects",
+        
       ],
-      crawlLinks: true,
-      ignore: ["/blog/[...slug]", "/[...slug]"],
+      crawlLinks: false,
+     
     },
+    compressPublicAssets: true,
+    
   },
 
   anime: {
