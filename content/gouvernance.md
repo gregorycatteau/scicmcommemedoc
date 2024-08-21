@@ -1,55 +1,30 @@
-# Note vision de la gouvernance
+# La gouvernance de M Comme Médoc
 
-![L'Holacratie](/holacratieimg.png)
+La SCIC M Comme Médoc adopte une structure dualiste sous forme de société anonyme, qui se distingue par une gouvernance participative structurée autour de plusieurs collèges de vote. Ces collèges sont conçus pour refléter la diversité des parties prenantes et assurer une prise de décision équilibrée et démocratique. Voici un aperçu de cette structure organisée.
 
-## Introduction
-La structure de gouvernance décrite ici vise à créer une organisation dynamique et adaptative, fondée sur des principes de partage, d'autonomie et de responsabilité.
+## Structure des Collèges et Sociétaires
 
-## Les Questions en Suspens
-La gouvernance doit répondre à des questions cruciales telles que la construction de la confiance, la participation aux décisions, la répartition des rôles, la prise de décision, l'intégration des nouveaux membres et la gestion des conflits.
+La SCIC est organisée en divers collèges qui correspondent aux différentes catégories de sociétaires, allant des bénéficiaires aux partenaires institutionnels. Chaque collège joue un rôle crucial dans la gouvernance et la prise de décisions stratégiques de la coopérative. Voici le détail des collèges constitués :
 
-![Construction de la confiance](/confianceconstruction.png)
+| Catégorie de Sociétaires | Collège               | Description                                         | Parts Sociales Minimales                          |
+|--------------------------|-----------------------|-----------------------------------------------------|---------------------------------------------------|
+| Bénéficiaires            | Bénéficiaires         | Clients internes sans contrepartie d'implication active | 1 part pour individu, 2 parts pour un foyer       |
+| Consom'acteurs           | Bénéficiaires avec implication active |                                                     | 2 parts pour participation                        |
+| Acteurs                  | Producteurs Partenaires | Partenaires développant l'offre de services        | 5 parts pour individus et associations, 10 parts pour entreprises |
+| Salariés                 | Futurs salariés de la SCIC | Pas d'obligation                                    |                                                   |
+| Autres                   | Partenaires Financiers | Personnes investissant dans la SCIC                 | 20 parts pour individus, 50 parts pour autres     |
+|                          | Partenaires Écologiques | Acteurs travaillant sur l'aspect écologique avec la SCIC | 5 parts pour associations, 20 parts pour entreprises |
+|                          | Partenaires Institutionnels | Institutions partenaires, comme les mairies       | 10 parts                                          |
+|                          | Partenaires Sociaux    | Associations d'usagers et autres collectifs sociaux | 1 part pour individus, 10 parts pour collectifs   |
 
-## Ce que l'On Ne Veut Pas
-L'organisation cherche à éviter les pièges classiques tels que le manque de partage d'information, les prises de décision difficiles, les jeux de pouvoir, la bureaucratie lourde, les réunions inefficaces, et la stagnation.
+## Pondération des Votes
 
-![Confusion et bureaucratie](/confusion.png)
+Les décisions importantes sont prises lors des assemblées générales où les votes sont pondérés pour garantir une représentation équitable de toutes les parties prenantes. La répartition des poids de vote entre les différents collèges de type est la suivante :
 
-## Les Ingrédients du Succès
-Pour réussir, l'organisation met l'accent sur la motivation, l'autonomie, l'expertise et la responsabilité partagée.
+| Type de Collège    | Pondération Totale | Répartition Interne                                     |
+|--------------------|--------------------|---------------------------------------------------------|
+| Usagers            | 30%                | Bénéficiaires: 30%, Consom'acteurs: 70%                 |
+| Producteurs        | 35%                | Acteurs: 60%, Salariés: 40%                             |
+| Autres Partenaires | 35%                | Financiers: 25%, Écologiques: 25%, Institutionnels: 25%, Sociaux: 25% |
 
-## Structure de Gouvernance
-### L'Assemblée Générale Informelle
-- Regroupe tous les associés concernés.
-- Vocation opérationnelle et permanente.
-- Souveraine dans la prise de décision.
-- Composée de différents cercles.
-
-### Les Cercles
-- Entités opérationnelles ou projets.
-- Composés d'acteurs (rôles) complémentaires.
-- Indépendants mais interconnectés.
-
-![cercles holacratiques](/cercles.png)
-### Les Rôles
-- Chaque rôle a une raison d'être et des redevabilités spécifiques.
-- Energétisé par une seule personne.
-
-### Les Assemblées Générales Formelles
-- Incluent tous les associés.
-- Présidées par des représentants de l'association La Base.
-- Traitent des décisions impactant l'entreprise dans son ensemble.
-
-### Les Comités de Gestion
-- Représentent les associés lors des assemblées formelles.
-- Participation de tous les associés à tour de rôle.
-
-### L’Arbitrage de l’Association La Base
-- Assure la présidence lors des assemblées formelles.
-- Garante des valeurs de l'organisation.
-
-## Holacratie
-Adoption de l'Holacratie pour une gestion dynamique et flexible, centrée sur la raison d'être de l'organisation, la répartition des tâches en rôles, et la résolution des tensions.
-
-## Conclusion
-Cette structure de gouvernance vise à créer une organisation résiliente, transparente et efficace, capable de s'adapter rapidement aux changements et d'impliquer activement tous ses membres dans le processus décisionnel.
+Cette structure de gouvernance assure que toutes les décisions clés, affectant le fonctionnement et la stratégie de la SCIC M Comme Médoc, soient prises de manière démocratique, reflétant la diversité et les intérêts de ses membres. Cela favorise une approche inclusive et durable, en phase avec les valeurs de coopération et de mutualité qui sont au cœur de l'identité de la SCIC M Comme Médoc.

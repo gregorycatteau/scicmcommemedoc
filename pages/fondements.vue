@@ -1,15 +1,12 @@
 <template>
   <div>
+    
     <fondementcomponent />
   </div>
 </template>
-<script>
-import fondementcomponentVue from '~/components/fondementcomponent.vue';
-export default {
-  components: {
-    fondementcomponentVue
-  },
-}
+<script setup >
+import fondementcomponent from '~/components/fondations/fondementcomponent.vue';
+
 </script>
 <style scoped>
 

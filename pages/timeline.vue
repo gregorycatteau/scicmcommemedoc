@@ -1,16 +1,43 @@
 <template>
-  <div class="timeline">
-    <timelinecomponent />
-    <timelinesecondcomponent />
+  <div class="timeline-container">
+    <!-- En-tête -->
+    <div class="header">
+      <h1 class="title">
+        Ce que nous avons compris par l'action et l'implication
+      </h1>
+      <p class="description">
+        Comprendre M Comme Médoc c'est comprendre les réflexions et les actions
+        de ceux qui l'ont créé.
+      </p>
+    </div>
+
+    <Worldstorytest2 />
+
+    <!-- Pied de page / Navigation -->
   </div>
 </template>
 
-<script>
-import timelinecomponent from '~/components/timelinecomponent.vue';
-import timelinesecondcomponent from '~/components/timelinesecondcomponent.vue';
+<script setup>
+import Worldstorytest2 from "~/components/history/worldstorytest2.vue";
 </script>
 
 <style scoped>
-/* Dans votre fichier CSS ou en tant que balises <style> dans un composant Vue */
+.timeline-container {
+  @apply flex flex-col items-center justify-center gap-10;
+}
+.main {
+  @apply flex flex-grow min-h-screen;
+}
+.header {
+  @apply shadow-lg rounded-xl bg-scicgreen p-10 text-center rounded-xl mt-20 bg-opacity-75;
+}
+.title {
+  @apply text-4xl font-semibold text-scicyellow mb-4;
+  font-family: kalnia;
+}
+.description {
+  @apply text-lg text-scicyellow;
+  font-family: lora;
+}
 
 </style>

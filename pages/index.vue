@@ -1,35 +1,23 @@
 <template>
-  <div class="home">
-    <WelcomingHeroSection />
-    <MissionSection />
-    <InitiativesSection />
-    <Polesection />
-    <JoinSection />
-    <SoutenirSection />
+  <div class="wrapper">
+    <Firstherosection />
+    <Introductionsection />
   </div>
 </template>
 
-<script>
-import WelcomingHeroSection from '~/components/welcomingherosection.vue'
-import MissionSection from '@/components/mission.vue'
-import InitiativesSection from '@/components/initiatives.vue'
-import Polesection from '@/components/poles.vue'
-import JoinSection from '@/components/join.vue'
-import SoutenirSection from '@/components/soutenir.vue'
-
-export default {
-  name: 'HomePage',
-  components: {
-    WelcomingHeroSection,
-    MissionSection,
-    InitiativesSection,
-    Polesection,
-    JoinSection,
-    SoutenirSection
-  }
-}
+<script setup>
+import Firstherosection from "~/components/accueil/firstherosection.vue";
+import Introductionsection from "~/components/accueil/introductionsection.vue";
 </script>
 
-<style>
-
+<style scoped>
+.wrapper {
+  @apply flex flex-col items-center justify-center min-h-screen mx-auto gap-y-8;
+  animation: fadeIn 1s ease-out;
+}
+@media (max-width: 640px) {
+  .wrapper {
+    @apply gap-y-4 px-4;
+  }
+}
 </style>

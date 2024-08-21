@@ -1,23 +1,17 @@
+<!-- pages/test.vue -->
 <template>
- 
-  
-  <div>
-    <PartOne />
+  <div class="mainwrapper">
+   testin' page
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 
-import PartOne from '~/components/premierconstat/part_one.vue';
-export default {
-  name: 'TestPage',
-  components: {
-    
-    PartOne
-  }
-}
 </script>
 
-<style>
-  
+<style scoped>
+.mainwrapper {
+  @apply mt-96;
+}
+
 </style>
