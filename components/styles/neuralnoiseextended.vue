@@ -147,3 +147,10 @@ export default {
 }
 </style>
 
+Pour faire pointer votre domaine mcommemedoc.fr vers Netlify tout en conservant vos services de messagerie chez Hostinger, vous devrez modifier uniquement l'enregistrement CNAME pour votre domaine principal. Voici comment procéder :
+Accédez à l'éditeur de zone DNS dans votre panneau de contrôle Hostinger.
+Dans la section "Gérer les enregistrements DNS", sélectionnez CNAME comme type d'enregistrement.
+Entrez @ comme hôte.
+Dans "Cible", saisissez le nom de domaine ou la valeur fournie par Netlify.
+Gardez le TTL par défaut de 14400 et cliquez sur "Ajouter l'enregistrement".
+Après avoir ajouté l'enregistrement, il faudra attendre quelques heures pour que les modifications prennent effet. Cela permettra de rediriger votre site vers Netlify sans affecter vos services de messagerie.

@@ -1,0 +1,248 @@
+.
+├── app.vue
+├── arborescence.txt
+├── assets
+│   └── css
+│       └── tailwind.css
+├── components
+│   ├── accueil
+│   │   ├── beforeallmission.vue
+│   │   ├── firstherosection.vue
+│   │   └── introductionsection.vue
+│   ├── blog
+│   │   ├── articlesfilter.vue
+│   │   ├── articleslist.vue
+│   │   ├── blogherosection.vue
+│   │   ├── blogsearchbar.vue
+│   │   ├── filteraccordion.vue
+│   │   ├── pagination.vue
+│   │   ├── slug.vue
+│   │   └── titlecount.vue
+│   ├── contact
+│   │   ├── contactcomponent.vue
+│   │   ├── faqcomponent.vue
+│   │   ├── gratefulmessage.vue
+│   │   └── mailsender.vue
+│   ├── discovery
+│   │   ├── content.vue
+│   │   ├── heading.vue
+│   │   ├── imagecontainer.vue
+│   │   ├── mcmstory.vue
+│   │   ├── neuralnoise.vue
+│   │   ├── sectioning.vue
+│   │   └── sections
+│   │       ├── collegessection.vue
+│   │       ├── colleges.vue
+│   │       ├── dualistsection.vue
+│   │       ├── intermediate.vue
+│   │       ├── principlesectionessay.vue
+│   │       ├── principlessection.vue
+│   │       └── scicsection.vue
+│   ├── fondations
+│   │   └── fondementcomponent.vue
+│   ├── history
+│   │   └── worldstorytest2.vue
+│   ├── involvment
+│   │   └── getinvolved.vue
+│   ├── involvmentforms
+│   │   ├── associationform.vue
+│   │   ├── entrepreneurform.vue
+│   │   ├── individualform.vue
+│   │   ├── involvedmailsender.vue
+│   │   ├── mainglobalform.vue
+│   │   └── societyform.vue
+│   ├── navigation
+│   │   ├── footercomponent.vue
+│   │   └── globalnavigation.vue
+│   ├── projects
+│   │   ├── building
+│   │   │   ├── buildinginitiatives.vue
+│   │   │   ├── buildingintrosection.vue
+│   │   │   ├── buildingobjectives.vue
+│   │   │   └── building.vue
+│   │   ├── economy
+│   │   │   ├── constatdepart.vue
+│   │   │   ├── economyherosection.vue
+│   │   │   ├── economyquestionnary.vue
+│   │   │   ├── economystrategy.vue
+│   │   │   ├── economy.vue
+│   │   │   ├── exempleeconomique.vue
+│   │   │   ├── firstimagelayout.vue
+│   │   │   ├── marketbycustomers.vue
+│   │   │   ├── marketbyinstitutionals.vue
+│   │   │   └── marketbyproducers.vue
+│   │   ├── familly
+│   │   │   ├── besoinscreche.vue
+│   │   │   ├── besoinsecole.vue
+│   │   │   ├── besoinsparentalite.vue
+│   │   │   ├── exemplecreche.vue
+│   │   │   ├── exempleecole.vue
+│   │   │   ├── exempleparentalite.vue
+│   │   │   ├── family.vue
+│   │   │   ├── recrutementcreche.vue
+│   │   │   └── recrutementecole.vue
+│   │   ├── health
+│   │   │   ├── healthinitiatives.vue
+│   │   │   ├── healthintrosection.vue
+│   │   │   ├── healthobjectives.vue
+│   │   │   └── health.vue
+│   │   ├── knowing
+│   │   │   ├── besoinsreappropriation.vue
+│   │   │   ├── exemplereappropriation.vue
+│   │   │   ├── knowledge.vue
+│   │   │   └── recrutementreappropriation.vue
+│   │   └── navigation
+│   │       ├── primarynavbar.vue
+│   │       ├── projectsnavbar.vue
+│   │       └── secondnavbar.vue
+│   └── styles
+│       └── neuralnoiseextended.vue
+├── content
+│   ├── blog
+│   │   ├── ambiguity.md
+│   │   ├── complexity.md
+│   │   ├── defis-agriculture-durable.md
+│   │   ├── democratie-participative.md
+│   │   ├── developpement-durable-local.md
+│   │   ├── economie-circulaire.md
+│   │   ├── education-alternative.md
+│   │   ├── importance-apprendre.md
+│   │   ├── intergenerationnel.md
+│   │   ├── resilience.md
+│   │   ├── respect.md
+│   │   ├── solidarite-crise.md
+│   │   ├── sustainability.md
+│   │   └── volatility.md
+│   ├── gouvernance.md
+│   ├── holacratie.md
+│   ├── labase.md
+│   ├── statuts.md
+│   └── valeurs.md
+├── data
+│   └── membership.ts
+├── isolate-0x6878550-116201-116201-v8.log
+├── layouts
+│   ├── default.vue
+│   └── projectslayout.vue
+├── middleware
+│   └── selectPole.ts
+├── netlify.toml
+├── nuxt.config.ts
+├── package.json
+├── package-lock.json
+├── pages
+│   ├── blog
+│   │   └── [...slug].vue
+│   ├── contact.vue
+│   ├── discovery.vue
+│   ├── fondements.vue
+│   ├── implication.vue
+│   ├── index.vue
+│   ├── legal.vue
+│   ├── listing.vue
+│   ├── mission.vue
+│   ├── projects.vue
+│   ├── [...slug].vue
+│   ├── test.vue
+│   ├── timeline.vue
+│   └── userinvolved.vue
+├── public
+│   ├── 404.png
+│   ├── agreement.png
+│   ├── Alexandre.png
+│   ├── Alex.png
+│   ├── Aline_et_Julien.png
+│   ├── Amandine.png
+│   ├── ambiguite.png
+│   ├── apprendre.png
+│   ├── apprentissagebois.png
+│   ├── Camille.png
+│   ├── Caroline.png
+│   ├── cercles.png
+│   ├── Claire.png
+│   ├── coherence.png
+│   ├── complexite.png
+│   ├── confianceconstruction.png
+│   ├── confusion .png
+│   ├── contact.png
+│   ├── David.png
+│   ├── Elise_et_Thomas.png
+│   ├── Emma.png
+│   ├── Eric.png
+│   ├── Fatima.png
+│   ├── favicon.ico
+│   ├── fifthperiod.png
+│   ├── firstperiod.png
+│   ├── fourthperiod.png
+│   ├── Hélène.png
+│   ├── holacratieimg.png
+│   ├── intergenerationnel.png
+│   ├── jardin.png
+│   ├── Jean-Pierre.png
+│   ├── Jean.png
+│   ├── Josiane.png
+│   ├── Julien.png
+│   ├── Léa.png
+│   ├── logo.png
+│   ├── Lucas.png
+│   ├── Marc_et_Sandrine.png
+│   ├── Marc.png
+│   ├── Marie.png
+│   ├── medocterritoire.png
+│   ├── Mélanie.png
+│   ├── mission2.png
+│   ├── Myriam.png
+│   ├── Nadia.png
+│   ├── Olivier.png
+│   ├── peur.png
+│   ├── Pierre.png
+│   ├── questionary.png
+│   ├── recyclage.png
+│   ├── reponsescic.png
+│   ├── resilience2.png
+│   ├── resilienceadaptee.png
+│   ├── resilience.png
+│   ├── respectvivant.png
+│   ├── Sandra.png
+│   ├── secondperiod.png
+│   ├── seventhperiod.png
+│   ├── sixthperiod.png
+│   ├── solidaritecrise.png
+│   ├── solidaritymakers.png
+│   ├── Sophie.png
+│   ├── tableau.jpg
+│   ├── thirdperiod.png
+│   ├── Thomas.png
+│   ├── travail.png
+│   ├── tree.png
+│   ├── Tristan.png
+│   ├── vivantorange.png
+│   ├── volatilite.png
+│   ├── wallpaper12.png
+│   ├── wallpaper13.png
+│   ├── wallpaper22.png
+│   ├── wallpaper3.png
+│   ├── wallpaper4.png
+│   ├── wallpaper.png
+│   └── wallpaperreappro.png
+├── README.md
+├── schema
+│   ├── processFormSchemaDeep.ts
+│   └── processFormSchema.ts
+├── server
+│   ├── api
+│   │   └── articles.js
+│   └── tsconfig.json
+├── stores
+│   ├── filters.js
+│   ├── querypoles.js
+│   ├── searchbarfilter.js
+│   ├── slideover.js
+│   └── user.ts
+├── tailwind.config.ts
+├── tsconfig.json
+├── types
+│   └── anime.d.ts
+└── wallpaper2.png
+
+35 directories, 211 files
