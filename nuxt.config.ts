@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   // Activation du SSR
   ssr: true,
@@ -273,8 +273,23 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        "/", // Prérendu de la page d'accueil
+        "/",
+        "/contact",
+        "/discovery",
+        "/fondements",
+        "/implication",
+        "/legal",
+        "/listing",
+        "/mission",
+        "/project",
+        "/timeline",
+        "/userinvolved" // Prérendu de la page d'accueil
         
+      ],
+      ignore: [
+        '/[...slug]',
+        '/blog/[...slug]',
+        '/test'
       ],
       crawlLinks: false,
      
