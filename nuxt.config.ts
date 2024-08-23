@@ -245,7 +245,31 @@ export default defineNuxtConfig({
     densities: [1, 2, 3],
     quality: 80,
   },
+  icon: {
+    provider: "iconify",
+    serverBundle: false,
+    clientBundle: {
+      icons: [
+        "material-symbols:add-location-alt",
+        "gravity-ui:house",
+        "material-symbols:timer",
+        "material-symbols:360",
+        "lucide:newspaper",
+        "material-symbols:groups-2-outline",
+        "logos:facebook",
+        "logos:telegram",
+        "skill-icons:linkedin",
+        "logos:youtube-icon",
+        "fa:spinner",
+        "noto:leaf-fluttering-in-wind",
+        "noto:red-heart",
+        "noto:seedling",
+        "heroicons:magnifying-glass-20-solid"
 
+
+      ],
+   },
+  },
   nitro: {
     prerender: {
       routes: [

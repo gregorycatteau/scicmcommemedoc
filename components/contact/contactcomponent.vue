@@ -40,15 +40,15 @@
 import { z } from "zod";
 import { reactive, ref, onMounted } from "vue";
 import MailSender from "~/components/contact/mailsender.vue";
-import GratefulMessage from "~/components/contact/gratefulmessage.vue";
+import gratefulMessage from "~/components/contact/gratefulmessage.vue";
 
 const schema = z.object({
-  username: z.string().min(2, "Doit contenir au moins 2 caractères"),
+  username: z.string()
+    .min(2, "Doit contenir au moins 2 caractères")
+    .regex(/^[a-zA-ZÀ-ÿ\s-]+$/, "Le nom ne peut contenir que des lettres, des espaces, et des traits d'union"),
   email: z.string().email("Adresse email invalide"),
   phone: z.string().regex(/^\d{10}$/, "Numéro de téléphone invalide"),
-  message: z
-    .string()
-    .min(10, "Le message doit contenir au moins 10 caractères"),
+  message: z.string().min(10, "Le message doit contenir au moins 10 caractères") .max(2000, "Le message ne peut pas dépasser 2000 caractères"),
 });
 
 const state = reactive({

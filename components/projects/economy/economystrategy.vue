@@ -1,237 +1,190 @@
 <template>
-  <UCard class="ucardwrapper">
+
+  <UCard class="before-all-mission">
     <template #header>
-      <h2 class="ucardtitle">Rassembler, coordonner et simplifier</h2>
+      <h1 class="maintitle">M Comme Médoc est pour que vous ne soyez plus seuls pour faire face à :</h1>
     </template>
-    <div class="ucardtextwrapper">
-      <p class="ucardtext">
-        M Comme Médoc est une SCIC, un organe collectif ayant pour objet
-        social l'amélioration du cadre de vie de ses sociétaires et plus
-        largement des habitants du territoire médocain. Notre objectif est de
-        rassembler, coordonner et simplifier les initiatives locales pour
-        créer une dynamique vertueuse et durable sur notre territoire. Dans un
-        premier temps, nous allons tout mettre en oeuvre pour réunir les
-        acteurs locaux, les institutions et les citoyens autour de projets
-        concrets et fédérateurs. Nous allons également travailler à la mise en
-        place d'outils et de services qui permettront de soutenir et de
-        valoriser les initiatives locales.
-      </p>
-      <div class="wrappercontentdev">
-        <div class="wrapperimagecontainer3"></div>
-        <div class="wrappercontenttext">
-          <h3 class="ucardsubtitle">Plantons les graines</h3>
-          <p class="ucardtext">
-            Nous voulons perpétrer la tradition de respect du vivant inhérente
-            à notre ADN médocain. Nous savons que nous pouvons sereinement
-            développer des mécanismes de solidarité et de partage qui
-            permettront à chacun de trouver sa place et de s'épanouir. Nous
-            voulons également nous appuyer sur les forces vives de notre
-            territoire pour créer une dynamique vertueuse et durable. Nous
-            savons que nous pouvons compter sur la richesse de notre
-            patrimoine naturel et culturel pour construire un avenir commun et
-            solidaire.
-          </p>
-          <p class="ucardtext">
-            Tout le monde a un rôle à jouer dans cette dynamique. Les
-            producteurs locaux, les artisans, les commerçants, les
-            associations, les citoyens, les institutions... Chacun peut
-            apporter sa pierre à l'édifice et contribuer à la construction
-            d'un territoire plus solidaire et plus durable. Nous voulons créer
-            un écosystème vertueux où chacun peut trouver sa place et
-            s'épanouir.
-          </p>
-
-          <h3 class="ucardsubtitle">Développons les racines</h3>
-          <h4 class="ucardsubtitle">Rendre les produits visibles en ligne</h4>
-          <p class="ucardtext">
-            La mise en avant des produits et leur visibilité est l'une des
-            premières étapes. Pour ce faire nous allons créer une application
-            internet qui permettra aux utilisateurs, à la fois de connaitre
-            les produits locaux disponibles mais également de commander en
-            ligne. Pour les producteurs, ce site leur permettra de disposer
-            d'une plateforme commune et donc de gérer plus facilement leurs
-            produits.
-          </p>
-          <div class="relative">
-            <p class="ucardtext">
-              Le développement de ce site sera intégralement financé par la
-              scic M Comme Médoc en échange d'une
-              <span
-                class="emphazer2 cursor-pointer text-blue-500 hover:text-blue-700"
-                @click="isOpen = true"
-              >
-                réciprocité solidaire de services
-              </span>
-              qui sera proposée aux producteurs locaux. Les frais fixes
-              (maintenance, hébergement) seront assumés par les producteurs
-              selon une logique de mutualisation solidaire.
-            </p>
-          </div>
+    <div class="separator">
+    <section class="sectionpair bg-scicgreen p-4 bg-opacity-35 rounded-2xl shadow-2xl">
+      <div class="text-section">
+        <h2 class="section-title">Un monde devenu volatile</h2>
+        <h3 class="section-subtitle">Quand préparer un budget devient un défi</h3>
+        <p class="section-description">Dans un monde où les prix fluctuent inopinément et plutôt spontanément vers le haut, caractérisé par l'angoisse d'une ménagère face à son budget, et où les entrepreneurs voient leurs plans bouleversés par des crises imprévues, nous pensons qu'il devient utile de raisonner différemment.</p>
+        <div class="buttoncentring">
+          <button @click="govolatility" class="button">En savoir plus</button>
         </div>
-        
-        </div>
-        <UPopover v-if="isOpen" :popper="{ placement: 'top' }">
-          <template #activator="{ props, isOpen }">
-            <span v-bind="props"></span>
-          </template>
-          <div class="p-10 bg-scicblue bg-opacity-40 shadow-lg rounded-lg">
-            <h3 class="ucardtitle2">
-              Principe de Réciprocité de Services pour la Plateforme de
-              E-commerce de la SCIC
-            </h3>
-            <h4 class="ucardsubtitle2">
-              Introduction au Modèle de Réciprocité
-            </h4>
-            <p class="ucardtext2">
-              La Société Coopérative d’Intérêt Collectif (SCIC) M Comme Médoc
-              développe une plateforme de e-commerce innovante, conçue pour
-              renforcer les liens entre les producteurs locaux et les
-              consommateurs. Le modèle économique de cette plateforme repose
-              sur un principe de réciprocité de services, offrant ainsi une
-              solution créative pour éviter les complications liées à la
-              gestion des flux financiers traditionnels.
-            </p>
-            <h4 class="ucardsubtitle2">
-              Fonctionnement de la Réciprocité de Services
-            </h4>
-            <p class="ucardtext2">
-              Dans le cadre de ce modèle, la SCIC prend en charge
-              l'intégralité des coûts associés à la création et à
-              l'opérationnalisation de la plateforme de e-commerce. En retour,
-              les producteurs locaux s'engagent à fournir à la SCIC des biens
-              ou des services équivalents à la valeur du temps investi pour
-              leur mise en place sur la plateforme. Cette approche permet de
-              construire un système d'échange équitable et soutenable pour
-              toutes les parties prenantes.
-            </p>
-            <h4 class="ucardsubtitle2">Équivalence de la Contribution</h4>
-            <p class="ucardtext2">
-              Le principe repose sur une équivalence où chaque heure de
-              service fourni par la SCIC est valorisée à 15 euros. De la même
-              manière, les contributions des producteurs, qu'elles soient sous
-              forme de biens ou de services, sont évaluées selon le même tarif
-              horaire. Par exemple, 15 euros de produits fournis par un
-              producteur sont considérés comme équivalant à une heure de
-              service rendu par la SCIC.
-            </p>
-            <h4 class="ucardsubtitle2">
-              Avantages de la Réciprocité de Services
-            </h4>
-            <p class="ucardtext2">
-              Ce modèle de réciprocité de services présente plusieurs
-              avantages :
-            </p>
-            <ul class="ucardlist">
-              <li class="ucardlistitem">
-                <span class="emphazer"
-                  >Minimisation des Transactions Financières :</span
-                >
-                Il réduit la nécessité de gérer des transactions financières
-                complexes, simplifiant la comptabilité et les démarches
-                administratives pour tous les participants.
-              </li>
-              <li class="ucardlistitem">
-                <span class="emphazer"
-                  >Renforcement des Relations Communautaires :
-                </span>
-                Ce système encourage la coopération et le renforcement des
-                liens entre les membres de la SCIC et les producteurs locaux,
-                créant une communauté plus soudée et résiliente.
-              </li>
-              <li class="ucardlistitem">
-                <span class="emphazer"
-                  >Accès Équitable aux Ressources :
-                </span>
-                En éliminant les barrières financières à l'entrée, ce modèle
-                permet à un plus grand nombre de producteurs de bénéficier de
-                la plateforme, favorisant une diversité et une richesse accrue
-                de l'offre locale.
-              </li>
-              <div class="popoverbutton">
-                <button class="button" @click="isOpen = false">Fermer</button>
-              </div>
-            </ul>
-          </div>
-        </UPopover>
-      
-
-      <p class="ucardtext">
-        La mise en ligne des produits sera, selon les cas, effectuée
-        directement par les producteurs ou par un administrateur de M Comme
-        Médoc.
-      </p>
-    </div>
-    <template #footer>
-      <div class="footerwrapper">
-        <button class="button" @click="openExampleEcole">Exemples</button>
-        <button class="button" @click="openBesoinsEcole">Nos besoins</button>
-        <button class="button" @click="openRecrutementEcole">
-          Recrutement
-        </button>
       </div>
+      <img src="/volatilite.png" alt="Illustration of volatility and uncertainty" class="image-section">
+    </section>
+
+    <section class="sectionunpair flex flex-col md:flex-row-reverse bg-scicorange p-4 bg-opacity-35 rounded-2xl shadow-2xl ">
+      <div class="text-section">
+        <h2 class="section-title">Un monde devenu complexe</h2>
+        <h3 class="section-subtitle">Et si on y réfléchissait ensemble ?</h3>
+        <p class="section-description">Vivre ne devrait pas être un parcours du combattant ! Pour quelles raisons devrions nous choisir de subir la complexité du monde alors que nous pouvons au contraire nous unir pour simplifier nos quotidiens ? </p>
+        <div class="buttoncentring">
+          <button @click="gocomplexity" class="button">En savoir plus</button>
+        </div>
+      </div>
+      <img src="/complexite.png" alt="Illustration of administrative complexity" class="image-section">
+      
+    </section>
+
+    <section class="sectionpair flex flex-col md:flex-row bg-scicgreen p-4 bg-opacity-35 rounded-2xl shadow-2xl">
+      <div class="text-section">
+        <h2 class="section-title">Un monde devenu ambigu</h2>
+        <h3 class="section-subtitle">Ecologie ou Egologie ? </h3>
+        <p class="section-description">Et si la solution aux problèmes de cohérence écologique venaient d'un cohésion entre chacun d'entre nous ? Et si nous reprenions collectivement notre destinée en main ? Et si nous honorions ensemble nos responsabilités pour faire de notre territoire une terre de paix et de prospérité vivante et harmonieuse ? </p>
+        <div class="buttoncentring">
+          <button @click="goambiguity" class="button">En savoir plus</button>
+        </div>
+      </div>
+      <img src="/ambiguite.png" alt="Illustration of ecological ambiguity" class="image-section">
+    </section>
+
+    <section class="sectionunpair flex flex-col md:flex-row-reverse bg-scicorange p-4 bg-opacity-35 rounded-2xl shadow-2xl">
+      <div class="text-section">
+        <h2 class="section-title">Un besoin urgent de Résilience</h2>
+        <h3 class="section-subtitle">Développer des Stratégies Adaptatives</h3>
+        <p class="section-description">Qui construit une forteresse défensive mourra seul. Qui développe une communauté fermée s'exclut. Qui pense au bien commun comme la valeur ajoutée de son épanouissement personne vit en harmonie. Ensemble nous pouvons trouver des solutions adaptatives et repenser notre vivre ensemble. </p>
+        <div class="buttoncentring">
+          <button @click="goresilience" class="button">En savoir plus</button>
+        </div>
+      </div>
+      <img src="/resilience2.png" alt="Illustration of resilience" class="image-section">
+    </section>
+
+    <section class="mission-section">
+    
+      <div class="mission-content">
+        <h2 class="mission-section-title">Notre Mission chez M Comme Médoc</h2>
+        <h3 class="mission-section-subtitle">Identifier et Développer des Réponses Innovantes</h3>
+        <p class="mission-section-description">« La mission de M Comme Médoc consiste à identifier et développer des réponses innovantes aux défis écologiques, économiques et sociaux de notre territoire. </p>
+        <p class="mission-section-description">En tant que laboratoire vivant, nous nous engageons à expérimenter et appliquer de manière collaborative des stratégies fondées sur la résilience et la solidarité, visant à construire un environnement plus durable et harmonieux. » </p>
+      </div>
+    </section>
+    </div>
+  <template #footer>
+      <button @click="goBack" class="button">Revenir en arrière</button>
     </template>
-  </UCard>
+    </UCard>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { useRouter } from 'vue-router';
 
-const isOpen = ref(false);
+const router = useRouter();
+
+function govolatility() {
+  router.push('/blog/volatility');
+}
+
+function gocomplexity() {
+  router.push('/blog/complexity');
+}
+
+function goambiguity() {
+  router.push('/blog/ambiguity');
+}
+
+function goresilience() {
+  router.push('/blog/sustainability');
+}
+
+function goBack() {
+  router.push('/');
+}
 </script>
 
 <style scoped>
-.ucardwrapper {
-  @apply bg-transparent shadow-xl rounded-2xl p-4 sm:p-6 md:p-8 mb-4;
+.before-all-mission {
+  @apply text-scicgreen bg-white bg-opacity-50 flex flex-col items-center py-20 px-4 gap-8 w-screen m-auto rounded-xl shadow-lg;
 }
-.ucardtitle {
-  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold ring ring-white text-center p-6 text-white rounded-2xl shadow-lg;
-  font-family: "Playfair Display", serif;
+.maintitle {
+  @apply text-2xl font-bold text-scicgreen mb-4 font-bold;
+  font-family: 'Playfair Display', serif;
 }
-.ucardtextwrapper {
-  @apply flex flex-col gap-2 sm:gap-4 md:gap-6;
+.separator {
+  @apply w-full flex flex-col items-center gap-8;
 }
-.ucardtext {
-  @apply text-base sm:text-lg md:text-xl text-justify indent-4 sm:indent-8 text-white;
-  font-family: "Lora", serif;
+.section {
+  @apply flex flex-col md:flex-row items-center gap-8 max-w-7xl;
 }
-.ucardsubtitle {
-  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-scicyellow text-center p-2 sm:p-4;
-  font-family: "Lora", serif;
+.sectionpair {
+  @apply flex flex-col md:flex-row items-center gap-8 max-w-7xl;
 }
-.footerwrapper {
-  @apply flex justify-center items-center gap-2 sm:gap-4 md:gap-6;
+.sectionunpair {
+  @apply flex flex-col md:flex-row-reverse items-center gap-8 max-w-7xl;
+}
+.text-section {
+  @apply flex-1 p-4 text-slate-800;
+}
+
+.image-section {
+  @apply w-full md:w-1/2 lg:w-1/3 rounded-xl shadow-lg transition-transform duration-300 ease-in-out hover:scale-105;
+}
+
+.mission-section {
+  @apply relative mt-10 p-10 flex flex-col items-center text-center text-white bg-gradient-to-r from-scicgreen to-scicblue rounded-xl;
+}
+
+.mission-background {
+  @apply absolute top-0 left-0 w-full h-full object-cover rounded-xl opacity-60;
+}
+
+.mission-content {
+  @apply relative z-10 p-4;
+}
+
+.section-title, .mission-section .section-title {
+  @apply text-4xl mb-6 font-bold text-center;
+  font-family: 'Playfair Display', serif;
+}
+
+.section-subtitle {
+  @apply text-2xl mb-4 font-semibold text-center;
+  font-family: 'Lora', serif;
+}
+
+.section-description {
+  @apply mb-4 text-justify indent-8 text-slate-900;
+  font-family: 'Montserrat', sans-serif;
+  @apply text-lg text-opacity-90;
+}
+
+.section-description {
+  @apply text-slate-800;
+  font-family: 'Lora', serif;
+}
+.buttoncentring {
+  @apply flex justify-center items-center;
 }
 .button {
-  @apply bg-scicgreen text-white font-bold mb-4 sm:mb-6 md:mb-10 py-2 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded hover:bg-scicorange transition-colors;
-  font-family: Montserrat;
+  @apply bg-scicgreen text-scicblue rounded-lg p-4 hover:bg-scicorange hover:text-white mb-10;
+  font-family: 'Lora', serif;
 }
-.wrappercontentdev {
-  @apply grid grid-rows-1 gap-2 sm:gap-4 md:gap-6;
-  @apply sm:grid-cols-2 md:grid-cols-2;
-}
-.wrapperimagecontainer3 {
-  @apply p-2 sm:p-4 md:p-6 rounded-lg shadow-2xl shadow-inner hover:scale-105;
-  background-image: url("/tree.png");
-  background-position: center;
+.mission-section {
+  @apply w-[95%] m-auto rounded-3xl shadow-md ;
+  background-image: url('/mission2.png');
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
-.emphazer2 {
-  @apply font-bold text-scicorange;
+.mission-content {
+  @apply bg-scicgreen bg-opacity-70 p-8 rounded-xl shadow-lg z-10;
 }
-.ucardtitle2 {
-  @apply text-xl sm:text-2xl md:text-3xl font-semibold text-scicgreen text-center ring-2 ring-scicgreen p-2 sm:p-4 rounded-lg;
-  font-family: "Lora", serif;
+.mission-section-title {
+  @apply text-4xl font-bold text-scicyellow mb-4;
+  font-family: 'Playfair Display', serif;
 }
-.ucardsubtitle2 {
-  @apply text-xl sm:text-2xl md:text-3xl font-semibold text-scicgreen text-center ring-2 ring-scicgreen p-2 sm:p-4 rounded-lg;
-  font-family: "Lora", serif;
+.mission-section-subtitle {
+  @apply text-2xl font-semibold text-scicblue mb-4;
+  font-family: 'Lora', serif;
 }
-.ucardtext2 {
-  @apply text-base sm:text-lg md:text-xl text-justify indent-4 sm:indent-8 p-2 sm:p-4;
-  font-family: "Lora", serif;
+.mission-section-description {
+  @apply text-scicgreen text-justify indent-8 text-xl bg-scicblue bg-opacity-70 p-4 rounded-lg font-extrabold;
+  font-family: 'Montserrat', sans-serif;
+  
 }
-.popoverbutton {
-  @apply flex items-center justify-center mt-4 sm:mt-6 md:mt-10;
-  font-family: Montserrat;
-}
+
 </style>

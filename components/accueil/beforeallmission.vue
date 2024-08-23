@@ -50,11 +50,7 @@
         <h3 class="section-subtitle">Développer des Stratégies Adaptatives</h3>
         <p class="section-description">Qui construit une forteresse défensive mourra seul. Qui développe une communauté fermée s'exclut. Qui pense au bien commun comme la valeur ajoutée de son épanouissement personne vit en harmonie. Ensemble nous pouvons trouver des solutions adaptatives et repenser notre vivre ensemble. </p>
         <div class="buttoncentring">
-          <button class="button">
-            <NuxtLink to="/blog/sustainability">
-            En savoir plus
-          </NuxtLink>
-          </button>
+          <button @click="goresilience" class="button">En savoir plus</button>
         </div>
       </div>
       <img src="/resilience2.png" alt="Illustration of resilience" class="image-section">
@@ -81,10 +77,25 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
+function govolatility() {
+  router.push('/blog/volatility');
+}
+
+function gocomplexity() {
+  router.push('/blog/complexity');
+}
+
+function goambiguity() {
+  router.push('/blog/ambiguity');
+}
+
+function goresilience() {
+  router.push('/blog/sustainability');
+}
+
 function goBack() {
   router.push('/');
 }
-
 </script>
 
 <style scoped>
@@ -179,4 +190,3 @@ function goBack() {
 }
 
 </style>
-

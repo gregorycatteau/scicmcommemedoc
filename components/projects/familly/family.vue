@@ -227,8 +227,8 @@
           <button class="button" @click="openExampleParentalite">
             Exemples
           </button>
-          <button class="button">Nos besoins</button>
-          <button class="button">Recrutement</button>
+          <button class="button" @click="openBesoinsParentalite">Nos besoins</button>
+         
         </div>
       </template>
     </UCard>

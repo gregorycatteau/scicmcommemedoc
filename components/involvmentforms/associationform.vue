@@ -75,8 +75,8 @@ import MailSender from "~/components/contact/mailsender.vue";
 import GratefulMessage from "~/components/contact/gratefulmessage.vue";
 
 const schema = z.object({
-  username: z.string().min(2, "Doit contenir au moins 2 caractères"),
-  enterprisename: z.string().min(2, "Doit contenir au moins 2 caractères"),
+  username: z.string().min(2, "Doit contenir au moins 2 caractères") .regex(/^[a-zA-ZÀ-ÿ\s-]+$/, "Le nom ne peut contenir que des lettres, des espaces, et des traits d'union"),
+  enterprisename: z.string().min(2, "Doit contenir au moins 2 caractères") .regex(/^[a-zA-ZÀ-ÿ\s-]+$/, "Le nom de l'association ne peut contenir que des lettres, des espaces, et des traits d'union"),
   activityname: z.string().min(2, "Doit contenir au moins 2 caractères"),
   adressname: z
     .string()
