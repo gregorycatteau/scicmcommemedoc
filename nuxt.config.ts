@@ -260,7 +260,7 @@ export default defineNuxtConfig({
         "/legal",
         "/listing",
         "/mission",
-        "/project",
+        "/projects",
         "/timeline",
         "/userinvolved" // Prérendu de la page d'accueil
         
