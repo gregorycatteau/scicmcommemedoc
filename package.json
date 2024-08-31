@@ -24,7 +24,7 @@
     "@nuxt/fonts": "0.7.2",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.11.1",
-    "@nuxtjs/seo": "^2.0.0-rc.18",
+    "@nuxtjs/seo": "^2.0.0-rc.19",
     "@pinia/nuxt": "latest",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@vueuse/core": "^11.0.1",

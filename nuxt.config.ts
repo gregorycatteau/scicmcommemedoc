@@ -44,56 +44,27 @@ export default defineNuxtConfig({
     },
   },
 
-  seo: {
+ 
+ 
     site: {
-      name: "M Comme Médoc",
-      url: "https://www.mcommemedoc.fr",
-    },
-    metas: {
-      titleTemplate: "%s - M Comme Médoc",
-      defaultTitle: "M Comme Médoc - Engagez-vous dans l'économie sociale en Médoc",
+      url: 'https://www.mcommemedoc.fr',
+      name: 'M Comme Médoc',
       description: "M Comme Médoc, une SCIC dynamique en Médoc, favorise une économie solidaire et durable.",
+      defaultLocale: "fr",
       keywords: [
-        "M Comme Médoc", "SCIC", "économie sociale", "développement territorial",
-        "Médoc", "coopérative", "engagement communautaire", "développement durable"
-      ],
-      ogImage: {
-        path: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "M Comme Médoc - Engagez-vous dans l'économie sociale en Médoc"
-      }
-    },
-    robots: {
-      enabled: true,
-      sitemap: "/sitemap.xml",
-      disallow: ["/admin", "/login"],
-    },
-    sitemap: {
-      hostname: "https://www.mcommemedoc.fr",
-      gzip: true,
-      routes: async (): Promise<string[]> => {
-        const { $content } = require('@nuxt/content');
+          "M Comme Médoc", "SCIC", "SCIC Médoc","économie sociale", "développement territorial",
+          "Médoc", "coopérative", "engagement communautaire", "développement durable", 
+          "ESS", "économie sociale et solidaire"
+        ],
+      },
+      seo: {
+        redirectToCanonicalSiteUrl: true,
         
-        type Article = {
-          slug: string;
-        };
+      },
+       
         
-        const articles: Article[] = await $content('articles').fetch();
-        return articles.map((article: Article) => `/articles/${article.slug}`);
-      }
-    },
-    schemaOrg: {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: "M Comme Médoc",
-      url: "https://www.mcommemedoc.fr",
-      logo: "https://www.mcommemedoc.fr/logo.png",
-      sameAs: [
-        "https://www.facebook.com/mcommemedoc"
-      ]
-    }
-  },
+       
+  
   
   
 
@@ -244,6 +215,14 @@ export default defineNuxtConfig({
     },
     densities: [1, 2, 3],
     quality: 80,
+    provider: 'public', 
+    presets: {
+      default: {
+        modifiers: {
+          loading: 'lazy',  // Lazy loading par défaut pour toutes les images
+        },
+      },
+    },
   },
   icon: {
     provider: "iconify",
