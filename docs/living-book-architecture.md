@@ -1,201 +1,93 @@
-# Architecture Livre vivant / Wiki
+# Architecture Bibliotheque vivante
 
-## Etat de reference
+## Decision
 
-- Branche socle : `feat/immersive-tools-and-medoc-resources`
-- Commit socle : `44dfc56b93ca004eee033a6272e2c234bd2db058`
-- Branche de travail : `feat/mcm-living-book-architecture`
-- Remote : `git@github.com:gregorycatteau/scicmcommemedoc.git`
-- Contrainte Git : l historique distant `main` est independant. Aucun merge, rebase, force push ou remplacement de `main`.
+La premiere architecture "Livre unique / Wiki interne" est remplacee. M Comme Medoc devient une Bibliotheque vivante : un ensemble de Livres editoriaux qui orientent vers des services operationnels reels.
 
-## Architecture actuelle
+Le site principal raconte, explique, presente et donne envie.
 
-L application est une application Nuxt avec pages dans `frontend/app/pages`, composants dans `frontend/app/components`, types dans `frontend/app/types`, utilitaires dans `frontend/app/utils` et donnees locales de demonstration dans `frontend/app/data/demoResources.ts`.
+Les services specialises permettent d agir :
 
-Les routes actuelles combinent trois intentions :
+- Wiki : `https://wiki.mcommemedoc.fr`
+- Projets : `https://projets.mcommemedoc.fr`
+- Documents : `https://docs.mcommemedoc.fr`
+- Chat : `https://chat.mcommemedoc.fr`
+- Authentification : `https://auth.mcommemedoc.fr`
 
-- recit principal : `/` ;
-- outils longue traine : `/vivre-dans-le-medoc-budget`, `/manger-local-medoc`, `/diagnostic-resilience-foyer`, `/creer-projet-citoyen-medoc`, `/developper-projet-medoc` ;
-- operationnel : `/ressources`, `/activites`, `/evenements`, `/devenir-membre`, `/vie-cooperative`, `/faq`, `/contact`.
+## Probleme de l architecture precedente
 
-Les ressources passent deja par `ResourceRepository`. La source frontend actuelle est locale et fictive. Le backend Django possede des modeles de ressources, produits, categories, horaires, verifications, suggestions et signalements, mais le frontend ne consomme pas encore ces donnees.
-
-## Probleme
-
-Le projet est utile mais encore percu comme un ensemble de pages et d outils. Le recit, les outils et les informations operationnelles partagent la meme surface. Cette confusion affaiblit la promesse : le visiteur doit comprendre qu il entre dans un Livre qui donne du sens, puis qu il peut consulter un Wiki pour agir avec des informations fiables.
+Le Livre unique produisait une succession de heros editoriaux. Il confondait l experience sensible, les outils longue traine et un Wiki local de demonstration. Cette confusion faisait ressembler le site a une collection de pages, pas a un ouvrage vivant.
 
 ## Architecture cible
-
-Deux univers sont separes sans etre isoles :
-
-- le Livre : experience narrative, emotionnelle, fluide, lisible dans l ordre mais jamais obligatoire ;
-- le Wiki : memoire operationnelle, recherche, fiches, procedures, verification, correction.
-
-Arborescence cible :
 
 ```txt
 frontend/app/
   pages/
-    index.vue
-    livre/
-      index.vue
-      preface.vue
-      habiter.vue
-      se-nourrir.vue
-      tenir.vue
-      faire-emerger.vue
-      developper.vue
-      relier.vue
-      faire-ensemble.vue
-      epilogue.vue
-    wiki/
-      index.vue
-    routes historiques conservees
+    index.vue              # couverture
+    bibliotheque.vue       # prototype lecteur + sommaire droit
+    livre/index.vue        # entree compatible vers bibliotheque
+    wiki/index.vue         # porte vers le Wiki externe
+    routes historiques     # conservees
   components/
-    book/
-    wiki/
+    library/               # couverture, lecteur, sommaire, chat
     shared/
+    book/                  # ancien prototype conserve mais non directeur
+    wiki/                  # ancien prototype conserve mais non directeur
   data/
-    book/
-    wiki/
+    library/books.ts       # registre multi-Livres
   types/
+    library.ts
 ```
 
-Les anciennes routes ne sont ni supprimees ni redirigees de maniere irreversible. Elles restent indexables et deviennent des portes compatibles vers les chapitres ou les gestes interactifs.
+## Livres
 
-## Structure du Livre
+1. La Genese : vision, origine, territoire, cycle Semer/Cultiver/Recolter.
+2. Les Ressources : portraits et chemins, avec fiches operationnelles dans le Wiki.
+3. Les Projets : recits de dynamiques, avec organisation dans OpenProject.
+4. Vivre autrement : guides et exercices, avec outils existants comme prolongements.
+5. Le Livre administratif : fonctionnement, droits, documents, acces membres.
 
-Le Livre suit une progression :
+La FAQ reste un acces pratique en fin de sommaire, pas un Livre principal.
 
-1. Couverture
-2. Sommaire vivant
-3. Preface
-4. Habiter
-5. Se nourrir
-6. Tenir
-7. Faire emerger
-8. Developper
-9. Relier
-10. Faire ensemble
-11. Epilogue
+## Prototype actuel
 
-Chaque chapitre doit contenir :
+Le prototype livre :
 
-- une question humaine ;
-- une tension concrete ;
-- une lecture courte et agreable ;
-- un geste ou un lien vers un outil existant ;
-- une micro-victoire ;
-- une fin ouverte vers le chapitre suivant ;
-- un pont explicite vers le Wiki.
+- couverture autour de "Semer. Cultiver. Recolter." ;
+- sommaire droit de la bibliotheque ;
+- feuilletage par recouvrement de page ;
+- trois pages composees pour le Livre I - La Genese ;
+- liens reels vers Wiki, OpenProject et Chat ;
+- version mobile avec sommaire repliable, boutons precedent/suivant et pas de double-page forcee.
 
-Le registre central `frontend/app/data/book/chapters.ts` sert au sommaire, aux navigations precedent/suivant, aux metadonnees SEO, aux ponts Wiki et a la progression locale.
+## Routes
 
-## Structure du Wiki
-
-Le Wiki est le portail operationnel. Sa premiere version centralise :
-
-- acces aux ressources existantes ;
-- categories operationnelles ;
-- etat des donnees ;
-- statut de demonstration des donnees locales ;
-- liens vers signalement, correction, fonctionnement et procedures ;
-- distinction entre donnees verifiees, demonstration, methodes et informations a venir.
-
-Aucune fausse fiche producteur, adresse, horaire ou partenaire n est creee.
-
-## Mapping des routes
-
-| Route historique | Role cible |
+| Route | Role |
 | --- | --- |
-| `/` | Couverture du Livre |
-| `/livre` | Sommaire vivant |
-| `/livre/preface` | Texte fondateur |
-| `/livre/habiter` | Chapitre 1, relie a `/vivre-dans-le-medoc-budget` |
-| `/livre/se-nourrir` | Chapitre 2, relie a `/manger-local-medoc` |
-| `/livre/tenir` | Chapitre 3, relie a `/diagnostic-resilience-foyer` |
-| `/livre/faire-emerger` | Chapitre 4, relie a `/creer-projet-citoyen-medoc` |
-| `/livre/developper` | Chapitre 5, relie a `/developper-projet-medoc` |
-| `/livre/relier` | Chapitre 6, relie a `/wiki` et `/ressources` |
-| `/livre/faire-ensemble` | Chapitre 7, relie a `/devenir-membre`, `/evenements`, `/vie-cooperative`, `/activites` |
-| `/livre/epilogue` | Ouverture vers contribution, rencontre, correction |
-| `/wiki` | Portail operationnel |
-| `/ressources` | Route historique conservee, future section Wiki ressources |
+| `/` | Couverture de la bibliotheque |
+| `/bibliotheque` | Lecteur prototype |
+| `/livre` | Entree compatible canonique vers `/bibliotheque` |
+| `/wiki` | Porte vers `https://wiki.mcommemedoc.fr` |
+| Routes outils longues traines | Conservees, associees au Livre IV |
+| `/ressources`, `/activites`, `/evenements`, `/devenir-membre`, `/vie-cooperative`, `/faq`, `/contact` | Conservees pour compatibilite |
 
-## Composants partages
+## SEO
 
-Livre :
+Les routes historiques restent disponibles. Le sitemap inclut `/bibliotheque`. Les anciennes routes de chapitres ne sont pas supprimees dans cette passe pour conserver le rollback et eviter une migration irreversible.
 
-- `BookLayout`
-- `BookCover`
-- `LivingTableOfContents`
-- `BookChapterHeader`
-- `ChapterIntro`
-- `ChapterQuote`
-- `ChapterEnding`
-- `BookWikiBridge`
-- `BookProgress`
+## Accessibilite
 
-Wiki :
+- H1 unique par page prototype.
+- Sommaire utilisable au clavier.
+- Navigation precedent/suivant explicite.
+- Liens externes explicites avec nouvel onglet.
+- Chat accessible par lien, pas par faux widget.
+- `prefers-reduced-motion` supprime les transitions de feuilletage.
 
-- `WikiLanding`
-- `WikiCategoryLink`
-- `WikiVerificationNotice`
+## Performance
 
-Partage :
-
-- `ReadableProse`
-- `EditorialImage`
-- `ExplicitLink`
-- `SectionDivider`
-
-Ces composants doivent rester concrets. Aucune abstraction generique ne doit etre creee sans usage direct.
-
-## Strategie SEO
-
-- conserver toutes les routes historiques ;
-- donner aux chapitres une valeur editoriale propre pour eviter la duplication ;
-- utiliser le registre des chapitres pour les titles et descriptions ;
-- mettre a jour le sitemap avec `/livre`, les chapitres et `/wiki` ;
-- garder des liens internes explicites entre Livre, Wiki et routes historiques ;
-- ne pas generer de milliers d URLs de filtres Wiki.
-
-## Strategie accessibilite
-
-- H1 unique par page ;
-- landmarks natifs ;
-- liens explicites ;
-- navigation clavier ;
-- focus visible existant conserve ;
-- acces direct au Wiki et aux outils ;
-- lecture non imposee ;
-- pas de contenu masque sans JavaScript ;
-- `prefers-reduced-motion` respecte via les composants existants et styles globaux.
-
-## Strategie performance
-
-- pas de dependance ajoutee ;
-- pas de flipbook ;
-- pas de bibliotheque d animation ;
-- images existantes avec dimensions explicites ;
-- chargement lazy hors couverture ;
-- pas de carte globale chargee dans les chapitres ;
-- decoupage par route Nuxt.
-
-## Risques
-
-- Confusion Livre/Wiki si les ponts sont vagues.
-- Donnees fictives prises pour des ressources reelles si les avertissements sont insuffisants.
-- Duplication SEO entre chapitres et routes outils.
-- Experience trop immersive qui reduirait l acces direct aux informations.
-- Trop grande densite editoriale sur mobile.
+Aucune nouvelle dependance. Le feuilletage est realise en CSS/Vue simple, sans flipbook, sans 3D lourde, sans scroll hijacking.
 
 ## Rollback
 
-Le rollback doit rester simple :
-
-- les routes historiques ne sont pas supprimees ;
-- le Livre et le Wiki sont ajoutes en parallele ;
-- chaque lot est commite separement ;
-- la branche `feat/mcm-living-book-architecture` est poussee sans toucher `main` ;
-- un retour arriere peut se faire par revert des commits de cette branche.
+Le tag `safety/living-book-v1-rejected` conserve l etat de la tentative precedente. Les changements de cette passe sont commits separement sur `feat/mcm-living-book-architecture`.
