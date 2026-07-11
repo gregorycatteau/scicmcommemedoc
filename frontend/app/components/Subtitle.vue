@@ -10,6 +10,6 @@
 @reference "~/assets/css/main.css";
 
 .Subtitle {
-  @apply mt-6 max-w-3xl text-xl leading-9 text-ink/75;
+  @apply mt-6 max-w-3xl text-xl leading-9 text-black/75;
 }
 </style>

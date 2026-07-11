@@ -65,17 +65,17 @@ function update(key: keyof ResourceFilters, value: string | boolean) {
 @reference "~/assets/css/main.css";
 
 .Filters {
-  @apply grid gap-4 rounded-[2rem] border border-ink/10 bg-white/60 p-5 md:grid-cols-3;
+  @apply grid gap-4 rounded-[2rem] border border-black/10 bg-white/60 p-5 md:grid-cols-3;
 }
 .Filters label {
   @apply grid gap-2;
 }
 .Filters span {
-  @apply text-sm font-black text-ink;
+  @apply text-sm font-black text-black;
 }
 .Filters select,
 .Filters button {
-  @apply min-h-11 rounded-xl border border-ink/10 bg-white px-3 font-semibold text-ink;
+  @apply min-h-11 rounded-xl border border-black/10 bg-white px-3 font-semibold text-black;
 }
 .CheckboxLabel {
   @apply flex items-center gap-3 self-end;
@@ -84,6 +84,6 @@ function update(key: keyof ResourceFilters, value: string | boolean) {
   @apply h-5 w-5;
 }
 .Filters button {
-  @apply self-end bg-ink text-white;
+  @apply self-end bg-black text-white;
 }
 </style>

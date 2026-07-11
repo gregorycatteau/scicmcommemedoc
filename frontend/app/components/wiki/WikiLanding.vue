@@ -31,13 +31,13 @@ defineProps<{
   @apply max-w-5xl;
 }
 .WikiIntro p {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .WikiIntro h1 {
   @apply mt-5 text-5xl font-black leading-tight sm:text-7xl;
 }
 .WikiIntro span {
-  @apply mt-7 block max-w-3xl text-xl leading-9 text-ink/70;
+  @apply mt-7 block max-w-3xl text-xl leading-9 text-black/70;
 }
 .WikiGrid {
   @apply grid gap-4 md:grid-cols-2 lg:grid-cols-3;

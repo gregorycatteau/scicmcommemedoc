@@ -15,6 +15,7 @@
 usePageSeo(
   'Pourquoi je suis ici - M Comme Medoc',
   'Acces direct a la preface du Livre vivant M Comme Medoc.',
+  { canonical: '/livre/preface' },
 )
 </script>
 
@@ -26,15 +27,15 @@ usePageSeo(
   @apply mx-auto flex max-w-4xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8;
 }
 .AliasPage p:first-child {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .AliasPage h1 {
   @apply mt-5 text-5xl font-black leading-tight sm:text-7xl;
 }
 .AliasPage p:not(:first-child) {
-  @apply mt-6 text-xl leading-9 text-ink/70;
+  @apply mt-6 text-xl leading-9 text-black/70;
 }
 .AliasPage a {
-  @apply mt-8 inline-flex w-fit rounded-full bg-ink px-6 py-3 font-black text-white;
+  @apply mt-8 inline-flex w-fit rounded-full bg-black px-6 py-3 font-black text-white;
 }
 </style>

@@ -10,6 +10,6 @@
 @reference "~/assets/css/main.css";
 
 .PageTitle {
-  @apply max-w-5xl text-5xl font-black leading-none text-ink sm:text-6xl lg:text-7xl;
+  @apply max-w-5xl text-5xl font-black leading-none text-black sm:text-6xl lg:text-7xl;
 }
 </style>

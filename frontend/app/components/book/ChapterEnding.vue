@@ -43,23 +43,32 @@ defineProps<{
   @apply max-w-4xl;
 }
 .EndingKicker {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .ChapterEnding h2 {
   @apply mt-4 text-4xl font-black leading-tight sm:text-6xl;
 }
 .ChapterEnding p:not(.EndingKicker) {
-  @apply mt-6 text-xl leading-9 text-ink/70;
+  @apply mt-6 text-xl leading-9 text-black/70;
 }
 .EndingNav {
   @apply mt-10 flex flex-col gap-3 sm:flex-row sm:items-stretch;
 }
 .BackLink,
 .NextLink {
-  @apply rounded-[1.25rem] border border-ink/12 px-6 py-4 font-black transition duration-500 hover:bg-ink hover:text-white;
+  border: 1px solid rgb(24 19 15 / 0.12);
+  @apply rounded-[1.25rem] px-6 py-4 font-black transition duration-500 hover:text-white;
+}
+.BackLink:hover,
+.NextLink:hover {
+  background: #18130f;
 }
 .NextLink {
-  @apply bg-ink text-white hover:bg-primary;
+  background: #18130f;
+  @apply text-white;
+}
+.NextLink:hover {
+  background: #ff6b35;
 }
 .NextLink span {
   @apply block text-xs uppercase tracking-[0.16em] opacity-65;

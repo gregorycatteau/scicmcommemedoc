@@ -13,12 +13,13 @@
 @reference "~/assets/css/main.css";
 
 .WikiVerificationNotice {
-  @apply rounded-[1.5rem] border border-clay/25 bg-white/75 p-6;
+  border: 1px solid rgb(185 104 63 / 0.25);
+  @apply rounded-[1.5rem] bg-white/75 p-6;
 }
 .WikiVerificationNotice strong {
-  @apply text-lg font-black text-clay;
+  @apply text-lg font-black text-orange-800;
 }
 .WikiVerificationNotice p {
-  @apply mt-3 leading-7 text-ink/70;
+  @apply mt-3 leading-7 text-black/70;
 }
 </style>

@@ -30,9 +30,9 @@ withDefaults(
   @apply mx-auto max-w-6xl;
 }
 .EditorialImage img {
-  @apply aspect-[16/10] w-full rounded-[1.5rem] object-cover shadow-2xl shadow-ink/15;
+  @apply aspect-[16/10] w-full rounded-[1.5rem] object-cover shadow-2xl shadow-black/15;
 }
 .EditorialImage figcaption {
-  @apply mt-3 text-sm leading-6 text-ink/55;
+  @apply mt-3 text-sm leading-6 text-black/55;
 }
 </style>

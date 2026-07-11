@@ -41,16 +41,16 @@ usePageSeo('FAQ', 'Questions frequentes sur la participation a M Comme Medoc.')
   @apply mx-auto grid max-w-4xl gap-4;
 }
 .FaqItem {
-  @apply rounded-[2rem] border border-ink/10 bg-white/55 p-6;
+  @apply rounded-[2rem] border border-black/10 bg-white/55 p-6;
 }
 .FaqQuestion {
-  @apply cursor-pointer text-xl font-black leading-tight text-ink;
+  @apply cursor-pointer text-xl font-black leading-tight text-black;
 }
 .FaqAnswer {
-  @apply mt-4 text-lg leading-8 text-ink/70;
+  @apply mt-4 text-lg leading-8 text-black/70;
 }
 .FaqCta {
-  @apply mt-6 grid gap-6 rounded-[2rem] bg-ink p-8 text-white sm:grid-cols-[1fr_auto] sm:items-center;
+  @apply mt-6 grid gap-6 rounded-[2rem] bg-black p-8 text-white sm:grid-cols-[1fr_auto] sm:items-center;
 }
 .FaqCta h2 {
   @apply text-3xl font-black leading-tight;

@@ -20,14 +20,14 @@ defineProps<{
 @reference "~/assets/css/main.css";
 
 .Breadcrumbs {
-  @apply mx-auto max-w-7xl px-4 pt-4 text-xs text-ink/58 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-7xl px-4 pt-4 text-xs text-black/58 sm:px-6 lg:px-8;
 }
 .Breadcrumbs ol {
   @apply flex flex-wrap items-center gap-2;
 }
 .Breadcrumbs li:not(:last-child)::after {
   content: '/';
-  @apply ml-2 text-ink/30;
+  @apply ml-2 text-black/30;
 }
 .Breadcrumbs a {
   @apply font-semibold underline-offset-4 hover:underline;

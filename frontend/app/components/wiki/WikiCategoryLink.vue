@@ -24,16 +24,16 @@ const statusLabel = computed(() => {
 @reference "~/assets/css/main.css";
 
 .WikiCategoryLink {
-  @apply grid min-h-56 content-start rounded-[1.5rem] border border-ink/10 bg-white/65 p-6 transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-xl hover:shadow-ink/10;
+  @apply grid min-h-56 content-start rounded-[1.5rem] border border-black/10 bg-white/65 p-6 transition duration-500 hover:-translate-y-1 hover:bg-white hover:shadow-xl hover:shadow-black/10;
 }
 .WikiCategoryLink span {
-  @apply text-xs font-black uppercase tracking-[0.18em] text-clay;
+  @apply text-xs font-black uppercase tracking-[0.18em] text-orange-800;
 }
 .WikiCategoryLink h2 {
   @apply mt-5 text-2xl font-black leading-tight;
 }
 .WikiCategoryLink p {
-  @apply mt-4 leading-7 text-ink/68;
+  @apply mt-4 leading-7 text-black/68;
 }
 @media (prefers-reduced-motion: reduce) {
   .WikiCategoryLink {

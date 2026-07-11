@@ -34,7 +34,7 @@ const mappableResources = computed(() => props.resources.filter((resource) => re
 @reference "~/assets/css/main.css";
 
 .MapPanel {
-  @apply sticky top-24 grid gap-4 rounded-[2rem] bg-ink p-5 text-white;
+  @apply sticky top-24 grid gap-4 rounded-[2rem] bg-black p-5 text-white;
 }
 .MapHeader h2 {
   @apply text-2xl font-black;
@@ -51,7 +51,7 @@ const mappableResources = computed(() => props.resources.filter((resource) => re
   @apply absolute inset-x-8 top-1/2 h-px rotate-[-14deg] bg-white/20;
 }
 .MapMarker {
-  @apply absolute min-h-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary px-3 py-2 text-xs font-black text-white shadow-lg;
+  @apply absolute min-h-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-600 px-3 py-2 text-xs font-black text-white shadow-lg;
 }
 .MapMarker span {
   @apply sr-only;

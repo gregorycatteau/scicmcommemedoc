@@ -28,16 +28,16 @@ const tools = [
   @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 .RelatedTools > p {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .RelatedTools > div {
   @apply mt-6 grid gap-3 md:grid-cols-5;
 }
 .RelatedTools a {
-  @apply rounded-[1.5rem] border border-ink/10 bg-white/55 p-4 transition duration-300 hover:-translate-y-1 hover:bg-white;
+  @apply rounded-[1.5rem] border border-black/10 bg-white/55 p-4 transition duration-300 hover:-translate-y-1 hover:bg-white;
 }
 .RelatedTools span {
-  @apply text-xs font-black uppercase tracking-[0.18em] text-clay;
+  @apply text-xs font-black uppercase tracking-[0.18em] text-orange-800;
 }
 .RelatedTools strong {
   @apply mt-3 block text-lg leading-tight;

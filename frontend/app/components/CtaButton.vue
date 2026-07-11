@@ -12,6 +12,6 @@ defineProps<{ to: string }>()
 @reference "~/assets/css/main.css";
 
 .CtaButton {
-  @apply rounded-full border border-white bg-primary px-6 py-3 text-center font-bold text-white shadow-sm transition duration-500 hover:bg-primary-dark;
+  @apply rounded-full border border-white bg-orange-600 px-6 py-3 text-center font-bold text-white shadow-sm transition duration-500 hover:bg-orange-700;
 }
 </style>

@@ -32,21 +32,21 @@ usePageSeo(
   @apply mx-auto flex max-w-4xl flex-col justify-center px-4 sm:px-6 lg:px-8;
 }
 .NotFoundKicker {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .NotFoundSection h1 {
   @apply mt-5 text-5xl font-black leading-tight sm:text-7xl;
 }
 .NotFoundSection p {
-  @apply mt-6 max-w-2xl text-xl leading-9 text-ink/70;
+  @apply mt-6 max-w-2xl text-xl leading-9 text-black/70;
 }
 .NotFoundActions {
   @apply mt-10 flex flex-col gap-3 sm:flex-row;
 }
 .PrimaryLink {
-  @apply rounded-full bg-primary px-6 py-3 text-center font-bold text-white transition duration-500 hover:bg-primary-dark;
+  @apply rounded-full bg-orange-600 px-6 py-3 text-center font-bold text-white transition duration-500 hover:bg-orange-700;
 }
 .SecondaryLink {
-  @apply rounded-full border border-ink/20 px-6 py-3 text-center font-bold text-ink transition duration-500 hover:border-ink hover:bg-ink hover:text-white;
+  @apply rounded-full border border-black/20 px-6 py-3 text-center font-bold text-black transition duration-500 hover:border-black hover:bg-black hover:text-white;
 }
 </style>

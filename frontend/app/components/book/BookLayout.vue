@@ -14,12 +14,15 @@
 @reference "~/assets/css/main.css";
 
 .BookLayout {
-  @apply bg-parchment text-ink;
+  @apply bg-stone-100 text-black;
 }
 .BookTopNav {
-  @apply mx-auto flex max-w-7xl justify-between px-4 py-5 text-sm font-black uppercase tracking-[0.16em] text-ink/55 sm:px-6 lg:px-8;
+  @apply mx-auto flex max-w-7xl justify-between px-4 py-5 text-sm font-black uppercase tracking-[0.16em] text-black/55 sm:px-6 lg:px-8;
 }
 .BookTopNav a {
-  @apply transition duration-300 hover:text-ink;
+  @apply transition duration-300;
+}
+.BookTopNav a:hover {
+  color: #18130f;
 }
 </style>

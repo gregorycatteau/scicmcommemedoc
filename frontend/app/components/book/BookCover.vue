@@ -24,13 +24,14 @@
 
 .BookCover {
   min-height: calc(100svh - var(--header-height));
-  @apply relative isolate overflow-hidden bg-ink text-white;
+  @apply relative isolate overflow-hidden bg-black text-white;
 }
 .CoverImage {
   @apply absolute inset-0 h-full w-full object-cover opacity-75;
 }
 .CoverVeil {
-  @apply absolute inset-0 bg-linear-to-r from-ink via-ink/60 to-ink/10;
+  background: linear-gradient(90deg, #18130f 0%, rgb(24 19 15 / 0.6) 52%, rgb(24 19 15 / 0.1) 100%);
+  @apply absolute inset-0;
 }
 .CoverContent {
   min-height: calc(100svh - var(--header-height));
@@ -54,10 +55,13 @@
   @apply rounded-full px-6 py-3 text-center font-black transition duration-500;
 }
 .PrimaryAction {
-  @apply bg-primary text-white hover:bg-primary-dark;
+  @apply bg-orange-600 text-white hover:bg-orange-700;
 }
 .SecondaryAction {
-  @apply border border-white/35 text-white hover:bg-white hover:text-ink;
+  @apply border border-white/35 text-white hover:bg-white;
+}
+.SecondaryAction:hover {
+  color: #18130f;
 }
 .CoverMeta {
   @apply mt-10 block;

@@ -36,6 +36,6 @@ const label = computed(
 .Badge--information-perimee,
 .Badge--ferme,
 .Badge--refuse {
-  @apply border-ink/15 bg-white/70 text-ink/75;
+  @apply border-black/15 bg-white/70 text-black/75;
 }
 </style>

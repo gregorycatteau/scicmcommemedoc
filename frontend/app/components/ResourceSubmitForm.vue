@@ -51,23 +51,23 @@ async function submit() {
 @reference "~/assets/css/main.css";
 
 .ResourceForm {
-  @apply grid gap-4 rounded-[2rem] border border-ink/10 bg-white/70 p-6;
+  @apply grid gap-4 rounded-[2rem] border border-black/10 bg-white/70 p-6;
 }
 .ResourceForm h2 {
   @apply text-2xl font-black;
 }
 .ResourceForm p {
-  @apply leading-7 text-ink/70;
+  @apply leading-7 text-black/70;
 }
 .ResourceForm label {
   @apply grid gap-2 font-bold;
 }
 .ResourceForm input,
 .ResourceForm textarea {
-  @apply rounded-xl border border-ink/10 bg-white px-4 py-3 font-normal;
+  @apply rounded-xl border border-black/10 bg-white px-4 py-3 font-normal;
 }
 .ResourceForm button {
-  @apply rounded-full bg-primary px-5 py-3 font-bold text-white disabled:opacity-60;
+  @apply rounded-full bg-orange-600 px-5 py-3 font-bold text-white disabled:opacity-60;
 }
 .Honeypot {
   @apply hidden;

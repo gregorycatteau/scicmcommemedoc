@@ -22,7 +22,7 @@ defineEmits<{ select: [slug: string]; reset: [] }>()
   @apply grid gap-4;
 }
 .ResultCount {
-  @apply font-black text-ink/70;
+  @apply font-black text-black/70;
 }
 .Cards {
   @apply grid gap-4;

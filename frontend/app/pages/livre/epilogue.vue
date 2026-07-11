@@ -2,18 +2,18 @@
   <MainWrapper>
     <BookLayout>
       <BookChapterHeader :chapter="chapter" />
-      <ChapterIntro question="Que reste-t-il quand le Livre se referme ?">
+      <BookChapterIntro question="Que reste-t-il quand le Livre se referme ?">
         <p>Une lecture ne suffit pas. Le Livre a du sens seulement s il aide a poser un geste : verifier une information, proposer une ressource, rencontrer quelqu un, presenter une idee, ou simplement reprendre la discussion.</p>
-      </ChapterIntro>
-      <ChapterQuote quote="Le sujet du Livre n est pas M Comme Medoc. Le sujet, c est ce que tu deviens capable de faire ici." />
+      </BookChapterIntro>
+      <BookChapterQuote quote="Le sujet du Livre n est pas M Comme Medoc. Le sujet, c est ce que tu deviens capable de faire ici." />
       <section class="EpilogueActions" aria-label="Ecrire la suite">
-        <ExplicitLink to="/creer-projet-citoyen-medoc" label="Proposer une idee" description="Transformer une intuition en premiere fiche partageable." />
-        <ExplicitLink to="/ressources" label="Signaler une information a corriger" description="Aider les donnees operationnelles a rester prudentes et utiles." />
-        <ExplicitLink to="/evenements" label="Participer a une rencontre" description="Passer du recit a une conversation." />
-        <ExplicitLink to="/devenir-membre" label="Devenir membre" description="Faire connaitre son envie de contribuer a sa mesure." />
+        <SharedExplicitLink to="/creer-projet-citoyen-medoc" label="Proposer une idee" description="Transformer une intuition en premiere fiche partageable." />
+        <SharedExplicitLink to="/ressources" label="Signaler une information a corriger" description="Aider les donnees operationnelles a rester prudentes et utiles." />
+        <SharedExplicitLink to="/evenements" label="Participer a une rencontre" description="Passer du recit a une conversation." />
+        <SharedExplicitLink to="/devenir-membre" label="Devenir membre" description="Faire connaitre son envie de contribuer a sa mesure." />
       </section>
-      <EditorialImage :src="chapter.image.src" :alt="chapter.image.alt" caption="L epilogue n est pas une fin : c est une page blanche laissee au lecteur." />
-      <ChapterEnding
+      <SharedEditorialImage :src="chapter.image.src" :alt="chapter.image.alt" caption="L epilogue n est pas une fin : c est une page blanche laissee au lecteur." />
+      <BookChapterEnding
         :transformation="chapter.transformation"
         closing="Tu peux refermer la page. Ou choisir une premiere action assez petite pour commencer vraiment."
         :previous="previous"

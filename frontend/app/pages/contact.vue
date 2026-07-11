@@ -133,26 +133,26 @@ usePageSeo(
 @reference "~/assets/css/main.css";
 
 .ContactForm {
-  @apply mx-auto grid max-w-4xl gap-5 rounded-[2rem] border border-ink/10 bg-white/70 p-6 sm:grid-cols-2 sm:p-8;
+  @apply mx-auto grid max-w-4xl gap-5 rounded-[2rem] border border-black/10 bg-white/70 p-6 sm:grid-cols-2 sm:p-8;
 }
 .FormLabel {
-  @apply grid gap-2 font-bold text-ink;
+  @apply grid gap-2 font-bold text-black;
 }
 .FormLabelWide {
   @apply sm:col-span-2;
 }
 .FormLabel input,
 .FormLabel textarea {
-  @apply rounded-2xl border border-ink/10 bg-white px-4 py-4 font-normal text-ink outline-none transition duration-300 focus:border-primary;
+  @apply rounded-2xl border border-black/10 bg-white px-4 py-4 font-normal text-black outline-none transition duration-300 focus:border-orange-600;
 }
 .FieldError {
-  @apply text-sm font-semibold text-primary-dark;
+  @apply text-sm font-semibold text-orange-700;
 }
 .SubmitButton {
-  @apply rounded-full bg-ink px-6 py-4 font-bold text-white transition duration-300 hover:bg-primary disabled:cursor-not-allowed disabled:opacity-70;
+  @apply rounded-full bg-black px-6 py-4 font-bold text-white transition duration-300 hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-70;
 }
 .FormMessage {
-  @apply rounded-2xl border border-ink/10 bg-white px-4 py-3 text-sm text-ink/75 sm:col-span-2;
+  @apply rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm text-black/75 sm:col-span-2;
 }
 .Honeypot {
   @apply hidden;

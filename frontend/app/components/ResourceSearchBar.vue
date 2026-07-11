@@ -17,9 +17,9 @@ defineEmits<{ 'update:modelValue': [value: string] }>()
   @apply grid gap-2;
 }
 .SearchBar span {
-  @apply font-black text-ink;
+  @apply font-black text-black;
 }
 .SearchBar input {
-  @apply min-h-14 rounded-2xl border border-ink/10 bg-white px-5 text-lg outline-none focus:border-primary;
+  @apply min-h-14 rounded-2xl border border-black/10 bg-white px-5 text-lg outline-none focus:border-orange-600;
 }
 </style>

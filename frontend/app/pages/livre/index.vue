@@ -1,7 +1,7 @@
 <template>
   <MainWrapper>
     <BookLayout>
-      <LivingTableOfContents :chapters="bookChapters" />
+      <BookLivingTableOfContents :chapters="bookChapters" />
       <BookProgress />
     </BookLayout>
   </MainWrapper>

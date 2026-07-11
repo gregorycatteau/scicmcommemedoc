@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://mcommeedoc.fr/</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/preface</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/habiter</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/se-nourrir</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/tenir</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/faire-emerger</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/developper</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/relier</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/faire-ensemble</loc></url>
+  <url><loc>https://mcommeedoc.fr/livre/epilogue</loc></url>
+  <url><loc>https://mcommeedoc.fr/wiki</loc></url>
   <url><loc>https://mcommeedoc.fr/ressources</loc></url>
   <url><loc>https://mcommeedoc.fr/vivre-dans-le-medoc-budget</loc></url>
   <url><loc>https://mcommeedoc.fr/manger-local-medoc</loc></url>

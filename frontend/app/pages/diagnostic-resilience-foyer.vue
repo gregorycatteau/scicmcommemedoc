@@ -75,13 +75,13 @@ usePageSeo('Diagnostic de resilience du foyer', 'Questionnaire court pour evalue
 @reference "~/assets/css/main.css";
 .DiagnosticGrid { padding-block: var(--section-padding-soft); @apply mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8; }
 .QuestionPanel { @apply grid content-start gap-6 rounded-[1.5rem] bg-white/70 p-6; }
-.CompassPanel { @apply border border-secondary/10 shadow-sm; }
+.CompassPanel { border: 1px solid rgb(46 79 79 / 0.1); @apply shadow-sm; }
 .QuestionPanel h2 { @apply text-4xl font-black; }
-.QuestionPanel p { @apply text-xl leading-9 text-ink/70; }
+.QuestionPanel p { @apply text-xl leading-9 text-black/70; }
 .Answers { @apply grid gap-3; }
-.Answers button,.BackButton { @apply rounded-full border border-ink/10 bg-white px-5 py-3 font-bold hover:bg-secondary hover:text-white disabled:opacity-50; }
-.ResilienceResult { @apply bg-secondary; }
-.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-primary; }
+.Answers button,.BackButton { @apply rounded-full border border-black/10 bg-white px-5 py-3 font-bold hover:bg-teal-900 hover:text-white disabled:opacity-50; }
+.ResilienceResult { @apply bg-teal-900; }
+.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-orange-600; }
 .CompassScore { @apply mt-5 flex aspect-square max-w-56 items-center justify-center rounded-full border border-white/20 bg-white/10 text-center; }
 .CompassScore span { @apply text-6xl font-black; }
 .CompassScore small { @apply ml-1 text-lg text-white/65; }
@@ -92,7 +92,7 @@ usePageSeo('Diagnostic de resilience du foyer', 'Questionnaire court pour evalue
 .PlanSteps section { @apply rounded-2xl bg-white/10 p-4; }
 .EditorialBlock { padding-block: var(--section-padding-soft); @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8; }
 .EditorialBlock h2 { @apply text-4xl font-black; }
-.EditorialBlock p { @apply mt-5 text-lg leading-8 text-ink/70; }
-.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-primary px-6 py-3 font-bold text-white; }
+.EditorialBlock p { @apply mt-5 text-lg leading-8 text-black/70; }
+.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-orange-600 px-6 py-3 font-bold text-white; }
 .ResilienceEditorial { @apply max-w-3xl; }
 </style>

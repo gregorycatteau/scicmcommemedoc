@@ -1,5 +1,5 @@
 <template>
-  <main class="MainWrapper">
+  <main id="contenu" class="MainWrapper" tabindex="-1">
     <slot />
   </main>
 </template>

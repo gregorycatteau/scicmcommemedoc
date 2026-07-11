@@ -33,7 +33,7 @@ defineProps<{
 @reference "~/assets/css/main.css";
 
 .LivingTableOfContents {
-  @apply bg-parchment;
+  @apply bg-stone-100;
 }
 .TocIntro {
   padding-block: var(--section-padding-soft);
@@ -41,7 +41,7 @@ defineProps<{
 }
 .TocIntro p,
 .ChapterCopy span {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .TocIntro h1 {
   @apply mt-5 max-w-5xl text-5xl font-black leading-tight sm:text-7xl;
@@ -50,7 +50,7 @@ defineProps<{
   @apply mx-auto grid max-w-7xl gap-12 px-4 pb-24 sm:px-6 lg:px-8;
 }
 .ChapterLine {
-  @apply grid gap-8 border-t border-ink/10 pt-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center;
+  @apply grid gap-8 border-t border-black/10 pt-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center;
 }
 .ChapterLine:nth-child(even) .ChapterImageWrap {
   @apply lg:order-2;
@@ -59,7 +59,7 @@ defineProps<{
   @apply lg:grid-cols-[0.7fr_1.3fr];
 }
 .ChapterImageWrap img {
-  @apply aspect-[16/10] w-full rounded-[1.5rem] object-cover shadow-2xl shadow-ink/15;
+  @apply aspect-[16/10] w-full rounded-[1.5rem] object-cover shadow-2xl shadow-black/15;
 }
 .ChapterCopy {
   @apply max-w-2xl;
@@ -68,12 +68,12 @@ defineProps<{
   @apply mt-4 text-4xl font-black leading-tight sm:text-6xl;
 }
 .ChapterCopy p {
-  @apply mt-6 text-lg leading-8 text-ink/72;
+  @apply mt-6 text-lg leading-8 text-black/72;
 }
 .ChapterCopy small {
-  @apply mt-6 block text-sm font-bold text-ink/50;
+  @apply mt-6 block text-sm font-bold text-black/50;
 }
 .ChapterCopy a {
-  @apply mt-8 inline-flex rounded-full bg-ink px-6 py-3 font-black text-white transition duration-500 hover:bg-primary;
+  @apply mt-8 inline-flex rounded-full bg-black px-6 py-3 font-black text-white transition duration-500 hover:bg-orange-600;
 }
 </style>

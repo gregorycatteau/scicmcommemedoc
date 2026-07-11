@@ -27,15 +27,15 @@ function clearProgress() {
 @reference "~/assets/css/main.css";
 
 .BookProgress {
-  @apply fixed bottom-4 right-4 z-40 hidden max-w-xs rounded-2xl border border-ink/10 bg-white/90 p-4 text-sm shadow-xl shadow-ink/10 backdrop-blur md:grid;
+  @apply fixed bottom-4 right-4 z-40 hidden max-w-xs rounded-2xl border border-black/10 bg-white/90 p-4 text-sm shadow-xl shadow-black/10 backdrop-blur md:grid;
 }
 .BookProgress p {
-  @apply font-black uppercase tracking-[0.16em] text-clay;
+  @apply font-black uppercase tracking-[0.16em] text-orange-800;
 }
 .BookProgress a {
-  @apply mt-2 font-bold text-ink;
+  @apply mt-2 font-bold text-black;
 }
 .BookProgress button {
-  @apply mt-3 w-fit text-xs font-bold text-ink/60 underline;
+  @apply mt-3 w-fit text-xs font-bold text-black/60 underline;
 }
 </style>

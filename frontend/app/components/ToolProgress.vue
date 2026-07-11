@@ -16,12 +16,12 @@ defineProps<{ current: number; total: number }>()
   @apply grid gap-2;
 }
 .ToolProgress span {
-  @apply text-sm font-bold text-ink/70;
+  @apply text-sm font-bold text-black/70;
 }
 .ToolProgress div {
-  @apply h-2 overflow-hidden rounded-full bg-ink/10;
+  @apply h-2 overflow-hidden rounded-full bg-black/10;
 }
 .ToolProgress i {
-  @apply block h-full rounded-full bg-primary transition-all duration-300;
+  @apply block h-full rounded-full bg-orange-600 transition-all duration-300;
 }
 </style>

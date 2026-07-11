@@ -32,16 +32,16 @@ const safeWebsite = computed(() => (props.resource?.website && isSafeHttpUrl(pro
 @reference "~/assets/css/main.css";
 
 .DetailPanel {
-  @apply grid gap-4 rounded-[2rem] border border-ink/10 bg-white p-6 shadow-2xl shadow-ink/10;
+  @apply grid gap-4 rounded-[2rem] border border-black/10 bg-white p-6 shadow-2xl shadow-black/10;
 }
 .CloseButton {
-  @apply justify-self-end rounded-full border border-ink/10 px-4 py-2 font-bold;
+  @apply justify-self-end rounded-full border border-black/10 px-4 py-2 font-bold;
 }
 .DetailPanel h2 {
   @apply text-3xl font-black leading-tight;
 }
 .DetailPanel p {
-  @apply leading-8 text-ink/75;
+  @apply leading-8 text-black/75;
 }
 .DetailPanel dl {
   @apply grid gap-3 text-sm;
@@ -50,13 +50,13 @@ const safeWebsite = computed(() => (props.resource?.website && isSafeHttpUrl(pro
   @apply font-black;
 }
 .DetailPanel dd {
-  @apply text-ink/70;
+  @apply text-black/70;
 }
 .DetailPanel a,
 .ReportButton {
-  @apply rounded-full bg-ink px-5 py-3 text-center font-bold text-white;
+  @apply rounded-full bg-black px-5 py-3 text-center font-bold text-white;
 }
 .ReportButton {
-  @apply bg-primary;
+  @apply bg-orange-600;
 }
 </style>

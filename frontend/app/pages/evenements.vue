@@ -57,7 +57,7 @@ usePageSeo(
 @reference "~/assets/css/main.css";
 
 .PageKicker {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-primary;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-600;
 }
 .MeetGrid {
   @apply grid gap-8 lg:grid-cols-[0.95fr_1.05fr];
@@ -66,22 +66,22 @@ usePageSeo(
   @apply grid gap-5;
 }
 .EventCard {
-  @apply rounded-[2rem] border border-ink/10 bg-white/55 p-7;
+  @apply rounded-[2rem] border border-black/10 bg-white/55 p-7;
 }
 .EventDate {
-  @apply text-sm font-black uppercase tracking-[0.18em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.18em] text-orange-800;
 }
 .EventCard h2 {
-  @apply mt-5 text-3xl font-black leading-tight text-ink;
+  @apply mt-5 text-3xl font-black leading-tight text-black;
 }
 .EventCard p {
-  @apply mt-4 text-lg leading-8 text-ink/70;
+  @apply mt-4 text-lg leading-8 text-black/70;
 }
 .EventButton {
-  @apply mt-7 inline-flex rounded-full bg-primary px-6 py-3 font-bold text-white transition duration-500 hover:bg-primary-dark;
+  @apply mt-7 inline-flex rounded-full bg-orange-600 px-6 py-3 font-bold text-white transition duration-500 hover:bg-orange-700;
 }
 .PlacePanel {
-  @apply overflow-hidden rounded-[2rem] bg-ink text-white shadow-2xl shadow-ink/20;
+  @apply overflow-hidden rounded-[2rem] bg-black text-white shadow-2xl shadow-black/20;
 }
 .PlaceImage {
   @apply aspect-[16/10] w-full object-cover opacity-85;

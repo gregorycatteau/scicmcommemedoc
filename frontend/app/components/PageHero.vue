@@ -28,16 +28,16 @@ const toneClass = computed(() => `PageHero--${props.tone}`)
 @reference "~/assets/css/main.css";
 
 .PageHero {
-  @apply border-b border-ink/8;
+  @apply border-b border-black/8;
 }
 .PageHero--light {
-  @apply bg-parchment text-ink;
+  @apply bg-stone-100 text-black;
 }
 .PageHero--dark {
-  @apply bg-ink text-white;
+  @apply bg-black text-white;
 }
 .PageHero--clay {
-  @apply bg-mist text-ink;
+  @apply bg-stone-200 text-black;
 }
 .HeroInner {
   min-height: min(760px, calc(100svh - var(--header-height)));
@@ -45,10 +45,10 @@ const toneClass = computed(() => `PageHero--${props.tone}`)
   @apply mx-auto grid max-w-7xl content-center px-4 sm:px-6 lg:px-8;
 }
 .HeroKicker {
-  @apply text-xs font-black uppercase tracking-[0.24em] text-clay;
+  @apply text-xs font-black uppercase tracking-[0.24em] text-orange-800;
 }
 .PageHero--dark .HeroKicker {
-  @apply text-primary;
+  @apply text-orange-600;
 }
 .PageHero h1 {
   @apply mt-4 max-w-5xl text-4xl font-black leading-[0.98] sm:text-5xl lg:text-6xl;

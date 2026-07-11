@@ -53,21 +53,21 @@ usePageSeo('Creer un projet citoyen dans le Medoc', 'Generateur de fiche projet 
 .ProjectGrid { padding-block: var(--section-padding-soft); @apply mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:px-8; }
 .ProjectForm { @apply grid gap-4 rounded-[1.5rem] bg-white/70 p-5 sm:p-6; }
 .WorkshopForm { background-image: linear-gradient(90deg, rgb(185 104 63 / 0.08) 1px, transparent 1px), linear-gradient(rgb(185 104 63 / 0.08) 1px, transparent 1px); background-size: 2.25rem 2.25rem; }
-.FormIntro { @apply rounded-2xl border border-clay/15 bg-parchment/80 p-4 text-sm font-semibold leading-6 text-ink/70; }
+.FormIntro { border: 1px solid rgb(185 104 63 / 0.15); @apply rounded-2xl bg-stone-100/80 p-4 text-sm font-semibold leading-6 text-black/70; }
 .ProjectForm label { @apply grid gap-2 font-bold; }
-.ProjectForm textarea { @apply rounded-lg border border-ink/10 bg-white px-4 py-3 font-normal; }
+.ProjectForm textarea { @apply rounded-lg border border-black/10 bg-white px-4 py-3 font-normal; }
 .Actions { @apply flex flex-wrap gap-3; }
-.Actions button { @apply rounded-full bg-ink px-5 py-3 font-bold text-white; }
-.ProjectResult { @apply bg-earth; }
-.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-primary; }
+.Actions button { @apply rounded-full bg-black px-5 py-3 font-bold text-white; }
+.ProjectResult { @apply bg-stone-700; }
+.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-orange-600; }
 .ProjectResult h2 { @apply mt-3 text-3xl font-black; }
-.SheetFrame { @apply mt-6 rounded-xl bg-parchment p-5 text-ink shadow-inner; }
-pre { @apply max-h-[70vh] overflow-auto whitespace-pre-wrap text-sm leading-7 text-ink; }
+.SheetFrame { @apply mt-6 rounded-xl bg-stone-100 p-5 text-black shadow-inner; }
+pre { @apply max-h-[70vh] overflow-auto whitespace-pre-wrap text-sm leading-7 text-black; }
 .EditorialBlock { padding-block: var(--section-padding-soft); @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8; }
 .EditorialBlock h2 { @apply text-4xl font-black; }
-.EditorialBlock p { @apply mt-5 text-lg leading-8 text-ink/70; }
-.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-primary px-6 py-3 font-bold text-white; }
-.ProjectEditorial { @apply border-t border-earth/10; }
+.EditorialBlock p { @apply mt-5 text-lg leading-8 text-black/70; }
+.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-orange-600 px-6 py-3 font-bold text-white; }
+.ProjectEditorial { border-top: 1px solid rgb(115 88 58 / 0.1); }
 @media print {
   .ProjectForm,
   .EditorialBlock,

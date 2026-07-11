@@ -50,15 +50,15 @@ usePageSeo(
   @apply mx-auto grid max-w-5xl gap-5 px-4 sm:px-6 lg:px-8;
 }
 .CoopPanel {
-  @apply rounded-[2rem] border border-ink/10 bg-white/55 p-7 sm:p-10;
+  @apply rounded-[2rem] border border-black/10 bg-white/55 p-7 sm:p-10;
 }
 .PanelKicker {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .CoopPanel h2 {
-  @apply mt-5 text-3xl font-black leading-tight text-ink sm:text-4xl;
+  @apply mt-5 text-3xl font-black leading-tight text-black sm:text-4xl;
 }
 .CoopPanel p:last-child {
-  @apply mt-5 text-lg leading-8 text-ink/70;
+  @apply mt-5 text-lg leading-8 text-black/70;
 }
 </style>

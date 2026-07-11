@@ -52,6 +52,9 @@
   @apply mt-3 grid gap-2 text-sm text-white/70;
 }
 .FooterButton {
-  @apply mt-2 inline-flex w-fit rounded-full border border-white/25 px-4 py-2 font-bold text-white transition duration-300 hover:border-white/60 hover:bg-white hover:text-ink;
+  @apply mt-2 inline-flex w-fit rounded-full border border-white/25 px-4 py-2 font-bold text-white transition duration-300 hover:border-white/60 hover:bg-white;
+}
+.FooterButton:hover {
+  color: #18130f;
 }
 </style>

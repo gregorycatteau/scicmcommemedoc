@@ -63,27 +63,28 @@ usePageSeo(
   @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
 }
 .ProjectPanel {
-  @apply grid gap-8 border-t border-ink/12 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center;
+  border-top: 1px solid rgb(24 19 15 / 0.12);
+  @apply grid gap-8 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center;
 }
 .ProjectPanel:nth-child(even) .ProjectImage {
   @apply lg:order-2;
 }
 .ProjectImage {
-  @apply aspect-[16/10] w-full rounded-[2rem] object-cover shadow-2xl shadow-ink/15;
+  @apply aspect-[16/10] w-full rounded-[2rem] object-cover shadow-2xl shadow-black/15;
 }
 .ProjectCopy {
   @apply max-w-xl;
 }
 .ProjectStage {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
 .ProjectCopy h2 {
-  @apply mt-4 text-3xl font-black leading-tight text-ink sm:text-5xl;
+  @apply mt-4 text-3xl font-black leading-tight text-black sm:text-5xl;
 }
 .ProjectCopy p:last-of-type {
-  @apply mt-6 text-lg leading-8 text-ink/70;
+  @apply mt-6 text-lg leading-8 text-black/70;
 }
 .ProjectLink {
-  @apply mt-8 inline-flex rounded-full bg-primary px-6 py-3 font-bold text-white transition duration-500 hover:bg-primary-dark;
+  @apply mt-8 inline-flex rounded-full bg-orange-600 px-6 py-3 font-bold text-white transition duration-500 hover:bg-orange-700;
 }
 </style>

@@ -166,22 +166,22 @@ usePageSeo(
   @apply grid gap-4;
 }
 .PathStep {
-  @apply rounded-[2rem] border border-ink/10 bg-white/55 p-7;
+  @apply rounded-[2rem] border border-black/10 bg-white/55 p-7;
 }
 .PathStep span {
-  @apply text-sm font-black uppercase tracking-[0.2em] text-clay;
+  @apply text-sm font-black uppercase tracking-[0.2em] text-orange-800;
 }
 .PathStep h2 {
-  @apply mt-5 text-3xl font-black leading-tight text-ink;
+  @apply mt-5 text-3xl font-black leading-tight text-black;
 }
 .PathStep p {
-  @apply mt-4 text-lg leading-8 text-ink/70;
+  @apply mt-4 text-lg leading-8 text-black/70;
 }
 .FormPanel {
-  @apply rounded-[2rem] bg-ink p-7 text-white shadow-2xl shadow-ink/20 sm:p-10;
+  @apply rounded-[2rem] bg-black p-7 text-white shadow-2xl shadow-black/20 sm:p-10;
 }
 .FormKicker {
-  @apply text-sm font-black uppercase tracking-[0.22em] text-primary;
+  @apply text-sm font-black uppercase tracking-[0.22em] text-orange-600;
 }
 .FormPanel h2 {
   @apply mt-5 text-4xl font-black leading-tight;
@@ -193,13 +193,13 @@ usePageSeo(
   @apply grid gap-2 font-semibold text-white;
 }
 .FormInput {
-  @apply rounded-2xl border border-white/15 bg-white/10 px-4 py-4 font-normal text-white outline-none transition duration-500 placeholder:text-white/40 focus:border-primary focus:bg-white/15;
+  @apply rounded-2xl border border-white/15 bg-white/10 px-4 py-4 font-normal text-white outline-none transition duration-500 placeholder:text-white/40 focus:border-orange-600 focus:bg-white/15;
 }
 .FieldError {
   @apply text-sm font-semibold text-orange-200;
 }
 .SubmitButton {
-  @apply rounded-full border border-white bg-primary px-6 py-4 font-bold text-white transition duration-500 hover:bg-primary-dark disabled:cursor-not-allowed disabled:opacity-70;
+  @apply rounded-full border border-white bg-orange-600 px-6 py-4 font-bold text-white transition duration-500 hover:bg-orange-700 disabled:cursor-not-allowed disabled:opacity-70;
 }
 .FormMessage {
   @apply rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white;

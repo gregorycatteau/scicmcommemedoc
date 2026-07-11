@@ -15,15 +15,15 @@ defineEmits<{ action: [] }>()
 @reference "~/assets/css/main.css";
 
 .EmptyState {
-  @apply rounded-[2rem] border border-dashed border-ink/20 bg-white/50 p-8 text-center;
+  @apply rounded-[2rem] border border-dashed border-black/20 bg-white/50 p-8 text-center;
 }
 .EmptyState h3 {
   @apply text-2xl font-black;
 }
 .EmptyState p {
-  @apply mx-auto mt-3 max-w-2xl leading-7 text-ink/70;
+  @apply mx-auto mt-3 max-w-2xl leading-7 text-black/70;
 }
 .EmptyState button {
-  @apply mt-6 rounded-full bg-ink px-5 py-3 font-bold text-white;
+  @apply mt-6 rounded-full bg-black px-5 py-3 font-bold text-white;
 }
 </style>

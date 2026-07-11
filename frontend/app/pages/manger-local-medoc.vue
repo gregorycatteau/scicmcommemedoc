@@ -78,24 +78,24 @@ usePageSeo('Manger local dans le Medoc', 'Guide interactif pour composer un pani
 .Chooser legend,.Chooser span { @apply mb-2 font-black; }
 .Chooser label { @apply flex items-center gap-3 font-semibold; }
 .Chooser > label { @apply grid items-start; }
-.Chooser input[type="checkbox"] { @apply size-5 accent-primary; }
-.Chooser select { @apply min-h-12 rounded-xl border border-ink/10 bg-white px-4; }
-.BasketResult { @apply bg-secondary; }
-.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-primary; }
+.Chooser input[type="checkbox"] { @apply size-5 accent-orange-600; }
+.Chooser select { @apply min-h-12 rounded-xl border border-black/10 bg-white px-4; }
+.BasketResult { @apply bg-teal-900; }
+.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-orange-600; }
 .ToolResult h2,.ResourceMatches h2 { @apply text-3xl font-black; }
 .BasketList { @apply mt-6 flex flex-wrap gap-2; }
-.BasketList li { @apply rounded-full bg-white px-4 py-2 font-bold text-ink; }
+.BasketList li { @apply rounded-full bg-white px-4 py-2 font-bold text-black; }
 .BasketRoute { @apply mt-6 border-t border-white/15 pt-5 text-white/75; }
-.ResultLink { @apply mt-6 inline-flex rounded-full bg-primary px-5 py-3 font-bold text-white; }
+.ResultLink { @apply mt-6 inline-flex rounded-full bg-orange-600 px-5 py-3 font-bold text-white; }
 .ResourceIntro { @apply self-start; }
-.ResourceIntro p { @apply mt-4 text-lg leading-8 text-ink/70; }
+.ResourceIntro p { @apply mt-4 text-lg leading-8 text-black/70; }
 .EditorialBlock { padding-block: var(--section-padding-soft); @apply mx-auto max-w-5xl px-4 sm:px-6 lg:px-8; }
 .EditorialBlock h2 { @apply text-4xl font-black; }
-.EditorialBlock p { @apply mt-5 text-lg leading-8 text-ink/70; }
+.EditorialBlock p { @apply mt-5 text-lg leading-8 text-black/70; }
 .SeasonGrid { @apply mt-6 grid gap-3 md:grid-cols-2; }
-.SeasonGrid p { @apply rounded-2xl border border-leaf/10 bg-white/60 p-5; }
+.SeasonGrid p { border: 1px solid rgb(47 107 63 / 0.1); @apply rounded-2xl bg-white/60 p-5; }
 .SeasonGrid p:nth-child(odd) { @apply translate-y-0 md:translate-y-4; }
-.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-primary px-6 py-3 font-bold text-white; }
+.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-orange-600 px-6 py-3 font-bold text-white; }
 .FoodEditorial { @apply relative; }
 @media (min-width: 640px) {
   .Chooser > label { @apply flex items-center; }

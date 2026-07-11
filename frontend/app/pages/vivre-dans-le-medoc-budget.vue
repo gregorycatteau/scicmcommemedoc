@@ -103,34 +103,34 @@ usePageSeo('Budget pour vivre dans le Medoc', 'Calculateur indicatif du cout de 
 @reference "~/assets/css/main.css";
 
 .ToolGrid { padding-block: var(--section-padding-soft); @apply mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8; }
-.ToolForm { @apply grid gap-5 rounded-2xl border border-earth/15 bg-white/70 p-5 shadow-sm sm:p-6; }
-.ToolForm fieldset { @apply grid gap-4 border-t border-earth/15 pt-5 md:grid-cols-2; }
+.ToolForm { border: 1px solid rgb(115 88 58 / 0.15); @apply grid gap-5 rounded-2xl bg-white/70 p-5 shadow-sm sm:p-6; }
+.ToolForm fieldset { border-top: 1px solid rgb(115 88 58 / 0.15); @apply grid gap-4 pt-5 md:grid-cols-2; }
 .ToolForm fieldset:first-child { @apply border-t-0 pt-0; }
-.ToolForm legend { @apply col-span-full pb-1 text-sm font-black uppercase tracking-[0.18em] text-earth; }
+.ToolForm legend { @apply col-span-full pb-1 text-sm font-black uppercase tracking-[0.18em] text-stone-700; }
 .ToolForm label { @apply grid gap-2 font-bold; }
-.ToolForm input,.ToolForm select { @apply min-h-12 rounded-lg border border-ink/10 bg-white px-4; }
+.ToolForm input,.ToolForm select { @apply min-h-12 rounded-lg border border-black/10 bg-white px-4; }
 .LedgerForm { background-image: linear-gradient(transparent 95%, rgb(115 88 58 / 0.12) 96%); background-size: 100% 3.25rem; }
 .BudgetResult { @apply relative overflow-hidden border border-white/10; }
-.BudgetResult::before { content: ""; @apply absolute inset-x-0 top-0 h-1 bg-primary; }
+.BudgetResult::before { content: ""; @apply absolute inset-x-0 top-0 h-1 bg-orange-600; }
 .ToolResult h2 { @apply text-5xl font-black; }
 .ToolResult p { @apply mt-4 text-white/75; }
-.ResultEyebrow { @apply mt-0 text-sm font-black uppercase tracking-[0.18em] text-primary; }
+.ResultEyebrow { @apply mt-0 text-sm font-black uppercase tracking-[0.18em] text-orange-600; }
 .LedgerSummary { @apply mt-6 grid gap-3 sm:grid-cols-3; }
 .LedgerSummary div { @apply grid gap-1 border-l border-white/15 pl-4; }
 .LedgerSummary dt { @apply text-xs uppercase tracking-[0.14em] text-white/55; }
 .LedgerSummary dd { @apply text-xl font-black; }
 .BudgetBars { @apply mt-6 grid gap-3; }
 .BudgetBars p { @apply grid grid-cols-[minmax(7rem,1fr)_2fr_auto] items-center gap-3 text-sm; }
-.BudgetBars i { @apply block h-2 rounded-full bg-primary; }
+.BudgetBars i { @apply block h-2 rounded-full bg-orange-600; }
 .BudgetBars strong { @apply text-right text-sm; }
 .ToolResult h3 { @apply mt-8 text-2xl font-black; }
 .ToolResult ul { @apply mt-4 grid gap-2; }
 .BudgetRecommendations { @apply mt-8 border-t border-white/15 pt-6; }
 .EditorialBlock { padding-block: var(--section-padding-soft); @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8; }
 .EditorialBlock h2 { @apply text-4xl font-black leading-tight; }
-.EditorialBlock p { @apply mt-5 text-lg leading-8 text-ink/70; }
-.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-primary px-6 py-3 font-bold text-white; }
-.BudgetEditorial { @apply border-y border-earth/10; }
+.EditorialBlock p { @apply mt-5 text-lg leading-8 text-black/70; }
+.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-orange-600 px-6 py-3 font-bold text-white; }
+.BudgetEditorial { border-block: 1px solid rgb(115 88 58 / 0.1); }
 @media (max-width: 640px) {
   .BudgetBars p { @apply grid-cols-1; }
   .BudgetBars strong { @apply text-left; }

@@ -59,25 +59,25 @@ usePageSeo('Developper une activite utile dans le Medoc', 'Guide personnalise po
 @reference "~/assets/css/main.css";
 .ActivityGrid { padding-block: var(--section-padding-soft); @apply mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.85fr] lg:px-8; }
 .ActivityForm { @apply grid gap-4 rounded-[1.5rem] bg-white/70 p-5 sm:p-6 md:grid-cols-2; }
-.PathForm { @apply border border-secondary/10; }
-.PathLegend { @apply col-span-full grid grid-cols-3 overflow-hidden rounded-full border border-ink/10 bg-white text-center text-xs font-black uppercase tracking-[0.12em]; }
-.PathLegend span { @apply px-3 py-3 text-ink/55; }
-.PathLegend .active { @apply bg-secondary text-white; }
+.PathForm { border: 1px solid rgb(46 79 79 / 0.1); }
+.PathLegend { @apply col-span-full grid grid-cols-3 overflow-hidden rounded-full border border-black/10 bg-white text-center text-xs font-black uppercase tracking-[0.12em]; }
+.PathLegend span { @apply px-3 py-3 text-black/55; }
+.PathLegend .active { @apply bg-teal-900 text-white; }
 .ActivityForm label { @apply grid gap-2 font-bold; }
-.ActivityForm input,.ActivityForm select,.ActivityForm textarea { @apply rounded-lg border border-ink/10 bg-white px-4 py-3 font-normal; }
-.ActivityResult { @apply bg-ink; }
-.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-primary; }
+.ActivityForm input,.ActivityForm select,.ActivityForm textarea { @apply rounded-lg border border-black/10 bg-white px-4 py-3 font-normal; }
+.ActivityResult { @apply bg-black; }
+.ResultEyebrow { @apply text-sm font-black uppercase tracking-[0.18em] text-orange-600; }
 .ToolResult h2 { @apply text-5xl font-black; }
 .ToolResult p { @apply mt-5 text-white/75; }
 .ToolResult ol { @apply mt-6 grid gap-3 list-decimal pl-5; }
 .RouteLine { @apply mt-7 grid gap-3 border-y border-white/15 py-5; }
 .RouteLine span { @apply rounded-full border border-white/15 px-4 py-2 text-sm font-bold text-white/50; }
-.RouteLine .is-lit { @apply border-primary/50 bg-primary/15 text-white; }
+.RouteLine .is-lit { border-color: rgb(255 107 53 / 0.5); background: rgb(255 107 53 / 0.15); @apply text-white; }
 .Warning { @apply rounded-2xl bg-white/10 p-4; }
 .EditorialBlock { padding-block: var(--section-padding-soft); @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8; }
 .EditorialBlock h2 { @apply text-4xl font-black; }
-.EditorialBlock p { @apply mt-5 text-lg leading-8 text-ink/70; }
-.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-primary px-6 py-3 font-bold text-white; }
+.EditorialBlock p { @apply mt-5 text-lg leading-8 text-black/70; }
+.EditorialBlock a { @apply mt-8 inline-flex rounded-full bg-orange-600 px-6 py-3 font-bold text-white; }
 .ActivityEditorial { @apply max-w-5xl; }
 @media (min-width: 640px) {
   .RouteLine { @apply grid-cols-5; }

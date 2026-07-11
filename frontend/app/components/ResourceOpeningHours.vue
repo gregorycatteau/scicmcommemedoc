@@ -18,12 +18,12 @@ const warn = computed(() => shouldWarnOpeningHours(props.resource))
 @reference "~/assets/css/main.css";
 
 .OpeningHours {
-  @apply grid gap-1 text-sm text-ink/75;
+  @apply grid gap-1 text-sm text-black/75;
 }
 .OpeningHours strong {
-  @apply text-ink;
+  @apply text-black;
 }
 .OpeningHours em {
-  @apply not-italic text-clay;
+  @apply not-italic text-orange-800;
 }
 </style>
