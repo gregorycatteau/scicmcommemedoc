@@ -2,25 +2,24 @@
   <footer class="SiteFooter">
     <div class="FooterGrid">
       <div>
-        <p class="FooterTitle">Mcomme Medoc</p>
-        <p class="FooterText">Semer des idees. Cultiver des savoir-faire. Recolter des liens, de l'autonomie et de la resilience.</p>
+        <p class="FooterTitle">M Comme Medoc</p>
+        <p class="FooterText">Semer des idees. Cultiver des savoir-faire. Recolter des liens, de l autonomie et de la resilience.</p>
       </div>
       <div>
-        <p class="FooterHeading">Avancer</p>
+        <p class="FooterHeading">Feuilleter</p>
         <div class="FooterLinks">
-          <NuxtLink to="/livre">Ouvrir le Livre</NuxtLink>
-          <NuxtLink to="/wiki">Chercher dans le Wiki</NuxtLink>
-          <NuxtLink to="/ressources">Ressources utiles</NuxtLink>
-          <NuxtLink to="/activites">Les projets</NuxtLink>
-          <NuxtLink to="/evenements">Nous rencontrer</NuxtLink>
+          <NuxtLink to="/bibliotheque">Ouvrir la bibliotheque</NuxtLink>
+          <NuxtLink to="/livre">Entree compatible Livre</NuxtLink>
+          <NuxtLink to="/faq">FAQ</NuxtLink>
         </div>
       </div>
       <div>
-        <p class="FooterHeading">Comprendre</p>
+        <p class="FooterHeading">Services</p>
         <div class="FooterLinks">
-          <NuxtLink to="/vie-cooperative">Vie cooperative</NuxtLink>
-          <NuxtLink to="/faq">FAQ</NuxtLink>
-          <NuxtLink class="FooterButton" to="/contact">Nous contacter</NuxtLink>
+          <a href="https://wiki.mcommemedoc.fr" target="_blank" rel="noopener noreferrer">Wiki operationnel ↗</a>
+          <a href="https://projets.mcommemedoc.fr" target="_blank" rel="noopener noreferrer">OpenProject ↗</a>
+          <a href="https://docs.mcommemedoc.fr" target="_blank" rel="noopener noreferrer">Documents ↗</a>
+          <a href="https://chat.mcommemedoc.fr" target="_blank" rel="noopener noreferrer">Chat ↗</a>
         </div>
       </div>
     </div>
@@ -51,10 +50,7 @@
 .FooterLinks {
   @apply mt-3 grid gap-2 text-sm text-white/70;
 }
-.FooterButton {
-  @apply mt-2 inline-flex w-fit rounded-full border border-white/25 px-4 py-2 font-bold text-white transition duration-300 hover:border-white/60 hover:bg-white;
-}
-.FooterButton:hover {
-  color: #18130f;
+.FooterLinks a {
+  @apply w-fit transition hover:text-white;
 }
 </style>

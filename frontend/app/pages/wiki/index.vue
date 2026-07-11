@@ -1,48 +1,57 @@
 <template>
   <MainWrapper>
-    <WikiLanding :categories="wikiCategories" />
-    <section class="WikiMethod" aria-labelledby="wiki-method-title">
+    <section class="WikiGate" aria-labelledby="wiki-gate-title">
       <div>
-        <p>Regle de confiance</p>
-        <h2 id="wiki-method-title">Une fiche utile doit dire ce qu elle sait, ce qu elle ne sait pas encore, et comment le corriger.</h2>
+        <p>Service operationnel</p>
+        <h1 id="wiki-gate-title">Le Wiki vit hors du site editorial.</h1>
+        <span>Le site raconte et oriente. Le Wiki porte les fiches, sources, procedures et informations mises a jour.</span>
       </div>
-      <SharedReadableProse>
-        <p>Le Wiki ne remplace pas le Livre. Il porte les informations pratiques : fiches, horaires, sources, statuts de verification, procedures et signalements.</p>
-        <p>Aujourd hui, les ressources visibles dans l application sont des donnees de demonstration. Elles permettent de tester la recherche et les filtres, mais ne doivent pas etre utilisees comme repertoire local reel.</p>
-      </SharedReadableProse>
-      <div class="WikiActions">
-        <SharedExplicitLink to="/ressources" label="Consulter les ressources de demonstration" description="Voir la recherche actuelle et les statuts visibles." />
-        <SharedExplicitLink to="/vie-cooperative" label="Comprendre le fonctionnement de la cooperative" description="Lire les principes d organisation existants." />
-        <SharedExplicitLink to="/ressources" label="Signaler une information a corriger" description="Utiliser le formulaire de signalement disponible sur la route ressources." />
+      <div class="WikiGatePanel">
+        <p>Les producteurs, horaires, documents de verification et corrections ne sont pas recopies ici. Cette porte envoie vers le service qui doit rester la source operationnelle.</p>
+        <a href="https://wiki.mcommemedoc.fr" target="_blank" rel="noopener noreferrer">Ouvrir le Wiki M Comme Medoc ↗</a>
+        <NuxtLink to="/bibliotheque">Retourner a la bibliotheque</NuxtLink>
       </div>
     </section>
   </MainWrapper>
 </template>
 
 <script setup lang="ts">
-import { wikiCategories } from '~/data/wiki/categories'
-
 usePageSeo(
-  'Wiki operationnel - M Comme Medoc',
-  'Wiki M Comme Medoc : ressources, fonctionnement, signalements et informations pratiques avec statut de verification.',
+  'Wiki M Comme Medoc - Service operationnel',
+  'Acceder au Wiki operationnel M Comme Medoc pour les fiches, sources, procedures et informations verifiables.',
 )
 </script>
 
 <style scoped>
 @reference "~/assets/css/main.css";
 
-.WikiMethod {
-  padding-block: var(--section-padding-soft);
-  border-top: 1px solid rgb(24 19 15 / 0.1);
-  @apply mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1fr] lg:px-8;
+.WikiGate {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 80% 18%, rgb(255 107 53 / 0.14), transparent 24%),
+    linear-gradient(135deg, #f7f1e6 0%, #e8dac4 100%);
+  @apply grid content-center gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[1fr_0.8fr] lg:px-16;
 }
-.WikiMethod > div:first-child p {
+.WikiGate > div:first-child p {
   @apply text-sm font-black uppercase tracking-[0.22em] text-orange-800;
 }
-.WikiMethod h2 {
-  @apply mt-5 text-4xl font-black leading-tight;
+.WikiGate h1 {
+  @apply mt-5 max-w-4xl text-5xl font-black leading-[0.95] sm:text-7xl;
 }
-.WikiActions {
-  @apply col-span-full flex flex-wrap gap-3;
+.WikiGate span {
+  @apply mt-7 block max-w-2xl text-xl leading-9 text-black/68;
+}
+.WikiGatePanel {
+  @apply self-center rounded-[1.5rem] border border-black/10 bg-white/70 p-6 shadow-xl shadow-black/10 backdrop-blur sm:p-8;
+}
+.WikiGatePanel p {
+  @apply text-lg leading-8 text-black/68;
+}
+.WikiGatePanel a,
+.WikiGatePanel :deep(a) {
+  @apply mt-6 flex w-fit rounded-full bg-black px-5 py-3 font-black text-white transition hover:bg-orange-600;
+}
+.WikiGatePanel :deep(a:last-child) {
+  @apply bg-transparent text-black underline underline-offset-4 hover:bg-transparent hover:text-orange-800;
 }
 </style>
