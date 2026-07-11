@@ -1,0 +1,195 @@
+{
+  "generatedAt": "2026-07-11T17:51:26.185Z",
+  "baseUrl": "http://127.0.0.1:3010",
+  "routeChecks": [
+    {
+      "route": "/",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/bibliotheque",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/livre",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/wiki",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/faq",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/vivre-dans-le-medoc-budget",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/manger-local-medoc",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/diagnostic-resilience-foyer",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/creer-projet-citoyen-medoc",
+      "status": 200,
+      "location": null
+    },
+    {
+      "route": "/developper-projet-medoc",
+      "status": 200,
+      "location": null
+    }
+  ],
+  "screenshots": [
+    {
+      "route": "/",
+      "file": "cover-desktop.png",
+      "viewport": "desktop",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "M Comme Medoc - Semer, cultiver, recolter | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 1425,
+      "clientWidth": 1425,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": false
+    },
+    {
+      "route": "/",
+      "file": "cover-mobile-390.png",
+      "viewport": "mobile-390",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "M Comme Medoc - Semer, cultiver, recolter | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": false
+    },
+    {
+      "route": "/bibliotheque",
+      "file": "bibliotheque-desktop.png",
+      "viewport": "desktop",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "Bibliotheque vivante - M Comme Medoc | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 1425,
+      "clientWidth": 1425,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": false
+    },
+    {
+      "route": "/bibliotheque",
+      "file": "bibliotheque-desktop-page2.png",
+      "viewport": "desktop",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "Bibliotheque vivante - M Comme Medoc | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 1425,
+      "clientWidth": 1425,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": false
+    },
+    {
+      "route": "/bibliotheque",
+      "file": "bibliotheque-mobile-390.png",
+      "viewport": "mobile-390",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "Bibliotheque vivante - M Comme Medoc | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": false
+    },
+    {
+      "route": "/bibliotheque",
+      "file": "bibliotheque-mobile-360-index-open.png",
+      "viewport": "mobile-360",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "Bibliotheque vivante - M Comme Medoc | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": false
+    },
+    {
+      "route": "/bibliotheque",
+      "file": "bibliotheque-mobile-360-reduced-motion.png",
+      "viewport": "mobile-360",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "Bibliotheque vivante - M Comme Medoc | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 360,
+      "clientWidth": 360,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": true
+    },
+    {
+      "route": "/wiki",
+      "file": "wiki-desktop.png",
+      "viewport": "desktop",
+      "documentStatus": 200,
+      "consoleMessages": [],
+      "title": "Wiki M Comme Medoc - Service operationnel | Mcomme Medoc",
+      "h1": 1,
+      "horizontalOverflow": false,
+      "scrollWidth": 1425,
+      "clientWidth": 1425,
+      "mainId": "contenu",
+      "chatHref": "https://chat.mcommemedoc.fr",
+      "wikiHref": "https://wiki.mcommemedoc.fr",
+      "projectHref": "https://projets.mcommemedoc.fr",
+      "reducedMotion": false
+    }
+  ],
+  "failures": []
+}
