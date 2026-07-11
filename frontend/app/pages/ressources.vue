@@ -2,9 +2,9 @@
   <MainWrapper>
     <Breadcrumbs :items="[{ label: 'Ressources' }]" />
     <LongTailHero
-      kicker="Ressources du Medoc"
-      title="Trouver, verifier et relier les ressources utiles du territoire."
-      description="Cette premiere version pose une methode fiable : chercher, filtrer, signaler une erreur et proposer une ressource sans presenter une donnee non verifiee comme un bon plan."
+      kicker="Wiki ressources"
+      title="Chercher, verifier et corriger les ressources utiles du territoire."
+      description="Cette route historique devient l entree ressources du Wiki. Les donnees visibles restent des exemples fictifs tant qu elles ne sont pas remplacees par des informations verifiees."
       promise="Une recherche locale utilisable, avec statuts de verification visibles."
       tone="clay"
     />
@@ -12,6 +12,7 @@
     <section class="DemoNotice">
       <strong>Données de démonstration</strong>
       <p>Aucune fiche ci-dessous ne represente une adresse reelle. Les donnees verifiees remplaceront ce fichier local progressivement.</p>
+      <NuxtLink to="/wiki">Comprendre le role du Wiki operationnel</NuxtLink>
     </section>
 
     <section class="ResourcesWorkspace">
@@ -127,6 +128,9 @@ usePageSeo(
 }
 .DemoNotice p {
   @apply mt-2 leading-7 text-ink/70;
+}
+.DemoNotice a {
+  @apply mt-4 inline-flex rounded-full border border-clay/25 px-5 py-2.5 font-bold text-ink transition duration-500 hover:bg-ink hover:text-white;
 }
 .ResourcesWorkspace {
   padding-block: var(--section-padding-soft);

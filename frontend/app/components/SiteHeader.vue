@@ -6,7 +6,8 @@
       </NuxtLink>
 
       <div class="DesktopLinks">
-        <NuxtLink class="NavLink" to="/#cycle">Semer Cultiver Recolter</NuxtLink>
+        <NuxtLink class="NavLink" to="/livre">Livre</NuxtLink>
+        <NuxtLink class="NavLink" to="/wiki">Wiki</NuxtLink>
         <NuxtLink class="NavLink" to="/ressources">Ressources</NuxtLink>
         <NuxtLink class="NavLink" to="/activites">Projets</NuxtLink>
         <NuxtLink class="NavLink" to="/evenements">Nous rencontrer</NuxtLink>
@@ -21,7 +22,8 @@
     </nav>
 
     <nav v-if="isOpen" id="mobile-navigation" class="MobileNav" aria-label="Navigation mobile">
-      <NuxtLink class="MobileNavLink" to="/#cycle" @click="isOpen = false">Semer Cultiver Recolter</NuxtLink>
+      <NuxtLink class="MobileNavLink" to="/livre" @click="isOpen = false">Livre</NuxtLink>
+      <NuxtLink class="MobileNavLink" to="/wiki" @click="isOpen = false">Wiki</NuxtLink>
       <NuxtLink class="MobileNavLink" to="/ressources" @click="isOpen = false">Ressources</NuxtLink>
       <NuxtLink class="MobileNavLink" to="/activites" @click="isOpen = false">Projets</NuxtLink>
       <NuxtLink class="MobileNavLink" to="/evenements" @click="isOpen = false">Nous rencontrer</NuxtLink>

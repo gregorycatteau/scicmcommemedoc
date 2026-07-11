@@ -8,7 +8,8 @@
       <div>
         <p class="FooterHeading">Avancer</p>
         <div class="FooterLinks">
-          <NuxtLink to="/#cycle">Le cycle</NuxtLink>
+          <NuxtLink to="/livre">Ouvrir le Livre</NuxtLink>
+          <NuxtLink to="/wiki">Chercher dans le Wiki</NuxtLink>
           <NuxtLink to="/ressources">Ressources utiles</NuxtLink>
           <NuxtLink to="/activites">Les projets</NuxtLink>
           <NuxtLink to="/evenements">Nous rencontrer</NuxtLink>
