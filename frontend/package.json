@@ -1,0 +1,25 @@
+{
+  "name": "mcomme-medoc-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --host 0.0.0.0",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "typecheck": "nuxi typecheck",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "latest",
+    "nuxt": "latest",
+    "tailwindcss": "latest",
+    "vue": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "~5.9.3",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.3.7"
+  }
+}

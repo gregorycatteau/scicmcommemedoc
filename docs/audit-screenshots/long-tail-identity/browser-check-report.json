@@ -1,0 +1,366 @@
+{
+  "report": [
+    {
+      "route": "vivre-dans-le-medoc-budget",
+      "viewport": "desktop",
+      "first": {
+        "title": "Budget pour vivre dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "PAYSAGE MENSUEL\n\n2 199 €\n\n26 392 € par an. Estimation indicative, pas un conseil financier.\n\nINCOMPRESSIBLE\n1 809 €\nLOGEMENT\n34 %\nMOBILITE\n10 %\n\nLogement\n750 €\n\nMobilite\n219 €\n\nEne",
+        "reduced": false
+      },
+      "result": {
+        "title": "Budget pour vivre dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "PAYSAGE MENSUEL\n\n2 199 €\n\n26 392 € par an. Estimation indicative, pas un conseil financier.\n\nINCOMPRESSIBLE\n1 809 €\nLOGEMENT\n34 %\nMOBILITE\n10 %\n\nLogement\n750 €\n\nMobilite\n219 €\n\nEne",
+        "reduced": false
+      }
+    },
+    {
+      "route": "vivre-dans-le-medoc-budget",
+      "viewport": "mobile-390",
+      "first": {
+        "title": "Budget pour vivre dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "PAYSAGE MENSUEL\n\n2 199 €\n\n26 392 € par an. Estimation indicative, pas un conseil financier.\n\nINCOMPRESSIBLE\n1 809 €\nLOGEMENT\n34 %\nMOBILITE\n10 %\n\nLogement\n750 €\n\nMobilite\n219 €\n\nEne",
+        "reduced": false
+      },
+      "result": {
+        "title": "Budget pour vivre dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "PAYSAGE MENSUEL\n\n2 199 €\n\n26 392 € par an. Estimation indicative, pas un conseil financier.\n\nINCOMPRESSIBLE\n1 809 €\nLOGEMENT\n34 %\nMOBILITE\n10 %\n\nLogement\n750 €\n\nMobilite\n219 €\n\nEne",
+        "reduced": false
+      }
+    },
+    {
+      "route": "vivre-dans-le-medoc-budget",
+      "viewport": "mobile-360",
+      "first": {
+        "title": "Budget pour vivre dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "PAYSAGE MENSUEL\n\n2 199 €\n\n26 392 € par an. Estimation indicative, pas un conseil financier.\n\nINCOMPRESSIBLE\n1 809 €\nLOGEMENT\n34 %\nMOBILITE\n10 %\n\nLogement\n750 €\n\nMobilite\n219 €\n\nEne",
+        "reduced": false
+      },
+      "result": {
+        "title": "Budget pour vivre dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "PAYSAGE MENSUEL\n\n2 199 €\n\n26 392 € par an. Estimation indicative, pas un conseil financier.\n\nINCOMPRESSIBLE\n1 809 €\nLOGEMENT\n34 %\nMOBILITE\n10 %\n\nLogement\n750 €\n\nMobilite\n219 €\n\nEne",
+        "reduced": false
+      }
+    },
+    {
+      "route": "vivre-dans-le-medoc-budget",
+      "viewport": "reduced-motion-390",
+      "reduced": {
+        "title": "Budget pour vivre dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "PAYSAGE MENSUEL\n\n2 199 €\n\n26 392 € par an. Estimation indicative, pas un conseil financier.\n\nINCOMPRESSIBLE\n1 809 €\nLOGEMENT\n34 %\nMOBILITE\n10 %\n\nLogement\n750 €\n\nMobilite\n219 €\n\nEne",
+        "reduced": true
+      }
+    },
+    {
+      "route": "manger-local-medoc",
+      "viewport": "desktop",
+      "first": {
+        "title": "Manger local dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "PANIER PREPARE\n\n1 famille\n\nToute saison · tous modes\n\nlegumes\n\nEtapes estimees : 1. Itineraire logique indicatif, pas un calcul routier.\n\nVerifier ou proposer une ressource",
+        "reduced": false
+      },
+      "result": {
+        "title": "Manger local dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "PANIER PREPARE\n\n1 famille\n\nToute saison · tous modes\n\nlegumes\n\nEtapes estimees : 1. Itineraire logique indicatif, pas un calcul routier.\n\nVerifier ou proposer une ressource",
+        "reduced": false
+      }
+    },
+    {
+      "route": "manger-local-medoc",
+      "viewport": "mobile-390",
+      "first": {
+        "title": "Manger local dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "PANIER PREPARE\n\n1 famille\n\nToute saison · tous modes\n\nlegumes\n\nEtapes estimees : 1. Itineraire logique indicatif, pas un calcul routier.\n\nVerifier ou proposer une ressource",
+        "reduced": false
+      },
+      "result": {
+        "title": "Manger local dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "PANIER PREPARE\n\n1 famille\n\nToute saison · tous modes\n\nlegumes\n\nEtapes estimees : 1. Itineraire logique indicatif, pas un calcul routier.\n\nVerifier ou proposer une ressource",
+        "reduced": false
+      }
+    },
+    {
+      "route": "manger-local-medoc",
+      "viewport": "mobile-360",
+      "first": {
+        "title": "Manger local dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "PANIER PREPARE\n\n1 famille\n\nToute saison · tous modes\n\nlegumes\n\nEtapes estimees : 1. Itineraire logique indicatif, pas un calcul routier.\n\nVerifier ou proposer une ressource",
+        "reduced": false
+      },
+      "result": {
+        "title": "Manger local dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "PANIER PREPARE\n\n1 famille\n\nToute saison · tous modes\n\nlegumes\n\nEtapes estimees : 1. Itineraire logique indicatif, pas un calcul routier.\n\nVerifier ou proposer une ressource",
+        "reduced": false
+      }
+    },
+    {
+      "route": "manger-local-medoc",
+      "viewport": "reduced-motion-390",
+      "reduced": {
+        "title": "Manger local dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "PANIER PREPARE\n\n1 famille\n\nToute saison · tous modes\n\nlegumes\n\nEtapes estimees : 1. Itineraire logique indicatif, pas un calcul routier.\n\nVerifier ou proposer une ressource",
+        "reduced": true
+      }
+    },
+    {
+      "route": "diagnostic-resilience-foyer",
+      "viewport": "desktop",
+      "first": {
+        "title": "Diagnostic de resilience du foyer | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "BOUSSOLE DU FOYER\n\n0\n/ 100\n\nScore pedagogique. Il ne promet aucune securite et ne remplace aucun conseil specialise.\n\nPriorites calmes\nEau\nAlimentation\nEnergie\n7 jours\nIdentifier l",
+        "reduced": false
+      },
+      "result": {
+        "title": "Diagnostic de resilience du foyer | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "BOUSSOLE DU FOYER\n\n0\n/ 100\n\nScore pedagogique. Il ne promet aucune securite et ne remplace aucun conseil specialise.\n\nPriorites calmes\nEau\nAlimentation\nEnergie\n7 jours\nIdentifier l",
+        "reduced": false
+      }
+    },
+    {
+      "route": "diagnostic-resilience-foyer",
+      "viewport": "mobile-390",
+      "first": {
+        "title": "Diagnostic de resilience du foyer | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "BOUSSOLE DU FOYER\n\n0\n/ 100\n\nScore pedagogique. Il ne promet aucune securite et ne remplace aucun conseil specialise.\n\nPriorites calmes\nEau\nAlimentation\nEnergie\n7 jours\nIdentifier l",
+        "reduced": false
+      },
+      "result": {
+        "title": "Diagnostic de resilience du foyer | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "BOUSSOLE DU FOYER\n\n0\n/ 100\n\nScore pedagogique. Il ne promet aucune securite et ne remplace aucun conseil specialise.\n\nPriorites calmes\nEau\nAlimentation\nEnergie\n7 jours\nIdentifier l",
+        "reduced": false
+      }
+    },
+    {
+      "route": "diagnostic-resilience-foyer",
+      "viewport": "mobile-360",
+      "first": {
+        "title": "Diagnostic de resilience du foyer | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "BOUSSOLE DU FOYER\n\n0\n/ 100\n\nScore pedagogique. Il ne promet aucune securite et ne remplace aucun conseil specialise.\n\nPriorites calmes\nEau\nAlimentation\nEnergie\n7 jours\nIdentifier l",
+        "reduced": false
+      },
+      "result": {
+        "title": "Diagnostic de resilience du foyer | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "BOUSSOLE DU FOYER\n\n0\n/ 100\n\nScore pedagogique. Il ne promet aucune securite et ne remplace aucun conseil specialise.\n\nPriorites calmes\nEau\nAlimentation\nEnergie\n7 jours\nIdentifier l",
+        "reduced": false
+      }
+    },
+    {
+      "route": "diagnostic-resilience-foyer",
+      "viewport": "reduced-motion-390",
+      "reduced": {
+        "title": "Diagnostic de resilience du foyer | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "BOUSSOLE DU FOYER\n\n0\n/ 100\n\nScore pedagogique. Il ne promet aucune securite et ne remplace aucun conseil specialise.\n\nPriorites calmes\nEau\nAlimentation\nEnergie\n7 jours\nIdentifier l",
+        "reduced": true
+      }
+    },
+    {
+      "route": "creer-projet-citoyen-medoc",
+      "viewport": "desktop",
+      "first": {
+        "title": "Creer un projet citoyen dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "FICHE PARTAGEABLE\n\nVersion de travail\n# initiative locale - territoire\n\n## Probleme constate\nA completer\n\n## Personnes concernees\nA completer\n\n## Proposition\nA completer\n\n## Territ",
+        "reduced": false
+      },
+      "result": {
+        "title": "Creer un projet citoyen dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "FICHE PARTAGEABLE\n\nVersion de travail\n# initiative locale - territoire\n\n## Probleme constate\nA completer\n\n## Personnes concernees\nA completer\n\n## Proposition\nA completer\n\n## Territ",
+        "reduced": false
+      }
+    },
+    {
+      "route": "creer-projet-citoyen-medoc",
+      "viewport": "mobile-390",
+      "first": {
+        "title": "Creer un projet citoyen dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "FICHE PARTAGEABLE\n\nVersion de travail\n# initiative locale - territoire\n\n## Probleme constate\nA completer\n\n## Personnes concernees\nA completer\n\n## Proposition\nA completer\n\n## Territ",
+        "reduced": false
+      },
+      "result": {
+        "title": "Creer un projet citoyen dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "FICHE PARTAGEABLE\n\nVersion de travail\n# initiative locale - territoire\n\n## Probleme constate\nA completer\n\n## Personnes concernees\nA completer\n\n## Proposition\nA completer\n\n## Territ",
+        "reduced": false
+      }
+    },
+    {
+      "route": "creer-projet-citoyen-medoc",
+      "viewport": "mobile-360",
+      "first": {
+        "title": "Creer un projet citoyen dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "FICHE PARTAGEABLE\n\nVersion de travail\n# initiative locale - territoire\n\n## Probleme constate\nA completer\n\n## Personnes concernees\nA completer\n\n## Proposition\nA completer\n\n## Territ",
+        "reduced": false
+      },
+      "result": {
+        "title": "Creer un projet citoyen dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "FICHE PARTAGEABLE\n\nVersion de travail\n# initiative locale - territoire\n\n## Probleme constate\nA completer\n\n## Personnes concernees\nA completer\n\n## Proposition\nA completer\n\n## Territ",
+        "reduced": false
+      }
+    },
+    {
+      "route": "creer-projet-citoyen-medoc",
+      "viewport": "reduced-motion-390",
+      "reduced": {
+        "title": "Creer un projet citoyen dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "FICHE PARTAGEABLE\n\nVersion de travail\n# initiative locale - territoire\n\n## Probleme constate\nA completer\n\n## Personnes concernees\nA completer\n\n## Proposition\nA completer\n\n## Territ",
+        "reduced": true
+      }
+    },
+    {
+      "route": "developper-projet-medoc",
+      "viewport": "desktop",
+      "first": {
+        "title": "Developper une activite utile dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "CHEMIN RECOMMANDE\n\nExplorer\n\nL idee doit encore rencontrer le terrain avant de se structurer.\n\nExplorer\nTester\nStructurer\nFinancer\nCooperer\nFormuler le besoin en une phrase\nParler ",
+        "reduced": false
+      },
+      "result": {
+        "title": "Developper une activite utile dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 1351,
+        "clientWidth": 1351,
+        "resultText": "CHEMIN RECOMMANDE\n\nExplorer\n\nL idee doit encore rencontrer le terrain avant de se structurer.\n\nExplorer\nTester\nStructurer\nFinancer\nCooperer\nFormuler le besoin en une phrase\nParler ",
+        "reduced": false
+      }
+    },
+    {
+      "route": "developper-projet-medoc",
+      "viewport": "mobile-390",
+      "first": {
+        "title": "Developper une activite utile dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "CHEMIN RECOMMANDE\n\nExplorer\n\nL idee doit encore rencontrer le terrain avant de se structurer.\n\nExplorer\nTester\nStructurer\nFinancer\nCooperer\nFormuler le besoin en une phrase\nParler ",
+        "reduced": false
+      },
+      "result": {
+        "title": "Developper une activite utile dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "CHEMIN RECOMMANDE\n\nExplorer\n\nL idee doit encore rencontrer le terrain avant de se structurer.\n\nExplorer\nTester\nStructurer\nFinancer\nCooperer\nFormuler le besoin en une phrase\nParler ",
+        "reduced": false
+      }
+    },
+    {
+      "route": "developper-projet-medoc",
+      "viewport": "mobile-360",
+      "first": {
+        "title": "Developper une activite utile dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "CHEMIN RECOMMANDE\n\nExplorer\n\nL idee doit encore rencontrer le terrain avant de se structurer.\n\nExplorer\nTester\nStructurer\nFinancer\nCooperer\nFormuler le besoin en une phrase\nParler ",
+        "reduced": false
+      },
+      "result": {
+        "title": "Developper une activite utile dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "resultText": "CHEMIN RECOMMANDE\n\nExplorer\n\nL idee doit encore rencontrer le terrain avant de se structurer.\n\nExplorer\nTester\nStructurer\nFinancer\nCooperer\nFormuler le besoin en une phrase\nParler ",
+        "reduced": false
+      }
+    },
+    {
+      "route": "developper-projet-medoc",
+      "viewport": "reduced-motion-390",
+      "reduced": {
+        "title": "Developper une activite utile dans le Medoc | Mcomme Medoc",
+        "overflowX": false,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "resultText": "CHEMIN RECOMMANDE\n\nExplorer\n\nL idee doit encore rencontrer le terrain avant de se structurer.\n\nExplorer\nTester\nStructurer\nFinancer\nCooperer\nFormuler le besoin en une phrase\nParler ",
+        "reduced": true
+      }
+    }
+  ],
+  "consoleEvents": [],
+  "source": "production 127.0.0.1:3002"
+}
